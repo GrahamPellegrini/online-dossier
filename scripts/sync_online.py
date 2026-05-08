@@ -12,6 +12,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "online.config.json"
 GENERATED_DIRS = ("demo", "documents", "masters", "previews")
+ASSET_VERSION = "20260508-2"
 
 
 def write_text(path: Path, text: str) -> None:
@@ -22,9 +23,9 @@ def write_text(path: Path, text: str) -> None:
 def rel_asset_path(page_path: str, asset_path: str) -> str:
     page_dir = Path(page_path).parent
     if str(page_dir) == ".":
-      return asset_path
+      return f"{asset_path}?v={ASSET_VERSION}"
     depth = len(page_dir.parts)
-    return "../" * depth + asset_path
+    return f"{'../' * depth}{asset_path}?v={ASSET_VERSION}"
 
 
 def entry_attrs(entry: dict) -> str:
