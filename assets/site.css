@@ -48,10 +48,10 @@ main{width:min(980px,100%)}
   height:34px;
   display:grid;
   place-items:center;
-  border:1px solid var(--line);
+  border:0;
   color:var(--red);
   text-decoration:none;
-  background:rgba(250,248,240,.72);
+  background:transparent;
 }
 .nav-button[aria-disabled=true]{opacity:.28;pointer-events:none}
 .directory{margin-top:30px;border-top:1px solid var(--line);display:grid}
