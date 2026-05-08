@@ -25,4 +25,8 @@
     link.addEventListener("touchstart",()=>prefetch(link),{passive:true});
     link.addEventListener("focus",()=>prefetch(link));
   });
+  document.querySelectorAll("a[data-preview-src]").forEach(link=>{
+    const url=new URL(link.dataset.previewSrc,location.href);
+    link.style.setProperty("--preview-image",`url("${url.href}")`);
+  });
 })();

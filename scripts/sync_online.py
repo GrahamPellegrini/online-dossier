@@ -34,7 +34,7 @@ def entry_attrs(entry: dict) -> str:
     preview = entry.get("preview")
     if preview:
         attrs.append('data-preview')
-        attrs.append(f'style="--preview-image:url({preview})"')
+        attrs.append(f'data-preview-src="{preview}"')
     return (" " + " ".join(attrs)) if attrs else ""
 
 
