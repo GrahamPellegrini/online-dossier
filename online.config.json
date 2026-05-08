@@ -4,79 +4,136 @@
     "repo": "online-dossier",
     "base_url": "https://grahampellegrini.github.io/online-dossier/"
   },
-  "entries": [
+  "directories": [
     {
-      "title": "Demo placement slide deck",
-      "kind": "Open",
-      "href": "demo/placement/"
+      "path": "index.html",
+      "title": "Directory list",
+      "breadcrumb": [],
+      "up": null,
+      "entries": [
+        {
+          "title": "Masters",
+          "kind": "Folder",
+          "href": "masters/",
+          "prefetch": true
+        }
+      ]
     },
     {
-      "title": "Placement demo PDF",
-      "kind": "PDF",
-      "href": "documents/placement-demo.pdf"
+      "path": "masters/index.html",
+      "title": "Masters",
+      "breadcrumb": [
+        {
+          "label": "Directory list",
+          "href": "../"
+        }
+      ],
+      "up": "../",
+      "entries": [
+        {
+          "title": "Placement",
+          "kind": "Folder",
+          "href": "placement/",
+          "prefetch": true
+        },
+        {
+          "title": "masters_proposal",
+          "kind": "PDF",
+          "href": "documents/masters_proposal.pdf",
+          "source": "../Masters/Proposal/build/ARI5902Assignment.pdf",
+          "preview": "previews/masters_proposal.png"
+        }
+      ]
     },
     {
-      "title": "Placement final report PDF",
-      "kind": "PDF",
-      "href": "documents/placement-final-report.pdf"
-    },
-    {
-      "title": "Placement one-page report PDF",
-      "kind": "PDF",
-      "href": "documents/placement-one-page-report.pdf"
+      "path": "masters/placement/index.html",
+      "title": "Placement",
+      "breadcrumb": [
+        {
+          "label": "Directory list",
+          "href": "../../"
+        },
+        {
+          "label": "Masters",
+          "href": "../"
+        }
+      ],
+      "up": "../",
+      "entries": [
+        {
+          "title": "Demo placement slide deck",
+          "kind": "Open",
+          "href": "demo/",
+          "prefetch": true
+        },
+        {
+          "title": "Placement final report",
+          "kind": "PDF",
+          "href": "documents/placement-final-report.pdf",
+          "source": "../Masters/Placement/GrahamPellegrini-Placement-Final-Report.pdf",
+          "preview": "previews/placement-final-report.png"
+        },
+        {
+          "title": "Placement one-page report",
+          "kind": "PDF",
+          "href": "documents/placement-one-page-report.pdf",
+          "source": "../Masters/Placement/GrahamPellegrini-Placement-1Page-Report.pdf",
+          "preview": "previews/placement-one-page-report.png"
+        }
+      ]
     }
   ],
   "copies": [
     {
       "source": "../Masters/Placement/demo/placement-slider.html",
-      "destination": "demo/placement/index.html",
+      "destination": "masters/placement/demo/index.html",
       "rewrite": {
         "../latex/assets/": "assets/"
       }
     },
     {
       "source": "../Masters/Placement/latex/assets/egodex_sketch.png",
-      "destination": "demo/placement/assets/egodex_sketch.png"
+      "destination": "masters/placement/demo/assets/egodex_sketch.png"
     },
     {
       "source": "../Masters/Placement/latex/assets/bounding_box_mask_cropped.png",
-      "destination": "demo/placement/assets/bounding_box_mask_cropped.png"
+      "destination": "masters/placement/demo/assets/bounding_box_mask_cropped.png"
     },
     {
       "source": "../Masters/Placement/latex/assets/dino_prompt.png",
-      "destination": "demo/placement/assets/dino_prompt.png"
+      "destination": "masters/placement/demo/assets/dino_prompt.png"
     },
     {
       "source": "../Masters/Placement/latex/assets/dino.png",
-      "destination": "demo/placement/assets/dino.png"
+      "destination": "masters/placement/demo/assets/dino.png"
     },
     {
       "source": "../Masters/Placement/latex/assets/semantic_vlm_output_panel.png",
-      "destination": "demo/placement/assets/semantic_vlm_output_panel.png"
+      "destination": "masters/placement/demo/assets/semantic_vlm_output_panel.png"
     },
     {
       "source": "../Masters/Placement/latex/assets/semantic_score_histogram_deck.png",
-      "destination": "demo/placement/assets/semantic_score_histogram_deck.png"
+      "destination": "masters/placement/demo/assets/semantic_score_histogram_deck.png"
     },
     {
       "source": "../Masters/Placement/latex/assets/bounding_box_single_window_inference.png",
-      "destination": "demo/placement/assets/bounding_box_single_window_inference.png"
+      "destination": "masters/placement/demo/assets/bounding_box_single_window_inference.png"
     },
     {
       "source": "../Masters/Placement/latex/assets/mask_single_window_inference.png",
-      "destination": "demo/placement/assets/mask_single_window_inference.png"
+      "destination": "masters/placement/demo/assets/mask_single_window_inference.png"
     },
     {
-      "source": "../Masters/Placement/GrahamPellegrini-Placement-Demo-Document.pdf",
-      "destination": "documents/placement-demo.pdf"
+      "source": "../Masters/Proposal/build/ARI5902Assignment.pdf",
+      "destination": "masters/documents/masters_proposal.pdf"
     },
     {
       "source": "../Masters/Placement/GrahamPellegrini-Placement-Final-Report.pdf",
-      "destination": "documents/placement-final-report.pdf"
+      "destination": "masters/placement/documents/placement-final-report.pdf"
     },
     {
       "source": "../Masters/Placement/GrahamPellegrini-Placement-1Page-Report.pdf",
-      "destination": "documents/placement-one-page-report.pdf"
+      "destination": "masters/placement/documents/placement-one-page-report.pdf"
     }
   ]
 }
