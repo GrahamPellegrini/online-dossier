@@ -12,7 +12,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "online.config.json"
 GENERATED_DIRS = ("demo", "documents", "masters", "previews")
-ASSET_VERSION = "20260508-2"
+ASSET_VERSION = "20260508-3"
 
 
 def write_text(path: Path, text: str) -> None:
@@ -76,15 +76,12 @@ def render_directory(config: dict, directory: dict) -> str:
     <div class="chrome">
       {render_breadcrumb(directory)}
       <div class="nav-buttons" aria-label="Navigation controls">
-        <a class="nav-button" href="javascript:history.back()" aria-label="Back">←</a>
         <a class="nav-button" {up_attr} aria-label="Up">↑</a>
-        <a class="nav-button" href="javascript:history.forward()" aria-label="Forward">→</a>
       </div>
     </div>
     <nav class="directory" aria-label="Shared files and folders">
 {entries}
     </nav>
-    <p class="note">Shared dossier materials. Hover entries to warm the next page or preview documents.</p>
   </main>
   <script src="{js}" defer></script>
 </body>

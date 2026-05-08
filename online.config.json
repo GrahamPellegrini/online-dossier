@@ -12,7 +12,7 @@
       "up": null,
       "entries": [
         {
-          "title": "Masters",
+          "title": "masters",
           "kind": "Folder",
           "href": "masters/",
           "prefetch": true
@@ -31,7 +31,7 @@
       "up": "../",
       "entries": [
         {
-          "title": "Placement",
+          "title": "placement",
           "kind": "Folder",
           "href": "placement/",
           "prefetch": true
@@ -61,20 +61,20 @@
       "up": "../",
       "entries": [
         {
-          "title": "Demo placement slide deck",
-          "kind": "Open",
+          "title": "demo_placement_slide_deck",
+          "kind": "HTML",
           "href": "demo/",
           "prefetch": true
         },
         {
-          "title": "Placement final report",
+          "title": "placement_final_report",
           "kind": "PDF",
           "href": "documents/placement-final-report.pdf",
           "source": "../Masters/Placement/GrahamPellegrini-Placement-Final-Report.pdf",
           "preview": "previews/placement-final-report.png"
         },
         {
-          "title": "Placement one-page report",
+          "title": "placement_one_page_report",
           "kind": "PDF",
           "href": "documents/placement-one-page-report.pdf",
           "source": "../Masters/Placement/GrahamPellegrini-Placement-1Page-Report.pdf",

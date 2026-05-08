@@ -7,14 +7,25 @@
   --red:#9f1730;
   --shadow:0 18px 52px rgba(42,34,22,.12);
 }
-html,body{margin:0;min-height:100%;background:var(--paper);color:var(--ink)}
-body{
-  font-family:Inter,system-ui,sans-serif;
+html{
+  margin:0;
+  min-height:100%;
   background:
     linear-gradient(90deg,rgba(23,21,17,.035) 1px,transparent 1px),
     linear-gradient(0deg,rgba(23,21,17,.03) 1px,transparent 1px),
     var(--paper);
   background-size:72px 72px;
+  color:var(--ink);
+}
+body{
+  margin:0;
+  min-height:100vh;
+  min-height:100dvh;
+  color:var(--ink);
+}
+body{
+  font-family:Inter,system-ui,sans-serif;
+  background:transparent;
   display:grid;
   place-items:center;
   padding:8vw;
