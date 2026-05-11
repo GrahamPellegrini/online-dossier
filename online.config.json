@@ -42,6 +42,12 @@
           "href": "documents/masters_proposal.pdf",
           "source": "../Masters/Proposal/build/ARI5902Assignment.pdf",
           "preview": "previews/masters_proposal.png"
+        },
+        {
+          "title": "umre_2026",
+          "kind": "HTML",
+          "href": "umre_2026/",
+          "prefetch": true
         }
       ]
     },
@@ -122,6 +128,21 @@
     {
       "source": "../Masters/Placement/latex/assets/mask_single_window_inference.png",
       "destination": "masters/placement/demo/assets/mask_single_window_inference.png"
+    },
+    {
+      "source": "../UMRE_2026/umre-2026-world-models-as-action-judges.html",
+      "destination": "masters/umre_2026/index.html",
+      "rewrite": {
+        "../Masters/Thesis/content/chapters/7_results/figures/": "assets/"
+      }
+    },
+    {
+      "source": "../Masters/Thesis/content/chapters/7_results/figures/branch_metrics.png",
+      "destination": "masters/umre_2026/assets/branch_metrics.png"
+    },
+    {
+      "source": "../Masters/Thesis/content/chapters/7_results/figures/pairwise_metrics.png",
+      "destination": "masters/umre_2026/assets/pairwise_metrics.png"
     },
     {
       "source": "../Masters/Proposal/build/ARI5902Assignment.pdf",
