@@ -42,26 +42,27 @@
     .meta-lines{margin-top:44px;display:grid;gap:10px;max-width:700px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:16px;line-height:1.5}
 
     /* Image-centred slides */
-    .img-slide{display:grid;place-items:center;gap:clamp(24px,3.5vh,40px);text-align:center;width:min(1100px,100%);margin-inline:auto}
-    .img-slide img{max-width:min(860px,92%);max-height:56vh;object-fit:contain;display:block}
-    .img-quote{font-size:clamp(1rem,1.35vw,1.28rem);color:var(--ink);line-height:1.62;max-width:680px;font-style:italic}
+    .img-slide-wrap{width:min(1100px,100%);margin-inline:auto;display:grid;gap:clamp(16px,2.5vh,28px)}
+    .img-centered{display:grid;place-items:center;gap:clamp(32px,4.5vh,52px);text-align:center}
+    .img-centered img{max-width:min(940px,96%);max-height:66vh;object-fit:contain;display:block}
+    .img-quote{font-size:clamp(1.2rem,1.75vw,1.65rem);color:var(--ink);line-height:1.6;max-width:800px;font-style:italic}
 
     /* Roles slide */
     .roles-wrap{width:min(1220px,100%);margin-inline:auto}
     .role-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:32px}
     .role{min-height:300px;background:rgba(255,253,247,.78);padding:36px;border-top:4px solid var(--red);display:grid;align-content:start}
     .role:nth-child(2){border-color:var(--blue)}
-    .role strong{display:block;font-size:clamp(1.3rem,2vw,2rem);line-height:1.08;letter-spacing:-.03em;white-space:nowrap}
-    .role-detail{margin-top:18px;font-size:clamp(.95rem,1.2vw,1.15rem);color:var(--ink);line-height:1.5}
-    .role-note{margin-top:10px;font-size:clamp(.88rem,1.05vw,1.02rem);color:var(--muted);line-height:1.45}
+    .role strong{display:block;font-size:clamp(1.55rem,2.4vw,2.6rem);line-height:1.08;letter-spacing:-.03em;white-space:nowrap}
+    .role-detail{margin-top:22px;font-size:clamp(1.08rem,1.45vw,1.4rem);color:var(--ink);line-height:1.5}
+    .role-note{margin-top:12px;font-size:clamp(1rem,1.25vw,1.2rem);color:var(--muted);line-height:1.45}
 
-    /* Branches horizontal */
-    .branches-horiz{width:min(1240px,100%);margin-inline:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-    .branch-col{display:grid;gap:10px;align-content:start}
+    /* Branches horizontal — pillar layout */
+    .branches-horiz{width:min(1240px,100%);margin-inline:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;min-height:calc(100vh - 190px);align-items:stretch}
+    .branch-col{display:grid;grid-template-rows:auto 1fr;gap:10px}
     .branch-label-top{font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-left:3px}
     .branch-col:nth-child(2) .branch-label-top{color:var(--blue)}
     .branch-col:nth-child(3) .branch-label-top{color:var(--red)}
-    .branch-card{height:200px;display:grid;place-items:center;border-top:5px solid var(--muted);background:rgba(255,253,247,.78);padding:24px}
+    .branch-card{display:grid;align-content:start;padding:36px 28px;border-top:5px solid var(--muted);background:rgba(255,253,247,.78)}
     .branch-col:nth-child(2) .branch-card{border-color:var(--blue)}
     .branch-col:nth-child(3) .branch-card{border-color:var(--red)}
     .branch-card-name{font-size:clamp(1.55rem,2.3vw,2.9rem);line-height:1.05;letter-spacing:-.04em;font-weight:800;text-transform:uppercase;text-align:center}
@@ -86,9 +87,11 @@
       .slide{min-height:auto;padding:72px 24px 84px}
       .slide::after{display:none}
       .slide-number{left:24px}
+      .img-centered img{max-height:48vh}
       .role-grid{grid-template-columns:1fr}
       .role strong{white-space:normal}
-      .branches-horiz{grid-template-columns:1fr;gap:32px}
+      .branches-horiz{grid-template-columns:1fr;gap:32px;min-height:auto}
+      .branch-card{min-height:160px;align-content:center}
       .results-body{grid-template-columns:1fr}
       .result-title-v2{white-space:normal}
     }
@@ -112,7 +115,7 @@
       .slide::after{display:none}
       .slide-number{left:1.1in}
       h1{font-size:1.18in}
-      .img-slide img{max-height:5.5in}
+      .img-centered img{max-height:5.5in}
       .role-grid{grid-template-columns:1fr 1fr}
       .role{min-height:3.2in}
       .branches-horiz{grid-template-columns:repeat(3,1fr)}
@@ -142,30 +145,36 @@
 
   <!-- 01: Policy — correct action -->
   <section class="slide tint" id="s1">
-    <div class="img-slide">
+    <div class="img-slide-wrap">
       <div class="kicker">Policy</div>
-      <img src="assets/policy_correct.png" alt="Policy selecting the correct action">
-      <p class="img-quote">"I see lock and key. Place key inside lock and turn key"</p>
+      <div class="img-centered">
+        <img src="assets/policy_correct.png" alt="Policy selecting the correct action">
+        <p class="img-quote">"I see lock and key. Place key inside lock and turn key"</p>
+      </div>
     </div>
     <div class="slide-number">01 / 07</div>
   </section>
 
   <!-- 02: Policy — incorrect action -->
   <section class="slide" id="s2">
-    <div class="img-slide">
+    <div class="img-slide-wrap">
       <div class="kicker">Policy</div>
-      <img src="assets/policy_incorrect.png" alt="Policy selecting an incorrect action">
-      <p class="img-quote">"I see lock and key. Place key inside lock and turn key"</p>
+      <div class="img-centered">
+        <img src="assets/policy_incorrect.png" alt="Policy selecting an incorrect action">
+        <p class="img-quote">"I see lock and key. Place key inside lock and turn key"</p>
+      </div>
     </div>
     <div class="slide-number">02 / 07</div>
   </section>
 
   <!-- 03: World Model -->
   <section class="slide tint" id="s3">
-    <div class="img-slide">
+    <div class="img-slide-wrap">
       <div class="kicker">World Model</div>
-      <img src="assets/world_model.png" alt="World model predicting multiple future states">
-      <p class="img-quote">Predicts multiple future states and which arrives to the end goal state</p>
+      <div class="img-centered">
+        <img src="assets/world_model.png" alt="World model predicting multiple future states">
+        <p class="img-quote">Predicts multiple future states and which arrives to the end goal state</p>
+      </div>
     </div>
     <div class="slide-number">03 / 07</div>
   </section>
@@ -223,22 +232,22 @@
       </div>
       <div class="results-body">
         <div class="chart-wrap" aria-label="Mean translation L2 loss comparison">
-          <svg viewBox="0 0 920 560" role="img">
-            <line x1="98" y1="450" x2="850" y2="450" stroke="rgba(23,21,17,.22)" stroke-width="2"/>
-            <line x1="98" y1="90" x2="98" y2="450" stroke="rgba(23,21,17,.22)" stroke-width="2"/>
+          <svg viewBox="0 0 920 590" role="img">
+            <line x1="98" y1="480" x2="850" y2="480" stroke="rgba(23,21,17,.22)" stroke-width="2"/>
+            <line x1="98" y1="90" x2="98" y2="480" stroke="rgba(23,21,17,.22)" stroke-width="2"/>
             <g font-family="Inter, sans-serif" font-weight="800" text-anchor="middle">
-              <rect x="170" y="95" width="130" height="355" fill="#9b9a91"/>
-              <text x="235" y="486" font-size="20" fill="#706c63">B1</text>
-              <text x="235" y="62" font-size="22" fill="#706c63">0.1429</text>
-              <rect x="395" y="362" width="130" height="88" fill="#315979"/>
-              <text x="460" y="486" font-size="20" fill="#315979">B2</text>
-              <text x="460" y="330" font-size="22" fill="#315979">0.0354</text>
-              <rect x="620" y="368" width="130" height="82" fill="#9f1730"/>
-              <text x="685" y="486" font-size="20" fill="#9f1730">B3</text>
-              <text x="685" y="338" font-size="22" fill="#9f1730">0.0328</text>
+              <rect x="170" y="125" width="130" height="355" fill="#9b9a91"/>
+              <text x="235" y="516" font-size="20" fill="#706c63">B1</text>
+              <text x="235" y="96" font-size="22" fill="#706c63">0.1429</text>
+              <rect x="395" y="392" width="130" height="88" fill="#315979"/>
+              <text x="460" y="516" font-size="20" fill="#315979">B2</text>
+              <text x="460" y="362" font-size="22" fill="#315979">0.0354</text>
+              <rect x="620" y="398" width="130" height="82" fill="#9f1730"/>
+              <text x="685" y="516" font-size="20" fill="#9f1730">B3</text>
+              <text x="685" y="368" font-size="22" fill="#9f1730">0.0328</text>
             </g>
             <text x="98" y="42" font-family="Inter, sans-serif" font-size="15" font-weight="800" letter-spacing=".14em" fill="#9f1730">MEAN TRANSLATION L2 LOSS</text>
-            <text x="98" y="526" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#706c63">lower is better; preliminary frozen benchmark</text>
+            <text x="98" y="558" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#706c63">lower is better; preliminary frozen benchmark</text>
           </svg>
         </div>
         <div class="metric-col">
