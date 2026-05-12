@@ -30,7 +30,7 @@
     .slide::after{content:"";position:absolute;right:0;top:0;width:min(24vw,310px);height:min(22vh,175px);pointer-events:none}
     .slide.tint{background:var(--paper2)}
     .slide.red{background:linear-gradient(135deg,#a91c35,#8f142b);color:#fffaf2}
-    .slide-number{position:absolute;left:8vw;bottom:32px;color:rgba(23,21,17,.38);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;text-align:left;justify-self:start}
+    .slide-number{position:absolute;left:8vw;bottom:32px;color:rgba(23,21,17,.38);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
     .red .slide-number{color:rgba(255,250,242,.5)}
     .kicker{margin-bottom:18px;color:var(--red);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
     .red .kicker{color:rgba(255,250,242,.74)}
@@ -40,51 +40,67 @@
     h2{max-width:980px;font-size:clamp(3.1rem,5vw,5.45rem);line-height:.95}
     .title-only{max-width:1180px;margin-left:3vw}
     .meta-lines{margin-top:44px;display:grid;gap:10px;max-width:700px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:16px;line-height:1.5}
-    .concept-slide{display:grid;grid-template-columns:minmax(0,.72fr) minmax(560px,1.28fr);gap:clamp(44px,6vw,96px);align-items:center;width:min(1280px,100%);margin-inline:auto}
-    .left-title{align-self:start;padding-top:4vh}
-    .diagram{min-height:530px;display:grid;place-items:center;background:transparent}
-    .diagram svg{width:100%;height:auto;max-height:70vh;display:block;overflow:visible}
-    .label{font:800 18px Inter,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;fill:var(--red)}
-    .small-label{font:700 16px Inter,system-ui,sans-serif;fill:var(--muted)}
-    .node-text{font:800 26px Inter,system-ui,sans-serif;fill:var(--ink)}
-    .compare{width:min(1220px,100%);margin-inline:auto}
-    .compare h2{max-width:none;font-size:clamp(3.4rem,5.25vw,5.9rem)}
-    .role-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:42px}
-    .role{min-height:350px;background:rgba(255,253,247,.78);padding:36px;border-top:4px solid var(--red);display:grid;align-content:space-between}
+
+    /* Image-centred slides */
+    .img-slide{display:grid;place-items:center;gap:clamp(24px,3.5vh,40px);text-align:center;width:min(1100px,100%);margin-inline:auto}
+    .img-slide img{max-width:min(860px,92%);max-height:56vh;object-fit:contain;display:block}
+    .img-quote{font-size:clamp(1rem,1.35vw,1.28rem);color:var(--ink);line-height:1.62;max-width:680px;font-style:italic}
+
+    /* Roles slide */
+    .roles-wrap{width:min(1220px,100%);margin-inline:auto}
+    .role-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:32px}
+    .role{min-height:300px;background:rgba(255,253,247,.78);padding:36px;border-top:4px solid var(--red);display:grid;align-content:start}
     .role:nth-child(2){border-color:var(--blue)}
-    .role strong{display:block;font-size:clamp(2.3rem,3.2vw,3.65rem);line-height:.95;letter-spacing:-.045em}
-    .role dl{display:grid;grid-template-columns:auto 1fr;gap:14px 18px;margin:30px 0 0;color:var(--muted);font-size:clamp(1rem,1.25vw,1.2rem);line-height:1.38}
-    .role dt{color:var(--red);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:13px}
-    .role:nth-child(2) dt{color:var(--blue)}
-    .branches{width:min(1240px,100%);margin-inline:auto;display:grid;gap:24px}
-    .branch-box{height:155px;background:rgba(255,253,247,.78);border-top:5px solid var(--muted);display:grid;grid-template-columns:180px 1fr;align-items:center;padding:28px 42px}
-    .branch-box:nth-child(2){border-color:var(--blue)}
-    .branch-box:nth-child(3){border-color:var(--red)}
-    .branch-id{align-self:start;color:var(--muted);font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
-    .branch-box:nth-child(2) .branch-id{color:var(--blue)}
-    .branch-box:nth-child(3) .branch-id{color:var(--red)}
-    .branch-name{font-size:clamp(2.6rem,4vw,4.8rem);line-height:.9;letter-spacing:-.04em;font-weight:800;text-transform:uppercase}
-    .results{display:grid;grid-template-columns:minmax(420px,.78fr) minmax(560px,1.22fr);gap:clamp(50px,6vw,90px);align-items:center;width:min(1320px,100%);margin-inline:auto}
-    .result-title{font-family:Inter,system-ui,sans-serif;font-weight:800;letter-spacing:-.035em;text-transform:uppercase;font-size:clamp(2.3rem,3.5vw,4.3rem);line-height:.94;max-width:620px}
-    .metrics{display:grid;gap:24px;margin-top:36px}
-    .metric strong{display:block;color:var(--red);font-size:clamp(4.3rem,6.4vw,7.2rem);line-height:.78;letter-spacing:-.06em}
-    .metric span{display:block;margin-top:13px;color:var(--ink);font-size:clamp(1.02rem,1.25vw,1.25rem);font-weight:800;line-height:1.14;text-transform:uppercase}
+    .role strong{display:block;font-size:clamp(1.3rem,2vw,2rem);line-height:1.08;letter-spacing:-.03em;white-space:nowrap}
+    .role-detail{margin-top:18px;font-size:clamp(.95rem,1.2vw,1.15rem);color:var(--ink);line-height:1.5}
+    .role-note{margin-top:10px;font-size:clamp(.88rem,1.05vw,1.02rem);color:var(--muted);line-height:1.45}
+
+    /* Branches horizontal */
+    .branches-horiz{width:min(1240px,100%);margin-inline:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .branch-col{display:grid;gap:10px;align-content:start}
+    .branch-label-top{font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-left:3px}
+    .branch-col:nth-child(2) .branch-label-top{color:var(--blue)}
+    .branch-col:nth-child(3) .branch-label-top{color:var(--red)}
+    .branch-card{height:200px;display:grid;place-items:center;border-top:5px solid var(--muted);background:rgba(255,253,247,.78);padding:24px}
+    .branch-col:nth-child(2) .branch-card{border-color:var(--blue)}
+    .branch-col:nth-child(3) .branch-card{border-color:var(--red)}
+    .branch-card-name{font-size:clamp(1.55rem,2.3vw,2.9rem);line-height:1.05;letter-spacing:-.04em;font-weight:800;text-transform:uppercase;text-align:center}
+
+    /* Results v2 */
+    .results-v2{width:min(1320px,100%);margin-inline:auto}
+    .results-title-row{margin-bottom:40px;border-bottom:1px solid var(--line);padding-bottom:24px}
+    .result-title-v2{font-family:Inter,system-ui,sans-serif;font-weight:800;letter-spacing:-.035em;text-transform:uppercase;font-size:clamp(2rem,4vw,4.8rem);line-height:.94;white-space:nowrap}
+    .results-body{display:grid;grid-template-columns:minmax(520px,1.4fr) minmax(240px,.6fr);gap:clamp(40px,5vw,80px);align-items:center}
     .chart-wrap{display:grid;align-items:center}
     .chart-wrap svg{width:100%;height:auto;display:block}
+    .metric-col{display:grid;gap:16px}
+    .metric strong{display:block;color:var(--red);font-size:clamp(4rem,6vw,7rem);line-height:.78;letter-spacing:-.06em}
+    .metric span{display:block;margin-top:13px;color:var(--ink);font-size:clamp(.95rem,1.2vw,1.2rem);font-weight:800;line-height:1.2;text-transform:uppercase}
+
+    /* Q&A */
     .question{display:grid;place-items:center;text-align:center}
     .question h2{max-width:none;font-size:clamp(5rem,10vw,11rem);line-height:.9}
+
     @media(max-width:980px){
-      .rail{display:none}.slide{min-height:auto;padding:72px 24px 84px}.slide::after{display:none}.slide-number{left:24px}
-      .concept-slide,.results{grid-template-columns:1fr}.left-title{padding-top:0}.diagram{min-height:360px}
-      .role-grid{grid-template-columns:1fr}.branch-box{height:auto;min-height:140px;grid-template-columns:1fr;gap:18px}
+      .rail{display:none}
+      .slide{min-height:auto;padding:72px 24px 84px}
+      .slide::after{display:none}
+      .slide-number{left:24px}
+      .role-grid{grid-template-columns:1fr}
+      .role strong{white-space:normal}
+      .branches-horiz{grid-template-columns:1fr;gap:32px}
+      .results-body{grid-template-columns:1fr}
+      .result-title-v2{white-space:normal}
     }
     @media(max-width:720px){
-      .slide{padding:68px 28px 78px}.kicker{font-size:11px;line-height:1.35}
+      .slide{padding:68px 28px 78px}
+      .kicker{font-size:11px;line-height:1.35}
       h1{font-size:clamp(3rem,15vw,4.35rem);line-height:.92}
-      h2{font-size:clamp(2.75rem,12vw,3.9rem);line-height:.98}
-      .title-only{margin-left:0}.meta-lines{font-size:15px;line-height:1.45;margin-top:36px}
-      .role{min-height:auto}.role dl{grid-template-columns:1fr}.branch-name{font-size:clamp(2.2rem,10vw,3.4rem)}
-      .result-title{font-size:clamp(2rem,9vw,3rem)}.metric strong{font-size:clamp(3.8rem,17vw,5.6rem)}
+      .title-only{margin-left:0}
+      .meta-lines{font-size:15px;line-height:1.45;margin-top:36px}
+      .role{min-height:auto}
+      .branch-card-name{font-size:clamp(1.4rem,8vw,2.2rem)}
+      .metric strong{font-size:clamp(3.5rem,14vw,5rem)}
     }
     @media print{
       @page{size:16in 9in;margin:0}
@@ -92,20 +108,27 @@
       *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
       .progress,.rail{display:none}
       .slide{width:16in;height:9in;min-height:0;page-break-after:always;break-after:page;break-inside:avoid;border-bottom:0;padding:52px 1.1in 58px}
-      .slide:last-of-type{page-break-after:auto;break-after:auto}.slide::after{display:none}.slide-number{left:1.1in}
-      h1{font-size:1.18in}h2{font-size:.78in}.concept-slide{grid-template-columns:5.2in 8.5in;gap:.7in}.diagram{min-height:5.6in}
-      .role-grid{grid-template-columns:1fr 1fr}.role{min-height:3.35in}.branch-box{height:1.5in}
-      .results{grid-template-columns:5in 8.4in;gap:.7in}.metric strong{font-size:.9in}.question h2{font-size:1.7in}
+      .slide:last-of-type{page-break-after:auto;break-after:auto}
+      .slide::after{display:none}
+      .slide-number{left:1.1in}
+      h1{font-size:1.18in}
+      .img-slide img{max-height:5.5in}
+      .role-grid{grid-template-columns:1fr 1fr}
+      .role{min-height:3.2in}
+      .branches-horiz{grid-template-columns:repeat(3,1fr)}
+      .branch-card{height:1.8in}
     }
   </style>
 </head>
 <body>
   <div class="progress"><span id="progress"></span></div>
   <nav class="rail" aria-label="Slide navigation">
-    <a href="#s0"></a><a href="#s1"></a><a href="#s2"></a><a href="#s3"></a><a href="#s4"></a><a href="#s5"></a><a href="#s6"></a>
+    <a href="#s0"></a><a href="#s1"></a><a href="#s2"></a><a href="#s3"></a>
+    <a href="#s4"></a><a href="#s5"></a><a href="#s6"></a><a href="#s7"></a>
   </nav>
 
-  <section class="slide" id="s0">
+  <!-- 00: Title -->
+  <section class="slide red" id="s0">
     <div class="title-only">
       <div class="kicker">UM Research Expo 2026</div>
       <h1>World Models<br>as Action Judges</h1>
@@ -114,157 +137,130 @@
         <div>WACT: evaluating world model support for action chunk policies</div>
       </div>
     </div>
-    <div class="slide-number">00 / 06</div>
+    <div class="slide-number">00 / 07</div>
   </section>
 
+  <!-- 01: Policy — correct action -->
   <section class="slide tint" id="s1">
-    <div class="concept-slide">
-      <div class="left-title">
-        <div class="kicker">Policy</div>
-        <h2>Policy</h2>
-      </div>
-      <div class="diagram" aria-label="Minimal visuomotor policy diagram">
-        <svg viewBox="0 0 980 560" role="img">
-          <defs>
-            <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1 L11 6 L1 11 Z" fill="#9f1730"/></marker>
-          </defs>
-          <rect x="55" y="150" width="235" height="180" fill="#f9f7eb" stroke="rgba(23,21,17,.14)"/>
-          <path d="M88 288 C122 246 154 270 180 232 C214 180 246 210 270 170" fill="none" stroke="#315979" stroke-width="9" stroke-linecap="round"/>
-          <circle cx="116" cy="214" r="22" fill="#1f604f" opacity=".9"/>
-          <text x="72" y="115" class="label">Observation</text>
-          <text x="80" y="366" class="small-label">camera + robot state</text>
-          <path d="M320 240 L444 240" stroke="#9f1730" stroke-width="7" marker-end="url(#arrowRed)"/>
-          <rect x="466" y="118" width="215" height="244" rx="0" fill="#171511"/>
-          <text x="535" y="248" fill="#fffaf2" font-family="EB Garamond, Georgia, serif" font-size="94" font-weight="700">π</text>
-          <text x="525" y="306" fill="#fffaf2" font-family="Inter, sans-serif" font-size="20" font-weight="800">policy</text>
-          <path d="M705 240 L828 240" stroke="#9f1730" stroke-width="7" marker-end="url(#arrowRed)"/>
-          <rect x="830" y="154" width="110" height="154" fill="#f9f7eb" stroke="rgba(23,21,17,.14)"/>
-          <path d="M856 200 L902 200 M856 238 L914 238 M856 276 L890 276" stroke="#9f1730" stroke-width="12" stroke-linecap="round"/>
-          <text x="782" y="115" class="label">Action</text>
-          <text x="784" y="366" class="small-label">next motor command</text>
-        </svg>
-      </div>
+    <div class="img-slide">
+      <div class="kicker">Policy</div>
+      <img src="assets/policy_correct.png" alt="Policy selecting the correct action">
+      <p class="img-quote">"I see lock and key. Place key inside lock and turn key"</p>
     </div>
-    <div class="slide-number">01 / 06</div>
+    <div class="slide-number">01 / 07</div>
   </section>
 
+  <!-- 02: Policy — incorrect action -->
   <section class="slide" id="s2">
-    <div class="concept-slide">
-      <div class="left-title">
-        <div class="kicker">World model</div>
-        <h2>World<br>Model</h2>
-      </div>
-      <div class="diagram" aria-label="Minimal action-conditioned world model diagram">
-        <svg viewBox="0 0 980 560" role="img">
-          <defs>
-            <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1 L11 6 L1 11 Z" fill="#315979"/></marker>
-          </defs>
-          <rect x="50" y="116" width="205" height="126" fill="#f9f7eb" stroke="rgba(23,21,17,.14)"/>
-          <path d="M80 202 C116 170 150 192 178 158 C203 130 225 148 244 126" fill="none" stroke="#706c63" stroke-width="8" stroke-linecap="round"/>
-          <text x="70" y="88" class="label">Now</text>
-          <rect x="50" y="318" width="205" height="92" fill="#f9f7eb" stroke="rgba(23,21,17,.14)"/>
-          <path d="M83 364 L216 364" stroke="#9f1730" stroke-width="12" stroke-linecap="round"/>
-          <text x="70" y="468" class="small-label">candidate action</text>
-          <path d="M280 178 L430 244" stroke="#315979" stroke-width="7" marker-end="url(#arrowBlue)"/>
-          <path d="M280 365 L430 302" stroke="#315979" stroke-width="7" marker-end="url(#arrowBlue)"/>
-          <rect x="446" y="168" width="230" height="210" fill="#171511"/>
-          <text x="492" y="262" fill="#fffaf2" font-family="EB Garamond, Georgia, serif" font-size="74" font-weight="700">model</text>
-          <text x="496" y="315" fill="#fffaf2" font-family="Inter, sans-serif" font-size="18" font-weight="800">predicts dynamics</text>
-          <path d="M705 274 L834 274" stroke="#315979" stroke-width="7" marker-end="url(#arrowBlue)"/>
-          <rect x="834" y="146" width="100" height="256" fill="#f9f7eb" stroke="rgba(23,21,17,.14)"/>
-          <path d="M856 360 C884 296 880 244 916 184" fill="none" stroke="#1f604f" stroke-width="10" stroke-linecap="round"/>
-          <circle cx="916" cy="184" r="12" fill="#1f604f"/>
-          <text x="724" y="88" class="label">Predicted future</text>
-        </svg>
-      </div>
+    <div class="img-slide">
+      <div class="kicker">Policy</div>
+      <img src="assets/policy_incorrect.png" alt="Policy selecting an incorrect action">
+      <p class="img-quote">"I see lock and key. Place key inside lock and turn key"</p>
     </div>
-    <div class="slide-number">02 / 06</div>
+    <div class="slide-number">02 / 07</div>
   </section>
 
+  <!-- 03: World Model -->
   <section class="slide tint" id="s3">
-    <div class="compare">
+    <div class="img-slide">
+      <div class="kicker">World Model</div>
+      <img src="assets/world_model.png" alt="World model predicting multiple future states">
+      <p class="img-quote">Predicts multiple future states and which arrives to the end goal state</p>
+    </div>
+    <div class="slide-number">03 / 07</div>
+  </section>
+
+  <!-- 04: Roles -->
+  <section class="slide" id="s4">
+    <div class="roles-wrap">
       <div class="kicker">Roles</div>
-      <h2>Policy as an Actor.<br>World Model as a Brain.</h2>
       <div class="role-grid">
         <div class="role">
-          <strong>Policy as<br>an Actor</strong>
-          <dl>
-            <dt>Good</dt><dd>Fast, direct, deployable.</dd>
-            <dt>Risk</dt><dd>Can choose a confident action without checking consequences.</dd>
-          </dl>
+          <strong>Policy as an Actor</strong>
+          <p class="role-detail">Quick decision making and inference for future state</p>
+          <p class="role-note">Eg. translation of human movement to robotic</p>
         </div>
         <div class="role">
-          <strong>World Model as<br>a Brain</strong>
-          <dl>
-            <dt>Good</dt><dd>Predicts futures and compares candidate actions.</dd>
-            <dt>Risk</dt><dd>If its imagined future is wrong, the judgement can be wrong.</dd>
-          </dl>
+          <strong>World Model as a Brain</strong>
+          <p class="role-detail">More like an imagination or simulation engine that has learnt the physics and properties.</p>
         </div>
       </div>
     </div>
-    <div class="slide-number">03 / 06</div>
+    <div class="slide-number">04 / 07</div>
   </section>
 
-  <section class="slide" id="s4">
-    <div class="branches" aria-label="Three evaluated branches">
-      <div class="branch-box">
-        <div class="branch-id">Branch 1</div>
-        <div class="branch-name">Policy Only</div>
-      </div>
-      <div class="branch-box">
-        <div class="branch-id">Branch 2</div>
-        <div class="branch-name">Policy + World Model</div>
-      </div>
-      <div class="branch-box">
-        <div class="branch-id">Branch 3</div>
-        <div class="branch-name">World Model Only</div>
-      </div>
-    </div>
-    <div class="slide-number">04 / 06</div>
-  </section>
-
+  <!-- 05: Three Branches -->
   <section class="slide tint" id="s5">
-    <div class="results">
-      <div>
-        <div class="kicker">Current results</div>
-        <div class="result-title">Policy + World Model Trends Best</div>
-        <div class="metrics">
-          <div class="metric"><strong>0.0354</strong><span>translation L2</span></div>
-          <div class="metric"><strong>15.8°</strong><span>rotation error</span></div>
-          <div class="metric"><strong>86.6%</strong><span>win rate vs policy only</span></div>
+    <div class="branches-horiz">
+      <div class="branch-col">
+        <div class="branch-label-top">Branch 1</div>
+        <div class="branch-card">
+          <div class="branch-card-name">Policy Only</div>
         </div>
       </div>
-      <div class="chart-wrap" aria-label="Minimal translation L2 comparison histogram">
-        <svg viewBox="0 0 920 560" role="img">
-          <line x1="98" y1="450" x2="850" y2="450" stroke="rgba(23,21,17,.22)" stroke-width="2"/>
-          <line x1="98" y1="90" x2="98" y2="450" stroke="rgba(23,21,17,.22)" stroke-width="2"/>
-          <g font-family="Inter, sans-serif" font-weight="800" text-anchor="middle">
-            <rect x="170" y="95" width="130" height="355" fill="#9b9a91"/>
-            <text x="235" y="486" font-size="20" fill="#706c63">B1</text>
-            <text x="235" y="62" font-size="22" fill="#706c63">0.1429</text>
-            <rect x="395" y="362" width="130" height="88" fill="#315979"/>
-            <text x="460" y="486" font-size="20" fill="#315979">B2</text>
-            <text x="460" y="330" font-size="22" fill="#315979">0.0354</text>
-            <rect x="620" y="368" width="130" height="82" fill="#9f1730"/>
-            <text x="685" y="486" font-size="20" fill="#9f1730">B3</text>
-            <text x="685" y="338" font-size="22" fill="#9f1730">0.0328</text>
-          </g>
-          <text x="98" y="42" font-family="Inter, sans-serif" font-size="15" font-weight="800" letter-spacing=".14em" fill="#9f1730">MEAN TRANSLATION L2</text>
-          <text x="98" y="526" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#706c63">lower is better; V-JEPA2-AC current corrected benchmark surface</text>
-        </svg>
+      <div class="branch-col">
+        <div class="branch-label-top">Branch 2</div>
+        <div class="branch-card">
+          <div class="branch-card-name">Policy + World Model</div>
+        </div>
+      </div>
+      <div class="branch-col">
+        <div class="branch-label-top">Branch 3</div>
+        <div class="branch-card">
+          <div class="branch-card-name">World Model Only</div>
+        </div>
       </div>
     </div>
-    <div class="slide-number">05 / 06</div>
+    <div class="slide-number">05 / 07</div>
   </section>
 
-  <section class="slide red" id="s6">
+  <!-- 06: Results -->
+  <section class="slide" id="s6">
+    <div class="results-v2">
+      <div class="results-title-row">
+        <div class="kicker">Current results</div>
+        <div class="result-title-v2">World Model Alone Trends Best</div>
+      </div>
+      <div class="results-body">
+        <div class="chart-wrap" aria-label="Mean translation L2 loss comparison">
+          <svg viewBox="0 0 920 560" role="img">
+            <line x1="98" y1="450" x2="850" y2="450" stroke="rgba(23,21,17,.22)" stroke-width="2"/>
+            <line x1="98" y1="90" x2="98" y2="450" stroke="rgba(23,21,17,.22)" stroke-width="2"/>
+            <g font-family="Inter, sans-serif" font-weight="800" text-anchor="middle">
+              <rect x="170" y="95" width="130" height="355" fill="#9b9a91"/>
+              <text x="235" y="486" font-size="20" fill="#706c63">B1</text>
+              <text x="235" y="62" font-size="22" fill="#706c63">0.1429</text>
+              <rect x="395" y="362" width="130" height="88" fill="#315979"/>
+              <text x="460" y="486" font-size="20" fill="#315979">B2</text>
+              <text x="460" y="330" font-size="22" fill="#315979">0.0354</text>
+              <rect x="620" y="368" width="130" height="82" fill="#9f1730"/>
+              <text x="685" y="486" font-size="20" fill="#9f1730">B3</text>
+              <text x="685" y="338" font-size="22" fill="#9f1730">0.0328</text>
+            </g>
+            <text x="98" y="42" font-family="Inter, sans-serif" font-size="15" font-weight="800" letter-spacing=".14em" fill="#9f1730">MEAN TRANSLATION L2 LOSS</text>
+            <text x="98" y="526" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#706c63">lower is better; preliminary frozen benchmark</text>
+          </svg>
+        </div>
+        <div class="metric-col">
+          <div class="metric">
+            <strong>XX%</strong>
+            <span>Win rate vs<br>policy only</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-number">06 / 07</div>
+  </section>
+
+  <!-- 07: Q&A -->
+  <section class="slide red" id="s7">
     <div class="question">
       <div>
         <div class="kicker">Q&A</div>
         <h2>Questions?</h2>
       </div>
     </div>
-    <div class="slide-number">06 / 06</div>
+    <div class="slide-number">07 / 07</div>
   </section>
 
   <script>
