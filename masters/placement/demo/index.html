@@ -130,6 +130,19 @@
     .center>div:not(.slide-number){width:100%;display:grid;justify-items:center}
     .future-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;width:min(1220px,100%);align-items:center;margin-inline:auto}
     .future{min-height:320px;padding:42px;display:grid;align-content:center;justify-items:center;text-align:center;border:1px solid var(--line);background:rgba(255,253,247,.84);font-size:clamp(1.85rem,2.55vw,2.75rem);line-height:1.06;letter-spacing:-.04em;font-weight:700}
+    .results-center{width:100%;max-width:1180px;margin-inline:auto;text-align:center}
+    .results-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:32px;align-items:start;text-align:left}
+    .table-label{font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+    .results-table{width:100%;border-collapse:collapse;font-size:clamp(.88rem,1.12vw,1.08rem);line-height:1.42}
+    .results-table th{padding:9px 12px 7px;border-bottom:2px solid rgba(159,23,48,.48);font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--red);text-align:right}
+    .results-table th:first-child{text-align:left;padding-left:0}
+    .results-table td{padding:8px 12px;border-bottom:1px solid var(--line);color:var(--ink);text-align:right}
+    .results-table td:first-child{text-align:left;padding-left:0;color:var(--muted)}
+    .results-table tbody tr:last-child td{border-bottom:none}
+    .results-table .win-row td{background:rgba(159,23,48,.058);font-weight:600}
+    .results-table .win-row td:first-child{color:var(--ink);font-weight:700}
+    .highlight-val{color:var(--red)!important;font-weight:700!important}
+    @media(max-width:980px){.results-grid{grid-template-columns:1fr;gap:36px}}
     @media(max-width:980px){
       .rail{display:none}.slide{min-height:auto;padding:72px 24px}.two,.two.flip,.artifact-grid,.problem-grid,.sketch-strip,.pipeline-grid,.prompt-layout,.bridge-grid{grid-template-columns:1fr}.cards,.metric-row,.future-grid{grid-template-columns:1fr}.bar{grid-template-columns:1fr;gap:8px}.concept{min-height:420px}.slide-number{left:24px}.pipe-arrow{transform:rotate(90deg);justify-self:center}
     }
@@ -160,7 +173,7 @@
 <body>
   <div class="progress"><span id="progress"></span></div>
   <nav class="rail" aria-label="Slide navigation">
-    <a href="#s1"></a><a href="#s2"></a><a href="#s3"></a><a href="#s4"></a><a href="#s5"></a><a href="#s6"></a><a href="#s7"></a><a href="#s8"></a><a href="#s9"></a><a href="#s10"></a><a href="#s11"></a><a href="#s12"></a><a href="#s13"></a>
+    <a href="#s1"></a><a href="#s2"></a><a href="#s3"></a><a href="#s4"></a><a href="#s5"></a><a href="#s6"></a><a href="#s7"></a><a href="#s8"></a><a href="#s9"></a><a href="#s10"></a><a href="#s11"></a><a href="#s12"></a><a href="#s13"></a><a href="#s14"></a>
   </nav>
 
   <section class="slide" id="s1">
@@ -173,7 +186,7 @@
         <div>M.AI.ESTRO - Automated Digital Twin Synthesis for Industrial Skill Transfer</div>
       </div>
     </div>
-    <div class="slide-number">01 / 13</div>
+    <div class="slide-number">01 / 14</div>
   </section>
 
   <section class="slide tint" id="s2">
@@ -181,7 +194,7 @@
       <div class="kicker">Problem context</div>
       <h2><span class="redline">World Models compress<br>every visible variation</span><span class="blackline">Masks improve scope by filtering out nuisance variations</span></h2>
     </div>
-    <div class="slide-number">02 / 13</div>
+    <div class="slide-number">02 / 14</div>
   </section>
 
   <section class="slide" id="s3">
@@ -190,9 +203,9 @@
         <div class="kicker">Problem context</div>
         <h2>Open-set perception requires input prompt, normally manual</h2>
       </div>
-      <img src="assets/dino_prompt.png" alt="Grounding DINO prompt diagram">
+      <img src="../latex/assets/dino_prompt.png" alt="Grounding DINO prompt diagram">
     </div>
-    <div class="slide-number">03 / 13</div>
+    <div class="slide-number">03 / 14</div>
   </section>
 
   <section class="slide red" id="s4">
@@ -200,7 +213,7 @@
       <div class="kicker">Research question</div>
       <h2 class="wide-title">Can VLM object lists become automated prompts for open-set grounding?</h2>
     </div>
-    <div class="slide-number">04 / 13</div>
+    <div class="slide-number">04 / 14</div>
   </section>
 
   <section class="slide tint" id="s5">
@@ -209,7 +222,7 @@
       <div class="pipeline-grid">
         <div class="pipe-stage">
           <div class="stage-title">Egodex Sample</div>
-          <img class="pipe-img" src="assets/egodex_sketch.png" alt="EgoDex sampled hand manipulation window">
+          <img class="pipe-img" src="../latex/assets/egodex_sketch.png" alt="EgoDex sampled hand manipulation window">
         </div>
         <div class="pipe-arrow">-></div>
         <div class="pipe-stage">
@@ -221,20 +234,20 @@ query: shoe</code></div>
         <div class="pipe-arrow">-></div>
         <div class="pipe-stage">
           <div class="stage-title">Bounding Box &amp; Mask</div>
-          <img class="pipe-img pipe-mask" src="assets/bounding_box_mask_cropped.png" alt="Blue bounding box and yellow mask sketch">
+          <img class="pipe-img pipe-mask" src="../latex/assets/bounding_box_mask_cropped.png" alt="Blue bounding box and yellow mask sketch">
         </div>
       </div>
       <div class="output-contract">Each sampled window keeps one aligned record: semantic description, object prompts, boxes, masks, and file manifest.</div>
     </div>
-    <div class="slide-number">05 / 13</div>
+    <div class="slide-number">05 / 14</div>
   </section>
 
   <section class="slide" id="s6">
     <div>
       <div class="kicker">Semantic stage</div>
-      <img class="semantic-proof" src="assets/semantic_vlm_output_panel.png" alt="Semantic frame and structured VLM output">
+      <img class="semantic-proof" src="../latex/assets/semantic_vlm_output_panel.png" alt="Semantic frame and structured VLM output">
     </div>
-    <div class="slide-number">06 / 13</div>
+    <div class="slide-number">06 / 14</div>
   </section>
 
   <section class="slide tint" id="s7">
@@ -247,7 +260,7 @@ query: shoe</code></div>
         <div class="metric"><strong>1.432</strong><span>s/window</span></div>
       </div>
     </div>
-    <div class="slide-number">07 / 13</div>
+    <div class="slide-number">07 / 14</div>
   </section>
 
   <section class="slide center" id="s8">
@@ -263,15 +276,15 @@ query: shoe</code></div>
         <div class="bar"><strong>SmolVLM2-2.2B</strong><div class="track"><span style="width:73%"></span></div><span>7.05 s</span></div>
       </div>
     </div>
-    <div class="slide-number">08 / 13</div>
+    <div class="slide-number">08 / 14</div>
   </section>
 
   <section class="slide tint" id="s9">
     <div>
       <div class="kicker">Score distribution</div>
-      <img class="plot-proof" src="assets/semantic_score_histogram_deck.png" alt="Semantic score histogram">
+      <img class="plot-proof" src="../latex/assets/semantic_score_histogram_deck.png" alt="Semantic score histogram">
     </div>
-    <div class="slide-number">09 / 13</div>
+    <div class="slide-number">09 / 14</div>
   </section>
 
   <section class="slide" id="s10">
@@ -281,24 +294,89 @@ query: shoe</code></div>
       <div class="bridge-grid">
         <div class="object-card"><strong>Object list</strong><code>["shoe", "laces"]</code></div>
         <div class="pipe-arrow">-></div>
-        <div class="dino-card"><strong>Grounding DINO</strong><img src="assets/dino.png" alt="Grounding DINO sketch"></div>
+        <div class="dino-card"><strong>Grounding DINO</strong><img src="../latex/assets/dino.png" alt="Grounding DINO sketch"></div>
       </div>
     </div>
-    <div class="slide-number">10 / 13</div>
+    <div class="slide-number">10 / 14</div>
   </section>
 
   <section class="slide tint" id="s11">
     <div>
       <div class="kicker">Spatial outputs</div>
       <div class="split-figures">
-        <div class="split-figure"><strong>Bounding boxes</strong><img src="assets/bounding_box_single_window_inference.png" alt="Bounding box single window inference"></div>
-        <div class="split-figure"><strong>Object masks</strong><img src="assets/mask_single_window_inference.png" alt="Mask single window inference"></div>
+        <div class="split-figure"><strong>Bounding boxes</strong><img src="../latex/assets/bounding_box_single_window_inference.png" alt="Bounding box single window inference"></div>
+        <div class="split-figure"><strong>Object masks</strong><img src="../latex/assets/mask_single_window_inference.png" alt="Mask single window inference"></div>
       </div>
     </div>
-    <div class="slide-number">11 / 13</div>
+    <div class="slide-number">11 / 14</div>
   </section>
 
   <section class="slide" id="s12">
+    <div class="results-center">
+      <div class="kicker">Pipeline evaluation</div>
+      <h2 style="font-size:clamp(2.9rem,4.5vw,5rem);text-align:center;margin-inline:auto">Quantitative Results</h2>
+      <div class="results-grid">
+
+        <div>
+          <div class="table-label">Semantic benchmark &mdash; 64-window shared slice</div>
+          <table class="results-table">
+            <thead>
+              <tr><th>Model</th><th>SigLIP</th><th>OpenCLIP</th><th>s / win</th></tr>
+            </thead>
+            <tbody>
+              <tr class="win-row">
+                <td>Qwen3-VL-2B ★</td><td>0.365</td><td>0.409</td><td>1.43</td>
+              </tr>
+              <tr><td>Qwen3-VL-8B</td><td>0.431</td><td>0.473</td><td>2.44</td></tr>
+              <tr><td>Qwen3.5-4B</td><td>0.434</td><td>0.478</td><td>5.76</td></tr>
+              <tr><td>LLaVA-v1.6-7B</td><td>0.422</td><td>0.463</td><td>3.32</td></tr>
+              <tr><td>Idefics3-8B</td><td>0.405</td><td>0.450</td><td>4.19</td></tr>
+              <tr><td>SmolVLM2-2.2B</td><td>0.319</td><td>0.361</td><td>7.05</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top:10px;font-size:12px;color:var(--muted)">★ production choice &mdash; best quality-to-latency balance</div>
+        </div>
+
+        <div>
+          <div class="table-label">Grounding &amp; mask &mdash; 512 frozen windows</div>
+          <table class="results-table">
+            <thead>
+              <tr><th>Metric</th><th>&ge;0.25</th><th>&ge;0.35</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Window detection</td>
+                <td class="highlight-val">97.3%</td><td>91.6%</td>
+              </tr>
+              <tr>
+                <td>Frame detection</td>
+                <td class="highlight-val">95.7%</td><td>86.7%</td>
+              </tr>
+              <tr>
+                <td>Mean box score</td>
+                <td>0.547 <span style="color:var(--muted)">±0.14</span></td>
+                <td>0.562 <span style="color:var(--muted)">±0.14</span></td>
+              </tr>
+              <tr>
+                <td>Mask window rate</td>
+                <td class="highlight-val">97.3%</td><td>91.6%</td>
+              </tr>
+              <tr>
+                <td>SAM&nbsp;2 mask score</td>
+                <td>0.905 <span style="color:var(--muted)">±0.11</span></td>
+                <td>0.912 <span style="color:var(--muted)">±0.10</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="margin-top:10px;font-size:12px;color:var(--muted)">Proxy coverage metrics &mdash; no ground-truth annotations used</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="slide-number">12 / 14</div>
+  </section>
+
+  <section class="slide" id="s13">
     <div class="artifact-proof">
       <div class="kicker">Artifact proof</div>
       <div class="artifact-grid">
@@ -312,10 +390,10 @@ progress.json
 manifest.json</code></div>
       </div>
     </div>
-    <div class="slide-number">12 / 13</div>
+    <div class="slide-number">13 / 14</div>
   </section>
 
-  <section class="slide tint center" id="s13">
+  <section class="slide tint center" id="s14">
     <div>
       <div class="kicker">Next work</div>
       <div class="future-grid">
@@ -324,7 +402,7 @@ manifest.json</code></div>
         <div class="future">Reuse for DPP Malta-Poland Call.</div>
       </div>
     </div>
-    <div class="slide-number">13 / 13</div>
+    <div class="slide-number">14 / 14</div>
   </section>
 
   <script>
