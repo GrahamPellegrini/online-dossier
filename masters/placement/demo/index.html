@@ -313,64 +313,40 @@ query: shoe</code></div>
 
   <section class="slide" id="s12">
     <div class="results-center">
-      <div class="kicker">Pipeline evaluation</div>
-      <h2 style="font-size:clamp(2.9rem,4.5vw,5rem);text-align:center;margin-inline:auto">Quantitative Results</h2>
-      <div class="results-grid">
-
-        <div>
-          <div class="table-label">Semantic benchmark &mdash; 64-window shared slice</div>
-          <table class="results-table">
-            <thead>
-              <tr><th>Model</th><th>SigLIP</th><th>OpenCLIP</th><th>s / win</th></tr>
-            </thead>
-            <tbody>
-              <tr class="win-row">
-                <td>Qwen3-VL-2B ★</td><td>0.365</td><td>0.409</td><td>1.43</td>
-              </tr>
-              <tr><td>Qwen3-VL-8B</td><td>0.431</td><td>0.473</td><td>2.44</td></tr>
-              <tr><td>Qwen3.5-4B</td><td>0.434</td><td>0.478</td><td>5.76</td></tr>
-              <tr><td>LLaVA-v1.6-7B</td><td>0.422</td><td>0.463</td><td>3.32</td></tr>
-              <tr><td>Idefics3-8B</td><td>0.405</td><td>0.450</td><td>4.19</td></tr>
-              <tr><td>SmolVLM2-2.2B</td><td>0.319</td><td>0.361</td><td>7.05</td></tr>
-            </tbody>
-          </table>
-          <div style="margin-top:10px;font-size:12px;color:var(--muted)">★ production choice &mdash; best quality-to-latency balance</div>
-        </div>
-
-        <div>
-          <div class="table-label">Grounding &amp; mask &mdash; 512 frozen windows</div>
-          <table class="results-table">
-            <thead>
-              <tr><th>Metric</th><th>&ge;0.25</th><th>&ge;0.35</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Window detection</td>
-                <td class="highlight-val">97.3%</td><td>91.6%</td>
-              </tr>
-              <tr>
-                <td>Frame detection</td>
-                <td class="highlight-val">95.7%</td><td>86.7%</td>
-              </tr>
-              <tr>
-                <td>Mean box score</td>
-                <td>0.547 <span style="color:var(--muted)">±0.14</span></td>
-                <td>0.562 <span style="color:var(--muted)">±0.14</span></td>
-              </tr>
-              <tr>
-                <td>Mask window rate</td>
-                <td class="highlight-val">97.3%</td><td>91.6%</td>
-              </tr>
-              <tr>
-                <td>SAM&nbsp;2 mask score</td>
-                <td>0.905 <span style="color:var(--muted)">±0.11</span></td>
-                <td>0.912 <span style="color:var(--muted)">±0.10</span></td>
-              </tr>
-            </tbody>
-          </table>
-          <div style="margin-top:10px;font-size:12px;color:var(--muted)">Proxy coverage metrics &mdash; no ground-truth annotations used</div>
-        </div>
-
+      <div class="kicker">Grounding &amp; mask coverage</div>
+      <h2 style="font-size:clamp(2.9rem,4.5vw,5rem);text-align:center;margin-inline:auto">Proxy Coverage Results</h2>
+      <div style="margin:40px auto 0;width:min(780px,100%)">
+        <table class="results-table" style="font-size:clamp(1.05rem,1.5vw,1.45rem)">
+          <thead>
+            <tr>
+              <th style="text-align:left;width:40%"></th>
+              <th colspan="2" style="text-align:center;font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-bottom:none;padding-bottom:2px">Detector confidence threshold</th>
+            </tr>
+            <tr>
+              <th style="text-align:left">Metric</th>
+              <th>&ge;&thinsp;0.25</th>
+              <th>&ge;&thinsp;0.35</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Window detection rate</td>
+              <td class="highlight-val">97.3%</td>
+              <td>91.6%</td>
+            </tr>
+            <tr>
+              <td>Frame detection rate</td>
+              <td class="highlight-val">95.7%</td>
+              <td>86.7%</td>
+            </tr>
+            <tr>
+              <td>Mask window rate</td>
+              <td class="highlight-val">97.3%</td>
+              <td>91.6%</td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="margin-top:14px;font-size:13px;color:var(--muted);text-align:center">512 frozen windows &middot; 63 tasks &middot; EgoDex train parts&nbsp;1&ndash;3 &middot; proxy coverage, no ground-truth annotations</div>
       </div>
     </div>
     <div class="slide-number">12 / 14</div>
