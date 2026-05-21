@@ -14,7 +14,7 @@
       --muted:#706c63;--line:rgba(23,21,17,.14);--red:#9f1730;
       --blue:#315979;--green:#1f604f;
     }
-    html{margin:0;scroll-behavior:smooth;background:var(--paper);color:var(--ink)}
+    html{margin:0;scroll-behavior:smooth;background:var(--paper);color:var(--ink);zoom:1.5}
     body{
       margin:0;min-height:100vh;min-height:100dvh;font-family:Inter,system-ui,sans-serif;overflow-x:hidden;
       background:
@@ -40,6 +40,7 @@
     h2{max-width:980px;font-size:clamp(3.1rem,5vw,5.45rem);line-height:.95}
     .title-only{max-width:1180px;margin-left:3vw}
     .meta-lines{margin-top:44px;display:grid;gap:10px;max-width:700px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:16px;line-height:1.5}
+    .red .meta-lines{color:rgba(255,250,242,.88);border-top-color:rgba(255,250,242,.25)}
 
     /* Image-centred slides */
     .img-slide-wrap{width:min(1100px,100%);margin-inline:auto;display:grid;gap:clamp(16px,2.5vh,28px)}
@@ -268,6 +269,7 @@
       <div>
         <div class="kicker">Q&A</div>
         <h2>Questions?</h2>
+        <p style="margin-top:32px;font-size:clamp(1.1rem,1.6vw,1.5rem);color:rgba(255,250,242,.62);letter-spacing:.04em">Thank you for listening</p>
       </div>
     </div>
     <div class="slide-number">07 / 07</div>
