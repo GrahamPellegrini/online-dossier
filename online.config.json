@@ -44,6 +44,13 @@
           "preview": "previews/masters_proposal.png"
         },
         {
+          "title": "thesis_draft",
+          "kind": "PDF",
+          "href": "documents/thesis_draft.pdf",
+          "source": "../Masters/Thesis/review.pdf",
+          "preview": "previews/thesis_draft.png"
+        },
+        {
           "title": "umre_2026",
           "kind": "HTML",
           "href": "umre_2026/",
@@ -132,6 +139,10 @@
     {
       "source": "../UMRE_2026/umre-2026-action-judges.html",
       "destination": "masters/umre_2026/index.html"
+    },
+    {
+      "source": "../Masters/Thesis/review.pdf",
+      "destination": "masters/documents/thesis_draft.pdf"
     },
     {
       "source": "../Masters/Proposal/build/ARI5902Assignment.pdf",
