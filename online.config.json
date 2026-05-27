@@ -141,6 +141,18 @@
       "destination": "masters/umre_2026/index.html"
     },
     {
+      "source": "../UMRE_2026/assets/policy_correct.png",
+      "destination": "masters/umre_2026/assets/policy_correct.png"
+    },
+    {
+      "source": "../UMRE_2026/assets/policy_incorrect.png",
+      "destination": "masters/umre_2026/assets/policy_incorrect.png"
+    },
+    {
+      "source": "../UMRE_2026/assets/world_model.png",
+      "destination": "masters/umre_2026/assets/world_model.png"
+    },
+    {
       "source": "../Masters/Thesis/review.pdf",
       "destination": "masters/documents/thesis_draft.pdf"
     },
