@@ -56,6 +56,17 @@
           "href": "documents/thesis_draft_lite.pdf"
         },
         {
+          "title": "thesis_draft_diff",
+          "kind": "PDF, highlighted vs. pre-feedback draft",
+          "href": "documents/thesis_draft_diff.pdf",
+          "source": "../Masters/Thesis/review_diff.pdf"
+        },
+        {
+          "title": "thesis_draft_diff_lite",
+          "kind": "PDF, compressed for slow connections",
+          "href": "documents/thesis_draft_diff_lite.pdf"
+        },
+        {
           "title": "umre_2026",
           "kind": "HTML",
           "href": "umre_2026/",
@@ -164,6 +175,14 @@
     {
       "source": "../Masters/Thesis/review_lite.pdf",
       "destination": "masters/documents/thesis_draft_lite.pdf"
+    },
+    {
+      "source": "../Masters/Thesis/review_diff.pdf",
+      "destination": "masters/documents/thesis_draft_diff.pdf"
+    },
+    {
+      "source": "../Masters/Thesis/review_diff_lite.pdf",
+      "destination": "masters/documents/thesis_draft_diff_lite.pdf"
     },
     {
       "source": "../Masters/Proposal/build/ARI5902Assignment.pdf",
