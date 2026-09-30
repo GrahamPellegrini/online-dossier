@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DGP0959 Visual Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #F8F1E7;
+      --surface: #FFFDF8;
+      --panel: #F1E7DC;
+      --border: #DCCFC2;
+      --red: #BA0C2F;
+      --red-deep: #8F0A24;
+      --red-soft: #F6DDE2;
+      --text: #1E1A17;
+      --text-secondary: #5F5750;
+      --text-muted: #8A7F75;
+      --success: #3D6B57;
+      --caution: #9A5B00;
+      --font: "Plus Jakarta Sans", Inter, Arial, sans-serif;
+      --mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      margin: 0;
+      background: #221f1c;
+      color: var(--text);
+      font-family: var(--font);
+    }
+
+    body {
+      margin: 0;
+      padding: 32px 0;
+    }
+
+    .deck {
+      display: grid;
+      gap: 32px;
+      justify-content: center;
+    }
+
+    .slide {
+      position: relative;
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background: var(--paper);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      inset: 42px 72px auto 72px;
+      height: 1px;
+      background: rgba(220, 207, 194, 0.72);
+    }
+
+    .slide.title::before { display: none; }
+
+    .header {
+      position: absolute;
+      inset: 0 72px auto 72px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .header span:last-child {
+      color: var(--red-deep);
+    }
+
+    .footer {
+      position: absolute;
+      inset: auto 72px 0 72px;
+      height: 34px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .footer span:nth-child(2) { text-align: center; }
+    .footer span:last-child { text-align: right; }
+
+    .content {
+      position: absolute;
+      inset: 92px 72px 78px 72px;
+    }
+
+    .title .content {
+      inset: 0;
+      display: grid;
+      grid-template-columns: 1fr 330px;
+      align-items: stretch;
+    }
+
+    .title-main {
+      padding: 84px 88px 74px 88px;
+      display: grid;
+      align-content: center;
+    }
+
+    .course-kicker {
+      color: var(--red-deep);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    h1, h2, h3, p { margin: 0; }
+
+    h1 {
+      max-width: 780px;
+      font-size: 72px;
+      line-height: 1.04;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      margin-top: 28px;
+      max-width: 680px;
+      color: var(--text-secondary);
+      font-size: 30px;
+      line-height: 1.28;
+      font-weight: 500;
+    }
+
+    .title-meta {
+      margin-top: 72px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      display: grid;
+      gap: 8px;
+      color: var(--text-secondary);
+      font-size: 18px;
+      line-height: 1.35;
+      font-weight: 500;
+    }
+
+    .title-accent {
+      background:
+        linear-gradient(145deg, rgba(186, 12, 47, 0.08), rgba(186, 12, 47, 0) 42%),
+        var(--red);
+      color: #fffaf7;
+      padding: 64px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .um-text {
+      font-size: 17px;
+      line-height: 1.22;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+    }
+
+    .session-badge {
+      align-self: flex-start;
+      border: 1px solid rgba(255, 250, 247, 0.56);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 40px;
+      line-height: 1.18;
+      font-weight: 760;
+      letter-spacing: 0;
+      color: var(--text);
+    }
+
+    .lead {
+      margin-top: 24px;
+      max-width: 900px;
+      color: var(--text-secondary);
+      font-size: 27px;
+      line-height: 1.42;
+      font-weight: 500;
+    }
+
+    .cols {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card, .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .card strong {
+      display: block;
+      color: var(--red-deep);
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .card p, .panel p {
+      color: var(--text-secondary);
+      font-size: 24px;
+      line-height: 1.42;
+      font-weight: 500;
+    }
+
+    .two-col {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      color: var(--red-deep);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .example-text {
+      color: var(--text);
+      font-size: 26px;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
+    .example-text .muted {
+      color: var(--text-secondary);
+    }
+
+    .prompt-box {
+      margin-top: 30px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--red);
+      border-radius: 16px;
+      padding: 30px 34px;
+      font-family: var(--mono);
+      color: var(--text);
+      font-size: 21px;
+      line-height: 1.45;
+      white-space: pre-wrap;
+    }
+
+    .prompt-caption {
+      margin-top: 18px;
+      color: var(--text-secondary);
+      font-size: 23px;
+      line-height: 1.35;
+      font-weight: 500;
+    }
+
+    .activity {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 36px;
+      align-items: stretch;
+      height: 100%;
+    }
+
+    .activity-marker {
+      background: var(--red-soft);
+      border-left: 8px solid var(--red);
+      border-radius: 18px;
+      padding: 32px;
+      display: grid;
+      align-content: center;
+      color: var(--red-deep);
+      font-size: 30px;
+      line-height: 1.18;
+      font-weight: 800;
+    }
+
+    .activity-body h2 { margin-bottom: 28px; }
+
+    .steps {
+      display: grid;
+      gap: 16px;
+      counter-reset: step;
+    }
+
+    .step {
+      position: relative;
+      padding-left: 56px;
+      min-height: 42px;
+      color: var(--text);
+      font-size: 25px;
+      line-height: 1.38;
+      font-weight: 500;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: var(--red);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .warning-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .warning-panel {
+      background: var(--red-soft);
+      border: 1px solid rgba(186, 12, 47, 0.25);
+      border-left: 8px solid var(--red);
+      border-radius: 18px;
+      padding: 36px;
+    }
+
+    .warning-panel h2 {
+      color: var(--red-deep);
+      margin-bottom: 24px;
+    }
+
+    .warning-panel p {
+      color: var(--text);
+      font-size: 27px;
+      line-height: 1.4;
+      font-weight: 560;
+    }
+
+    .checklist {
+      display: grid;
+      gap: 18px;
+    }
+
+    .check {
+      padding: 20px 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      color: var(--text);
+      font-size: 23px;
+      line-height: 1.34;
+      font-weight: 600;
+    }
+
+    .compare-grid {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .compare-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      min-height: 300px;
+    }
+
+    .compare-card.recommended {
+      border-top: 6px solid var(--red);
+    }
+
+    .compare-card.neutral {
+      border-top: 6px solid var(--border);
+    }
+
+    .compare-card h3 {
+      font-size: 25px;
+      line-height: 1.2;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 28px;
+      color: var(--text-secondary);
+      font-size: 23px;
+      line-height: 1.34;
+      font-weight: 500;
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.58em;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--red);
+    }
+
+    .takeaway-list {
+      margin-top: 38px;
+      display: grid;
+      gap: 20px;
+    }
+
+    .takeaway {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 20px;
+      align-items: start;
+      padding: 22px 26px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--surface);
+    }
+
+    .takeaway-num {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--red);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .takeaway p {
+      color: var(--text);
+      font-size: 25px;
+      line-height: 1.35;
+      font-weight: 560;
+    }
+
+    .mini-diagram {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .node {
+      min-height: 120px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 24px;
+      display: grid;
+      align-content: center;
+      text-align: center;
+      color: var(--text);
+      font-size: 24px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .arrow {
+      color: var(--red);
+      font-size: 38px;
+      font-weight: 800;
+    }
+
+    @media (max-width: 1320px) {
+      body { padding: 0; }
+      .deck { gap: 0; }
+      .slide {
+        width: 100vw;
+        height: 56.25vw;
+        max-height: 100vh;
+        box-shadow: none;
+        transform-origin: top left;
+      }
+    }
+
+    @media print {
+      @page {
+        size: 1280px 720px;
+        margin: 0;
+      }
+
+      html, body {
+        width: 1280px;
+        margin: 0;
+        padding: 0;
+        background: var(--paper);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .deck {
+        display: block;
+      }
+
+      .slide {
+        width: 1280px;
+        height: 720px;
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+        break-after: page;
+      }
+
+      .slide:last-child {
+        page-break-after: auto;
+        break-after: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck">
+    <section class="slide title">
+      <div class="content">
+        <div class="title-main">
+          <div class="course-kicker">DGP0959 | AI Tools for Work and Study</div>
+          <h1>Your AI Toolkit</h1>
+          <p class="subtitle">A practical beginner course for using AI clearly, critically, and usefully.</p>
+          <div class="title-meta">
+            <span>Session&nbsp;01&nbsp;/&nbsp;08</span>
+            <span>Graham Pellegrini&nbsp;|&nbsp;DegreePlus Programme</span>
+            <span>University of Malta&nbsp;|&nbsp;14 October 2026</span>
+          </div>
+        </div>
+        <aside class="title-accent">
+          <div class="um-text">L-Universita<br>ta' Malta</div>
+          <div class="session-badge">Prototype</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="header"><span>DGP0959 | Session 01: AI Toolkit</span><span>Tool Choice</span></div>
+      <div class="content">
+        <h2>AI tools are useful when the task is clear</h2>
+        <p class="lead">The first decision is not the prompt. It is whether the task needs exploration, drafting, comparison, planning, or verification.</p>
+        <div class="cols">
+          <div class="card">
+            <strong>Explore</strong>
+            <p>Use AI to understand a topic, list options, or generate questions before research.</p>
+          </div>
+          <div class="card">
+            <strong>Draft</strong>
+            <p>Use AI to turn notes into a first version that you can check and improve.</p>
+          </div>
+          <div class="card">
+            <strong>Verify</strong>
+            <p>Use reliable sources and human judgement before trusting important claims.</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>02 / 08</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="header"><span>DGP0959 | Session 02: Better Results</span><span>Worked Example</span></div>
+      <div class="content">
+        <h2>A better prompt gives the AI a job to do</h2>
+        <div class="two-col">
+          <div class="panel">
+            <div class="label">Before</div>
+            <p class="example-text">"Write me an email about missing class."</p>
+          </div>
+          <div class="panel">
+            <div class="label">After</div>
+            <p class="example-text">"Draft a polite email to my lecturer explaining that I missed today's session due to illness. Ask what I should review before next week. Keep it concise and professional."</p>
+          </div>
+        </div>
+        <div class="mini-diagram">
+          <div class="node">Purpose</div><div class="arrow">+</div>
+          <div class="node">Audience</div><div class="arrow">+</div>
+          <div class="node">Format</div>
+        </div>
+      </div>
+      <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>03 / 08</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="header"><span>DGP0959 | Session 03: Documents</span><span>Reusable Prompt</span></div>
+      <div class="content">
+        <h2>Prompt pattern: summarise without losing decisions</h2>
+        <div class="prompt-box">Summarise this document for a student who needs to act on it.
+
+Return:
+1. the main point;
+2. any dates or deadlines;
+3. decisions already made;
+4. actions I need to take;
+5. claims I should verify.</div>
+        <p class="prompt-caption">Prompt slides should remain readable in the PDF, so long prompts are split into clear numbered lines.</p>
+      </div>
+      <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>04 / 08</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="header"><span>DGP0959 | Session 05: Planning</span><span>Activity</span></div>
+      <div class="content">
+        <div class="activity">
+          <div class="activity-marker">Hands-on<br>activity</div>
+          <div class="activity-body">
+            <h2>Turn a messy goal into an action plan</h2>
+            <div class="steps">
+              <div class="step">Choose one real assignment, project, or student task.</div>
+              <div class="step">Ask AI to break it into milestones, actions, and risks.</div>
+              <div class="step">Revise the plan so every action has a clear next step.</div>
+              <div class="step">Mark which parts require human judgement or verification.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>05 / 08</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="header"><span>DGP0959 | Session 01: AI Toolkit</span><span>Privacy</span></div>
+      <div class="content warning-layout">
+        <div class="warning-panel">
+          <h2>Check before pasting</h2>
+          <p>Do not paste private, sensitive, client, patient, student, or unpublished university information into an AI tool unless you know it is allowed.</p>
+        </div>
+        <div class="checklist">
+          <div class="check">Remove names, IDs, and contact details.</div>
+          <div class="check">Use fictional examples when possible.</div>
+          <div class="check">Ask for structure, not for decisions you must own.</div>
+          <div class="check">When in doubt, stop and check policy.</div>
+        </div>
+      </div>
+      <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>06 / 08</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="header"><span>DGP0959 | Session 02: Better Results</span><span>Comparison</span></div>
+      <div class="content">
+        <h2>Compare outputs before accepting one</h2>
+        <div class="compare-grid">
+          <div class="compare-card neutral">
+            <h3>Accept first answer</h3>
+            <ul>
+              <li>May miss your audience.</li>
+              <li>May hide weak assumptions.</li>
+              <li>Often sounds generic.</li>
+              <li>Harder to trust later.</li>
+            </ul>
+          </div>
+          <div class="compare-card recommended">
+            <h3>Ask for alternatives</h3>
+            <ul>
+              <li>Shows different structures.</li>
+              <li>Makes trade-offs visible.</li>
+              <li>Lets you combine the best parts.</li>
+              <li>Keeps you in control.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>07 / 08</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="header"><span>DGP0959 | Session 08: Workflow</span><span>Recap</span></div>
+      <div class="content">
+        <h2>What to take away</h2>
+        <div class="takeaway-list">
+          <div class="takeaway">
+            <div class="takeaway-num">1</div>
+            <p>Choose the tool by task: explore, draft, compare, plan, present, or verify.</p>
+          </div>
+          <div class="takeaway">
+            <div class="takeaway-num">2</div>
+            <p>Good prompts give purpose, context, audience, constraints, and format.</p>
+          </div>
+          <div class="takeaway">
+            <div class="takeaway-num">3</div>
+            <p>The final judgement stays with you, especially for private or important work.</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>08 / 08</span></div>
+    </section>
+  </main>
+</body>
+</html>

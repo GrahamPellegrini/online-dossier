@@ -11,7 +11,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "online.config.json"
-GENERATED_DIRS = ("demo", "documents", "masters", "previews")
+GENERATED_DIRS = ("demo", "documents", "masters", "previews", "DGP0959")
 ASSET_VERSION = "20260508-4"
 
 

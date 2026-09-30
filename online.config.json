@@ -16,8 +16,108 @@
           "kind": "Folder",
           "href": "masters/",
           "prefetch": true
+        },
+        {
+          "title": "DGP0959",
+          "kind": "Folder",
+          "href": "DGP0959/",
+          "prefetch": true
         }
       ]
+    },
+    {
+      "path": "DGP0959/index.html",
+      "title": "DGP0959",
+      "breadcrumb": [
+        {
+          "label": "Directory list",
+          "href": "../"
+        }
+      ],
+      "up": "../",
+      "entries": [
+        {
+          "title": "Slides",
+          "kind": "Folder",
+          "href": "slides/",
+          "prefetch": true
+        },
+        {
+          "title": "PDF / Downloads",
+          "kind": "Folder",
+          "href": "pdf/",
+          "prefetch": true
+        },
+        {
+          "title": "Resources",
+          "kind": "Folder",
+          "href": "resources/",
+          "prefetch": true
+        }
+      ]
+    },
+    {
+      "path": "DGP0959/slides/index.html",
+      "title": "Slides",
+      "breadcrumb": [
+        {
+          "label": "Directory list",
+          "href": "../../"
+        },
+        {
+          "label": "DGP0959",
+          "href": "../"
+        }
+      ],
+      "up": "../",
+      "entries": [
+        {
+          "title": "visual_prototype",
+          "kind": "HTML",
+          "href": "visual_prototype.html",
+          "source": "../DGP0959/prototypes/lecture-design-system/dgp0959-visual-prototype.html",
+          "prefetch": true
+        }
+      ]
+    },
+    {
+      "path": "DGP0959/pdf/index.html",
+      "title": "PDF",
+      "breadcrumb": [
+        {
+          "label": "Directory list",
+          "href": "../../"
+        },
+        {
+          "label": "DGP0959",
+          "href": "../"
+        }
+      ],
+      "up": "../",
+      "entries": [
+        {
+          "title": "visual_prototype_pdf",
+          "kind": "PDF",
+          "href": "visual_prototype.pdf",
+          "source": "../DGP0959/prototypes/lecture-design-system/dgp0959-visual-prototype.pdf"
+        }
+      ]
+    },
+    {
+      "path": "DGP0959/resources/index.html",
+      "title": "Resources",
+      "breadcrumb": [
+        {
+          "label": "Directory list",
+          "href": "../../"
+        },
+        {
+          "label": "DGP0959",
+          "href": "../"
+        }
+      ],
+      "up": "../",
+      "entries": []
     },
     {
       "path": "masters/index.html",
@@ -177,6 +277,14 @@
     {
       "source": "../Masters/Placement/GrahamPellegrini-Placement-1Page-Report.pdf",
       "destination": "masters/placement/documents/placement-one-page-report.pdf"
+    },
+    {
+      "source": "../DGP0959/prototypes/lecture-design-system/dgp0959-visual-prototype.html",
+      "destination": "DGP0959/slides/visual_prototype.html"
+    },
+    {
+      "source": "../DGP0959/prototypes/lecture-design-system/dgp0959-visual-prototype.pdf",
+      "destination": "DGP0959/pdf/visual_prototype.pdf"
     }
   ]
 }
