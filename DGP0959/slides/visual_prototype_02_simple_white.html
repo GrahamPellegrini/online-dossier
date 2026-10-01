@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DGP0959 Visual Prototype 02</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #BA0C2F;
+      --red-deep: #8F0A24;
+      --ink: #1D1D1F;
+      --muted: #666A70;
+      --quiet: #8B9098;
+      --line: #D9DDE3;
+      --soft: #F6F7F9;
+      --soft-red: #F8E7EB;
+      --font: "Plus Jakarta Sans", Inter, Arial, sans-serif;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      --header-h: 38px;
+      --footer-h: 26px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      margin: 0;
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+      background: #fff;
+      color: var(--ink);
+      font-family: var(--font);
+    }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      background: #fff;
+      overflow-x: hidden;
+    }
+
+    .progress {
+      position: fixed;
+      inset: 0 0 auto 0;
+      height: 4px;
+      background: #EDEFF2;
+      z-index: 20;
+    }
+
+    .progress span {
+      display: block;
+      width: 0;
+      height: 100%;
+      background: var(--red);
+      transition: width 0.08s linear;
+    }
+
+    .rail {
+      position: fixed;
+      z-index: 20;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: grid;
+      gap: 10px;
+    }
+
+    .rail a {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #B9BEC7;
+      opacity: 0.62;
+      transform: scale(1);
+      transition: background 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
+    }
+
+    .rail a.active {
+      background: var(--red);
+      opacity: 1;
+      transform: scale(1.6);
+    }
+
+    .slide {
+      min-height: 100svh;
+      scroll-snap-align: start;
+      position: relative;
+      display: grid;
+      grid-template-rows: var(--header-h) 1fr var(--footer-h);
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .slide.title {
+      grid-template-rows: 1fr;
+    }
+
+    .header,
+    .footer {
+      width: min(1180px, calc(100vw - 96px));
+      margin-inline: auto;
+      display: grid;
+      align-items: center;
+      color: var(--quiet);
+      font-size: clamp(0.68rem, 1vw, 0.78rem);
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .header {
+      grid-template-columns: minmax(0, 1fr) auto;
+      border-bottom: 1px solid var(--line);
+      padding-top: 4px;
+    }
+
+    .header .topic {
+      color: var(--red-deep);
+      white-space: nowrap;
+    }
+
+    .footer {
+      grid-template-columns: 1fr auto 1fr;
+      gap: 16px;
+      border-top: 1px solid var(--line);
+      font-size: clamp(0.62rem, 0.9vw, 0.7rem);
+      letter-spacing: 0.02em;
+      text-transform: none;
+      font-weight: 600;
+    }
+
+    .footer span:nth-child(2) { text-align: center; }
+    .footer span:last-child { text-align: right; }
+
+    .content {
+      width: min(1120px, calc(100vw - 128px));
+      margin-inline: auto;
+      padding: clamp(34px, 6vh, 64px) 0;
+      display: grid;
+      align-content: center;
+    }
+
+    .title-wrap {
+      min-height: 100svh;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 30vw);
+    }
+
+    .title-main {
+      display: grid;
+      align-content: center;
+      padding: clamp(48px, 8vw, 92px);
+    }
+
+    .title-logo-row {
+      margin-bottom: clamp(48px, 9vh, 92px);
+    }
+
+    .title-logo-row img {
+      width: clamp(190px, 19vw, 270px);
+      height: auto;
+      display: block;
+    }
+
+    .kicker {
+      margin-bottom: 18px;
+      color: var(--red-deep);
+      font-size: clamp(0.8rem, 1.2vw, 1rem);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin: 0; }
+
+    h1 {
+      max-width: 860px;
+      color: var(--ink);
+      font-size: clamp(3.5rem, 7vw, 6.4rem);
+      line-height: 0.98;
+      font-weight: 800;
+      letter-spacing: -0.015em;
+    }
+
+    .subtitle {
+      margin-top: 28px;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: clamp(1.35rem, 2.1vw, 2rem);
+      line-height: 1.32;
+      font-weight: 500;
+    }
+
+    .title-meta {
+      margin-top: 48px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      gap: 7px;
+      color: var(--muted);
+      font-size: clamp(0.95rem, 1.25vw, 1.1rem);
+      line-height: 1.4;
+    }
+
+    .title-accent {
+      background: var(--red);
+      display: grid;
+      align-content: end;
+      justify-items: start;
+      padding: clamp(36px, 5vw, 64px);
+    }
+
+    .title-accent .badge {
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.72);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      max-width: 960px;
+      font-size: clamp(2rem, 3.6vw, 3.35rem);
+      line-height: 1.12;
+      font-weight: 760;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+
+    .lead {
+      margin-top: 22px;
+      max-width: 820px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 1.65vw, 1.42rem);
+      line-height: 1.48;
+      font-weight: 500;
+    }
+
+    .three {
+      margin-top: clamp(28px, 5vh, 48px);
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .tile,
+    .panel,
+    .prompt,
+    .callout,
+    .takeaway {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+
+    .tile {
+      padding: 24px;
+      min-height: 150px;
+    }
+
+    .tile strong,
+    .label {
+      display: block;
+      color: var(--red-deep);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tile p,
+    .panel p,
+    .callout p {
+      color: var(--ink);
+      font-size: clamp(1rem, 1.45vw, 1.22rem);
+      line-height: 1.42;
+      font-weight: 500;
+    }
+
+    .two {
+      margin-top: clamp(28px, 5vh, 48px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .panel {
+      padding: 28px;
+    }
+
+    .panel.good {
+      border-top: 5px solid var(--red);
+    }
+
+    .prompt {
+      margin-top: clamp(26px, 5vh, 44px);
+      padding: 28px 32px;
+      border-left: 5px solid var(--red);
+      background: #fff;
+      font-family: var(--mono);
+      font-size: clamp(0.95rem, 1.35vw, 1.15rem);
+      line-height: 1.55;
+      white-space: pre-wrap;
+      color: var(--ink);
+    }
+
+    .activity-grid {
+      margin-top: clamp(28px, 5vh, 48px);
+      display: grid;
+      grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .activity-label {
+      border-left: 7px solid var(--red);
+      background: var(--soft-red);
+      padding: 24px;
+      display: grid;
+      align-content: center;
+      color: var(--red-deep);
+      font-size: clamp(1.3rem, 2.4vw, 2.1rem);
+      line-height: 1.15;
+      font-weight: 800;
+      border-radius: 6px;
+    }
+
+    .steps {
+      display: grid;
+      gap: 13px;
+      counter-reset: step;
+    }
+
+    .step {
+      position: relative;
+      padding: 14px 16px 14px 52px;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 6px;
+      color: var(--ink);
+      font-size: clamp(1rem, 1.45vw, 1.18rem);
+      line-height: 1.35;
+      font-weight: 560;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--red-deep);
+      font-weight: 800;
+    }
+
+    .warning {
+      margin-top: clamp(28px, 5vh, 48px);
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .callout {
+      background: var(--soft-red);
+      border-left: 7px solid var(--red);
+      padding: 30px;
+    }
+
+    .checks {
+      display: grid;
+      gap: 12px;
+    }
+
+    .check {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 16px 18px;
+      background: #fff;
+      color: var(--ink);
+      font-size: clamp(0.98rem, 1.32vw, 1.12rem);
+      line-height: 1.35;
+      font-weight: 650;
+    }
+
+    .takeaways {
+      margin-top: clamp(28px, 5vh, 48px);
+      display: grid;
+      gap: 16px;
+      max-width: 920px;
+    }
+
+    .takeaway {
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 16px;
+      align-items: start;
+      background: #fff;
+      padding: 18px 22px;
+    }
+
+    .takeaway span {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--red);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .takeaway p {
+      color: var(--ink);
+      font-size: clamp(1rem, 1.5vw, 1.25rem);
+      line-height: 1.36;
+      font-weight: 560;
+    }
+
+    @media (max-width: 850px) {
+      html { scroll-snap-type: none; }
+      .rail { display: none; }
+      .slide {
+        min-height: 100svh;
+        grid-template-rows: auto 1fr auto;
+      }
+      .header,
+      .footer,
+      .content {
+        width: min(100% - 36px, 720px);
+      }
+      .header {
+        min-height: 42px;
+        grid-template-columns: 1fr;
+        gap: 3px;
+        align-content: center;
+      }
+      .header .topic { white-space: normal; }
+      .footer {
+        min-height: 34px;
+        grid-template-columns: 1fr auto;
+      }
+      .footer span:nth-child(2) { display: none; }
+      .content {
+        padding: 36px 0;
+        align-content: start;
+      }
+      .title-wrap {
+        grid-template-columns: 1fr;
+      }
+      .title-main {
+        padding: 38px 24px 44px;
+      }
+      .title-accent {
+        min-height: 120px;
+        align-content: center;
+        padding: 24px;
+      }
+      .title-logo-row {
+        margin-bottom: 42px;
+      }
+      .three,
+      .two,
+      .activity-grid,
+      .warning {
+        grid-template-columns: 1fr;
+      }
+      .tile,
+      .panel,
+      .callout {
+        padding: 20px;
+      }
+    }
+
+    @media print {
+      @page { size: 16in 9in; margin: 0; }
+      html, body {
+        width: 16in;
+        background: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .progress,
+      .rail { display: none; }
+      .slide {
+        width: 16in;
+        height: 9in;
+        min-height: 0;
+        page-break-after: always;
+        break-after: page;
+      }
+      .slide:last-of-type {
+        page-break-after: auto;
+        break-after: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress"><span id="progress-bar"></span></div>
+  <nav class="rail" aria-label="Slide navigation">
+    <a href="#s0"></a><a href="#s1"></a><a href="#s2"></a><a href="#s3"></a>
+    <a href="#s4"></a><a href="#s5"></a><a href="#s6"></a><a href="#s7"></a>
+  </nav>
+
+  <section class="slide title" id="s0">
+    <div class="title-wrap">
+      <div class="title-main">
+        <div class="title-logo-row">
+          <img src="assets/UMLOGO_redRGB.png" alt="University of Malta logo">
+        </div>
+        <div class="kicker">DGP0959 | AI Tools for Work and Study</div>
+        <h1>Your AI Toolkit</h1>
+        <p class="subtitle">A practical beginner course for using AI clearly, critically, and usefully.</p>
+        <div class="title-meta">
+          <span>Session 01 / 08</span>
+          <span>Graham Pellegrini | DegreePlus Programme</span>
+          <span>University of Malta | 14 October 2026</span>
+        </div>
+      </div>
+      <aside class="title-accent">
+        <span class="badge">Visual prototype 02</span>
+      </aside>
+    </div>
+  </section>
+
+  <section class="slide" id="s1">
+    <div class="header"><span>DGP0959 | Session 01: AI Toolkit</span><span class="topic">Tool choice</span></div>
+    <div class="content">
+      <h2>Start by naming the job</h2>
+      <p class="lead">A good AI workflow begins with a task type, not with a tool name.</p>
+      <div class="three">
+        <div class="tile"><strong>Explore</strong><p>Use AI to map a topic and find useful questions.</p></div>
+        <div class="tile"><strong>Draft</strong><p>Turn rough notes into a first version you can improve.</p></div>
+        <div class="tile"><strong>Verify</strong><p>Check important claims against trusted sources.</p></div>
+      </div>
+    </div>
+    <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>02 / 08</span></div>
+  </section>
+
+  <section class="slide" id="s2">
+    <div class="header"><span>DGP0959 | Session 02: Better Results</span><span class="topic">Worked example</span></div>
+    <div class="content">
+      <h2>A stronger prompt gives context</h2>
+      <div class="two">
+        <div class="panel">
+          <span class="label">Weak</span>
+          <p>"Write me an email about missing class."</p>
+        </div>
+        <div class="panel good">
+          <span class="label">Better</span>
+          <p>"Draft a polite email to my lecturer explaining that I missed today's session due to illness. Ask what I should review before next week."</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>03 / 08</span></div>
+  </section>
+
+  <section class="slide" id="s3">
+    <div class="header"><span>DGP0959 | Session 03: Documents</span><span class="topic">Reusable prompt</span></div>
+    <div class="content">
+      <h2>Prompt pattern: extract decisions</h2>
+      <div class="prompt">Summarise this document for a student who needs to act on it.
+
+Return:
+1. main point;
+2. dates or deadlines;
+3. decisions already made;
+4. actions I need to take;
+5. claims I should verify.</div>
+    </div>
+    <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>04 / 08</span></div>
+  </section>
+
+  <section class="slide" id="s4">
+    <div class="header"><span>DGP0959 | Session 05: Planning</span><span class="topic">Activity</span></div>
+    <div class="content">
+      <h2>Turn a messy goal into an action plan</h2>
+      <div class="activity-grid">
+        <div class="activity-label">Hands-on activity</div>
+        <div class="steps">
+          <div class="step">Choose one real assignment, project, or student task.</div>
+          <div class="step">Ask AI to break it into milestones, actions, and risks.</div>
+          <div class="step">Revise the result so every action has a clear next step.</div>
+          <div class="step">Mark which parts require human judgement.</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>05 / 08</span></div>
+  </section>
+
+  <section class="slide" id="s5">
+    <div class="header"><span>DGP0959 | Session 01: AI Toolkit</span><span class="topic">Privacy</span></div>
+    <div class="content">
+      <h2>Check before pasting</h2>
+      <div class="warning">
+        <div class="callout"><p>Do not paste private, sensitive, client, patient, student, or unpublished university information into an AI tool unless you know it is allowed.</p></div>
+        <div class="checks">
+          <div class="check">Remove names, IDs, and contact details.</div>
+          <div class="check">Use fictional examples when possible.</div>
+          <div class="check">When in doubt, stop and check policy.</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>06 / 08</span></div>
+  </section>
+
+  <section class="slide" id="s6">
+    <div class="header"><span>DGP0959 | Session 02: Better Results</span><span class="topic">Comparison</span></div>
+    <div class="content">
+      <h2>Do not accept the first answer</h2>
+      <div class="two">
+        <div class="panel">
+          <span class="label">First answer</span>
+          <p>Often sounds polished, but may hide weak assumptions or miss your audience.</p>
+        </div>
+        <div class="panel good">
+          <span class="label">Compared answer</span>
+          <p>Ask for alternatives, critique, and trade-offs. Then combine the best parts yourself.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>07 / 08</span></div>
+  </section>
+
+  <section class="slide" id="s7">
+    <div class="header"><span>DGP0959 | Session 08: Workflow</span><span class="topic">Recap</span></div>
+    <div class="content">
+      <h2>What to take away</h2>
+      <div class="takeaways">
+        <div class="takeaway"><span>1</span><p>Choose the tool by task: explore, draft, compare, plan, present, or verify.</p></div>
+        <div class="takeaway"><span>2</span><p>Good prompts include purpose, context, audience, constraints, and format.</p></div>
+        <div class="takeaway"><span>3</span><p>The final judgement stays with you, especially for private or important work.</p></div>
+      </div>
+    </div>
+    <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>08 / 08</span></div>
+  </section>
+
+  <script>
+    const slides = [...document.querySelectorAll(".slide")];
+    const dots = [...document.querySelectorAll(".rail a")];
+    const progress = document.getElementById("progress-bar");
+
+    function updateProgress() {
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+      progress.style.width = `${Math.min(100, Math.max(0, ratio * 100))}%`;
+
+      let active = 0;
+      let best = Infinity;
+      slides.forEach((slide, index) => {
+        const distance = Math.abs(slide.getBoundingClientRect().top);
+        if (distance < best) {
+          best = distance;
+          active = index;
+        }
+      });
+      dots.forEach((dot, index) => dot.classList.toggle("active", index === active));
+    }
+
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", updateProgress);
+    updateProgress();
+  </script>
+</body>
+</html>

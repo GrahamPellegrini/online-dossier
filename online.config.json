@@ -77,6 +77,20 @@
           "href": "visual_prototype.html",
           "source": "../DGP0959/prototypes/lecture-design-system/dgp0959-visual-prototype.html",
           "prefetch": true
+        },
+        {
+          "title": "visual_prototype_02_simple_white",
+          "kind": "HTML",
+          "href": "visual_prototype_02_simple_white.html",
+          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-02-simple-white.html",
+          "prefetch": true
+        },
+        {
+          "title": "visual_prototype_03_workbench",
+          "kind": "HTML",
+          "href": "visual_prototype_03_workbench.html",
+          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-03-workbench.html",
+          "prefetch": true
         }
       ]
     },
@@ -100,6 +114,18 @@
           "kind": "PDF",
           "href": "visual_prototype.pdf",
           "source": "../DGP0959/prototypes/lecture-design-system/dgp0959-visual-prototype.pdf"
+        },
+        {
+          "title": "visual_prototype_02_simple_white_pdf",
+          "kind": "PDF",
+          "href": "visual_prototype_02_simple_white.pdf",
+          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-02-simple-white.pdf"
+        },
+        {
+          "title": "visual_prototype_03_workbench_pdf",
+          "kind": "PDF",
+          "href": "visual_prototype_03_workbench.pdf",
+          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-03-workbench.pdf"
         }
       ]
     },
@@ -285,6 +311,30 @@
     {
       "source": "../DGP0959/prototypes/lecture-design-system/dgp0959-visual-prototype.pdf",
       "destination": "DGP0959/pdf/visual_prototype.pdf"
+    },
+    {
+      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-02-simple-white.html",
+      "destination": "DGP0959/slides/visual_prototype_02_simple_white.html"
+    },
+    {
+      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-02-simple-white.pdf",
+      "destination": "DGP0959/pdf/visual_prototype_02_simple_white.pdf"
+    },
+    {
+      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-03-workbench.html",
+      "destination": "DGP0959/slides/visual_prototype_03_workbench.html"
+    },
+    {
+      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-03-workbench.pdf",
+      "destination": "DGP0959/pdf/visual_prototype_03_workbench.pdf"
+    },
+    {
+      "source": "../DGP0959/prototypes/lecture-design-system-v2/assets/UMLOGO_redRGB.png",
+      "destination": "DGP0959/slides/assets/UMLOGO_redRGB.png"
+    },
+    {
+      "source": "../DGP0959/prototypes/lecture-design-system-v2/assets/UMLOGO_revWHITE.png",
+      "destination": "DGP0959/slides/assets/UMLOGO_revWHITE.png"
     }
   ]
 }
