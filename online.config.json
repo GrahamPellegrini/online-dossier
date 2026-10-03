@@ -91,6 +91,27 @@
           "href": "visual_prototype_03_workbench.html",
           "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-03-workbench.html",
           "prefetch": true
+        },
+        {
+          "title": "visual_prototype_04_slim_rail",
+          "kind": "HTML",
+          "href": "visual_prototype_04_slim_rail.html",
+          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-04-slim-rail.html",
+          "prefetch": true
+        },
+        {
+          "title": "visual_prototype_05_ribbon",
+          "kind": "HTML",
+          "href": "visual_prototype_05_ribbon.html",
+          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-05-ribbon.html",
+          "prefetch": true
+        },
+        {
+          "title": "visual_prototype_06_dark_lab",
+          "kind": "HTML",
+          "href": "visual_prototype_06_dark_lab.html",
+          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-06-dark-lab.html",
+          "prefetch": true
         }
       ]
     },
@@ -126,6 +147,24 @@
           "kind": "PDF",
           "href": "visual_prototype_03_workbench.pdf",
           "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-03-workbench.pdf"
+        },
+        {
+          "title": "visual_prototype_04_slim_rail_pdf",
+          "kind": "PDF",
+          "href": "visual_prototype_04_slim_rail.pdf",
+          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-04-slim-rail.pdf"
+        },
+        {
+          "title": "visual_prototype_05_ribbon_pdf",
+          "kind": "PDF",
+          "href": "visual_prototype_05_ribbon.pdf",
+          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-05-ribbon.pdf"
+        },
+        {
+          "title": "visual_prototype_06_dark_lab_pdf",
+          "kind": "PDF",
+          "href": "visual_prototype_06_dark_lab.pdf",
+          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-06-dark-lab.pdf"
         }
       ]
     },
@@ -327,6 +366,34 @@
     {
       "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-03-workbench.pdf",
       "destination": "DGP0959/pdf/visual_prototype_03_workbench.pdf"
+    },
+    {
+      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-04-slim-rail.html",
+      "destination": "DGP0959/slides/visual_prototype_04_slim_rail.html"
+    },
+    {
+      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-04-slim-rail.pdf",
+      "destination": "DGP0959/pdf/visual_prototype_04_slim_rail.pdf"
+    },
+    {
+      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-05-ribbon.html",
+      "destination": "DGP0959/slides/visual_prototype_05_ribbon.html"
+    },
+    {
+      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-05-ribbon.pdf",
+      "destination": "DGP0959/pdf/visual_prototype_05_ribbon.pdf"
+    },
+    {
+      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-06-dark-lab.html",
+      "destination": "DGP0959/slides/visual_prototype_06_dark_lab.html"
+    },
+    {
+      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-06-dark-lab.pdf",
+      "destination": "DGP0959/pdf/visual_prototype_06_dark_lab.pdf"
+    },
+    {
+      "source": "../DGP0959/prototypes/lecture-design-system-v2/prototype-controls.js",
+      "destination": "DGP0959/slides/prototype-controls.js"
     },
     {
       "source": "../DGP0959/prototypes/lecture-design-system-v2/assets/UMLOGO_redRGB.png",
