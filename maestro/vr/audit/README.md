@@ -1,7 +1,7 @@
 # M.AI.ESTRO VR audit dossier
 
 Start with [the HTML review](findings.html) or [the PDF](findings.pdf).
-The refined pipeline is embedded and explained in both. The PDF uses A4 text
+The pipeline diagram is embedded and explained in both. The PDF uses A4 text
 pages plus an A3 landscape page for the complete diagram; text is selectable.
 
 ## Source and version
