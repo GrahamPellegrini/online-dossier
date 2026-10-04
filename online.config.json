@@ -55,12 +55,6 @@
           "prefetch": true
         },
         {
-          "title": "PDF / Downloads",
-          "kind": "Folder",
-          "href": "pdf/",
-          "prefetch": true
-        },
-        {
           "title": "Resources",
           "kind": "Folder",
           "href": "resources/",
@@ -84,38 +78,21 @@
       "up": "../",
       "entries": [
         {
-          "title": "Course overview \u2014 introduction slide",
+          "title": "Session 1 \u2014 opening slides",
           "kind": "HTML",
-          "href": "course_overview.html",
-          "source": "../DGP0959/sessions/01-ai-toolkit/course-overview.html",
+          "href": "opening-slides.html",
+          "source": "../DGP0959/sessions/01-ai-toolkit/opening-slides.html",
+          "prefetch": true
+        },
+        {
+          "title": "Session 1 \u2014 tutor and revision notes",
+          "kind": "HTML",
+          "href": "tutor-notes.html",
+          "source": "../DGP0959/sessions/01-ai-toolkit/tutor-notes.html",
           "prefetch": true
         }
       ],
-      "description": "Course introduction material. Full lecture decks will be added as they are developed."
-    },
-    {
-      "path": "DGP0959/pdf/index.html",
-      "title": "PDF",
-      "breadcrumb": [
-        {
-          "label": "Directory list",
-          "href": "../../"
-        },
-        {
-          "label": "DGP0959",
-          "href": "../"
-        }
-      ],
-      "up": "../",
-      "entries": [
-        {
-          "title": "Course overview \u2014 introduction slide",
-          "kind": "PDF",
-          "href": "course_overview.pdf",
-          "source": "../DGP0959/sessions/01-ai-toolkit/course-overview.pdf"
-        }
-      ],
-      "description": "Lecture downloads. The course overview is a single slide for the Session 1 introduction."
+      "description": "Review the opening slides and their companion notes. Download or print from each page."
     },
     {
       "path": "DGP0959/resources/index.html",
@@ -133,46 +110,25 @@
       "up": "../",
       "entries": [
         {
-          "title": "Workshop roadmap (draft)",
+          "title": "Workshop roadmap",
           "kind": "HTML",
           "href": "course-roadmap.html",
           "source": "../DGP0959/resources/course-roadmap.html",
           "prefetch": true
         },
         {
-          "title": "Workshop roadmap (draft) \u2014 PDF",
-          "kind": "PDF",
-          "href": "course-roadmap.pdf",
-          "source": "../DGP0959/resources/course-roadmap.pdf",
-          "prefetch": false
-        },
-        {
-          "title": "AI accounts and first steps (draft)",
+          "title": "AI accounts and first steps",
           "kind": "HTML",
           "href": "getting-started.html",
           "source": "../DGP0959/resources/getting-started.html",
           "prefetch": true
         },
         {
-          "title": "AI accounts and first steps (draft) \u2014 PDF",
-          "kind": "PDF",
-          "href": "getting-started.pdf",
-          "source": "../DGP0959/resources/getting-started.pdf",
-          "prefetch": false
-        },
-        {
-          "title": "Class starting-point check (draft)",
+          "title": "Class starting-point check",
           "kind": "HTML",
           "href": "class-starting-point.html",
           "source": "../DGP0959/resources/class-starting-point.html",
           "prefetch": true
-        },
-        {
-          "title": "Class starting-point check (draft) \u2014 PDF",
-          "kind": "PDF",
-          "href": "class-starting-point.pdf",
-          "source": "../DGP0959/resources/class-starting-point.pdf",
-          "prefetch": false
         }
       ]
     },
@@ -278,25 +234,11 @@
           "prefetch": true
         },
         {
-          "title": "01 warm academic \u2014 PDF",
-          "kind": "PDF",
-          "href": "01-warm-academic.pdf",
-          "source": "../DGP0959/design_templates/01-warm-academic.pdf",
-          "prefetch": false
-        },
-        {
           "title": "02 simple white",
           "kind": "HTML",
           "href": "02-simple-white.html",
           "source": "../DGP0959/design_templates/02-simple-white.html",
           "prefetch": true
-        },
-        {
-          "title": "02 simple white \u2014 PDF",
-          "kind": "PDF",
-          "href": "02-simple-white.pdf",
-          "source": "../DGP0959/design_templates/02-simple-white.pdf",
-          "prefetch": false
         },
         {
           "title": "03 workbench",
@@ -306,25 +248,11 @@
           "prefetch": true
         },
         {
-          "title": "03 workbench \u2014 PDF",
-          "kind": "PDF",
-          "href": "03-workbench.pdf",
-          "source": "../DGP0959/design_templates/03-workbench.pdf",
-          "prefetch": false
-        },
-        {
           "title": "04 slim rail",
           "kind": "HTML",
           "href": "04-slim-rail.html",
           "source": "../DGP0959/design_templates/04-slim-rail.html",
           "prefetch": true
-        },
-        {
-          "title": "04 slim rail \u2014 PDF",
-          "kind": "PDF",
-          "href": "04-slim-rail.pdf",
-          "source": "../DGP0959/design_templates/04-slim-rail.pdf",
-          "prefetch": false
         },
         {
           "title": "05 ribbon",
@@ -334,13 +262,6 @@
           "prefetch": true
         },
         {
-          "title": "05 ribbon \u2014 PDF",
-          "kind": "PDF",
-          "href": "05-ribbon.pdf",
-          "source": "../DGP0959/design_templates/05-ribbon.pdf",
-          "prefetch": false
-        },
-        {
           "title": "06 dark lab",
           "kind": "HTML",
           "href": "06-dark-lab.html",
@@ -348,25 +269,11 @@
           "prefetch": true
         },
         {
-          "title": "06 dark lab \u2014 PDF",
-          "kind": "PDF",
-          "href": "06-dark-lab.pdf",
-          "source": "../DGP0959/design_templates/06-dark-lab.pdf",
-          "prefetch": false
-        },
-        {
           "title": "07 themed ribbon \u2014 Approved design",
           "kind": "HTML",
           "href": "07-themed-ribbon.html",
           "source": "../DGP0959/design_templates/07-themed-ribbon.html",
           "prefetch": true
-        },
-        {
-          "title": "07 themed ribbon \u2014 Approved design \u2014 PDF",
-          "kind": "PDF",
-          "href": "07-themed-ribbon.pdf",
-          "source": "../DGP0959/design_templates/07-themed-ribbon.pdf",
-          "prefetch": false
         },
         {
           "title": "Reuse instructions",
@@ -380,13 +287,6 @@
           "href": "resource-document.html",
           "source": "../DGP0959/design_templates/resource-document.html",
           "prefetch": true
-        },
-        {
-          "title": "Case-study / take-home document template \u2014 PDF",
-          "kind": "PDF",
-          "href": "resource-document.pdf",
-          "source": "../DGP0959/design_templates/resource-document.pdf",
-          "prefetch": false
         }
       ]
     },
@@ -706,10 +606,6 @@
       "destination": "DGP0959/slides/course_overview.html"
     },
     {
-      "source": "../DGP0959/sessions/01-ai-toolkit/course-overview.pdf",
-      "destination": "DGP0959/pdf/course_overview.pdf"
-    },
-    {
       "source": "../DGP0959/design_templates/resource-document.html",
       "destination": "design_templates/resource-document.html"
     },
@@ -784,6 +680,30 @@
     {
       "source": "../MAESTRO/VR/audit/source-manifest.json",
       "destination": "maestro/vr/audit/source-manifest.json"
+    },
+    {
+      "source": "../DGP0959/sessions/01-ai-toolkit/opening-slides.html",
+      "destination": "DGP0959/slides/opening-slides.html"
+    },
+    {
+      "source": "../DGP0959/sessions/01-ai-toolkit/opening-slides.pdf",
+      "destination": "DGP0959/slides/opening-slides.pdf"
+    },
+    {
+      "source": "../DGP0959/sessions/01-ai-toolkit/tutor-notes.html",
+      "destination": "DGP0959/slides/tutor-notes.html"
+    },
+    {
+      "source": "../DGP0959/sessions/01-ai-toolkit/tutor-notes.pdf",
+      "destination": "DGP0959/slides/tutor-notes.pdf"
+    },
+    {
+      "source": "../DGP0959/sessions/01-ai-toolkit/course-overview.pdf",
+      "destination": "DGP0959/slides/course-overview.pdf"
+    },
+    {
+      "source": "../DGP0959/sessions/01-ai-toolkit/prototype-controls.js",
+      "destination": "DGP0959/slides/prototype-controls.js"
     }
   ]
 }
