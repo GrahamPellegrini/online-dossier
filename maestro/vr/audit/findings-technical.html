@@ -6,18 +6,18 @@
 <figure class="pipeline"><a aria-label="Open the full-resolution pipeline diagram" href="maestro_pipeline.png"><img alt="Maestro VR architecture: Quest capture and MinIO storage feed Hands23, then split into SAM2 orbit reconstruction and task labelling, re-identification and pose tracking, with object records returned to storage." src="maestro_pipeline.png"/></a><figcaption>Figure 1. Current Maestro VR pipeline used for the audit discussion.</figcaption></figure>
 <h2 id="pipeline-modules">Pipeline Modules</h2>
 <p>Each node has a narrow responsibility. The audit question is whether the handoff between nodes is reliable enough for replay.</p>
-<div class="module-grid">
-<article><h3>Quest capture</h3><p>Records RGB, depth, headset pose and hand pose for task and orbit sessions.</p></article>
-<article><h3>Ingestion and MinIO</h3><p>Accepts uploads, stores raw inputs and exposes session artifacts for worker processing.</p></article>
-<article><h3>OPE worker</h3><p>Coordinates hand precompute, object evidence, masks, labelling, tracking and publication.</p></article>
-<article><h3>Hands23</h3><p>Provides hand/object contact evidence and candidate boxes before object processing begins.</p></article>
-<article><h3>SAM2 masks</h3><p>Turns candidate evidence into masks for orbit reconstruction and task-frame object tracking.</p></article>
-<article><h3>Qwen labels</h3><p>Supplies an object label from the crop; useful, but still dependent on mask quality.</p></article>
-<article><h3>DINOv2 and SigLIP</h3><p>Support visual identity checks. The current audit keeps DINOv2 and SigLIP rather than adopting DINOv3.</p></article>
-<article><h3>PointCloudPCA</h3><p>Provides model-free task pose estimates when a trusted mesh is not available.</p></article>
-<article><h3>FoundationPose with mesh</h3><p>Runs when a suitable mesh, mask and depth are available; this is the stronger route for mesh-backed replay.</p></article>
-<article><h3>Headset replay</h3><p>Consumes stored objects, tracks, meshes and masks so captured objects can be inspected in VR.</p></article>
-</div>
+<ol class="module-list">
+<li><span class="module-number">1</span><div><h3>Quest capture</h3><p>Records RGB, depth, headset pose and hand pose for task and orbit sessions.</p></div></li>
+<li><span class="module-number">2</span><div><h3>Ingestion and MinIO</h3><p>Accepts uploads, stores raw inputs and exposes session artifacts for worker processing.</p></div></li>
+<li><span class="module-number">3</span><div><h3>Hands23 hand detection</h3><p>Provides hand/object contact evidence and candidate boxes before object processing begins.</p></div></li>
+<li><span class="module-number">4</span><div><h3>SAM2 segmentation</h3><p>Turns candidate evidence into masks for orbit reconstruction and task-frame object tracking.</p></div></li>
+<li><span class="module-number">5a</span><div><h3>PointCloudPCA</h3><p>Provides model-free task pose estimates when a trusted mesh is not available.</p></div></li>
+<li><span class="module-number">5b</span><div><h3>FoundationPose with mesh</h3><p>Runs when a suitable mesh, mask and depth are available; this is the stronger route for mesh-backed replay.</p></div></li>
+<li><span class="module-number">6</span><div><h3>Qwen labels</h3><p>Supplies an object label from the crop; useful, but still dependent on mask quality.</p></div></li>
+<li><span class="module-number">7</span><div><h3>DINOv2 and SigLIP</h3><p>Support visual identity checks. The current audit keeps DINOv2 and SigLIP rather than adopting DINOv3.</p></div></li>
+<li><span class="module-number">8</span><div><h3>COLMAP mesh reconstruction</h3><p>Reconstructs object meshes from orbit capture frames for canonical mesh-backed replay.</p></div></li>
+<li><span class="module-number">9</span><div><h3>Headset replay</h3><p>Consumes stored objects, tracks, meshes and masks so captured objects can be inspected in VR.</p></div></li>
+</ol>
 <h2 id="corrections">Detailed corrections and measurements</h2>
 <h3>Two demo blockers addressed</h3>
 <p>PointCloudPCA rejects estimates more than <strong>0.5m from the nearest available wrist/palm during a confirmed grip</strong>, producing no pose for that frame. Pipeline wiring uses current-frame world landmarks and the actual grip interval, including during orbit capture. Missing landmarks cannot be checked. Tests cover good estimates, metre-scale outliers, coordinate transforms and task/orbit integration.</p>
