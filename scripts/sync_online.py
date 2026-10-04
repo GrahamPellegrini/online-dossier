@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import html
 import shutil
 import subprocess
 from pathlib import Path
@@ -11,7 +12,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "online.config.json"
-GENERATED_DIRS = ("demo", "documents", "masters", "previews", "DGP0959")
+GENERATED_DIRS = ("demo", "documents", "masters", "previews", "DGP0959", "design_templates")
 ASSET_VERSION = "20260508-4"
 
 
@@ -58,6 +59,8 @@ def render_directory(config: dict, directory: dict) -> str:
       </a>'''
         for entry in directory["entries"]
     )
+    description = directory.get("description", "")
+    description_html = f'<p>{html.escape(description)}</p>' if description else ""
     up = directory.get("up")
     up_attr = f'href="{up}"' if up else 'href="#" aria-disabled="true"'
     return f'''<!DOCTYPE html>
@@ -79,6 +82,7 @@ def render_directory(config: dict, directory: dict) -> str:
         <a class="nav-button" {up_attr} aria-label="Up">↑</a>
       </div>
     </div>
+    {description_html}
     <nav class="directory" aria-label="Shared files and folders">
 {entries}
     </nav>

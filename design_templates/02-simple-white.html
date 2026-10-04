@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DGP0959 Visual Prototype 02</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Design template 02-simple-white</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --red: #BA0C2F;
       --red-deep: #8F0A24;
@@ -503,148 +504,132 @@
       }
     }
   </style>
-</head>
+<style>@media print{html{scroll-snap-type:none;scroll-behavior:auto}.laser-pointer{display:none}}</style></head>
 <body>
-  <div class="progress"><span id="progress-bar"></span></div>
-  <nav class="rail" aria-label="Slide navigation">
-    <a href="#s0"></a><a href="#s1"></a><a href="#s2"></a><a href="#s3"></a>
-    <a href="#s4"></a><a href="#s5"></a><a href="#s6"></a><a href="#s7"></a>
-  </nav>
+<div class="progress"><span id="progress-bar"></span></div>
+<nav aria-label="Slide navigation" class="rail"><a aria-label="Slide 1" href="#s0"></a><a aria-label="Slide 2" href="#s1"></a><a aria-label="Slide 3" href="#s2"></a><a aria-label="Slide 4" href="#s3"></a><a aria-label="Slide 5" href="#s4"></a><a aria-label="Slide 6" href="#s5"></a><a aria-label="Slide 7" href="#s6"></a><a aria-label="Slide 8" href="#s7"></a></nav>
+<section class="slide title" id="s0">
+<div class="title-wrap">
+<div class="title-main">
+<div class="title-logo-row">
+<img alt="[Placeholder institution logo]" src="assets/placeholder-logo-dark.svg"/>
+</div>
+<div class="kicker">[Section label]</div>
+<h1>[Lecture title]</h1>
+<p class="subtitle">[Replace with a short explanation, example, or action.]</p>
+<div class="title-meta">
+<span>[Session number]</span>
+<span>[Tutor] | [Programme]</span>
+<span>[Institution] | [Date]</span>
+</div>
+</div>
+<aside class="title-accent">
+<span class="badge">[Section label]</span>
+</aside>
+</div>
+</section>
+<section class="slide" id="s1">
+<div class="header"><span>[Course code] | [Session title]</span><span class="topic">[Topic]</span></div>
+<div class="content">
+<h2>[Main slide message]</h2>
+<p class="lead">[Replace with a short explanation, example, or action.]</p>
+<div class="three">
+<div class="tile"><strong>[Label]</strong><p>[Replace with a short explanation, example, or action.]</p></div>
+<div class="tile"><strong>[Label]</strong><p>[Replace with a short explanation, example, or action.]</p></div>
+<div class="tile"><strong>[Label]</strong><p>[Replace with a short explanation, example, or action.]</p></div>
+</div>
+</div>
+<div class="footer"><span>[Course title]</span><span>[Tutor] | [Programme]</span><span>02 / 08</span></div>
+</section>
+<section class="slide" id="s2">
+<div class="header"><span>[Course code] | [Session title]</span><span class="topic">[Topic]</span></div>
+<div class="content">
+<h2>[Main slide message]</h2>
+<div class="two">
+<div class="panel">
+<span class="label">[Label]</span>
+<p>[Replace with a short explanation, example, or action.]</p>
+</div>
+<div class="panel good">
+<span class="label">[Label]</span>
+<p>[Replace with a short explanation, example, or action.]</p>
+</div>
+</div>
+</div>
+<div class="footer"><span>[Course title]</span><span>[Tutor] | [Programme]</span><span>03 / 08</span></div>
+</section>
+<section class="slide" id="s3">
+<div class="header"><span>[Course code] | [Session title]</span><span class="topic">[Topic]</span></div>
+<div class="content">
+<h2>[Main slide message]</h2>
+<div class="prompt">[Instruction or reusable prompt]
 
-  <section class="slide title" id="s0">
-    <div class="title-wrap">
-      <div class="title-main">
-        <div class="title-logo-row">
-          <img src="assets/UMLOGO_redRGB.png" alt="University of Malta logo">
-        </div>
-        <div class="kicker">DGP0959 | AI Tools for Work and Study</div>
-        <h1>Your AI Toolkit</h1>
-        <p class="subtitle">A practical beginner course for using AI clearly, critically, and usefully.</p>
-        <div class="title-meta">
-          <span>Session 01 / 08</span>
-          <span>Graham Pellegrini | DegreePlus Programme</span>
-          <span>University of Malta | 14 October 2026</span>
-        </div>
-      </div>
-      <aside class="title-accent">
-        <span class="badge">Visual prototype 02</span>
-      </aside>
-    </div>
-  </section>
-
-  <section class="slide" id="s1">
-    <div class="header"><span>DGP0959 | Session 01: AI Toolkit</span><span class="topic">Tool choice</span></div>
-    <div class="content">
-      <h2>Start by naming the job</h2>
-      <p class="lead">A good AI workflow begins with a task type, not with a tool name.</p>
-      <div class="three">
-        <div class="tile"><strong>Explore</strong><p>Use AI to map a topic and find useful questions.</p></div>
-        <div class="tile"><strong>Draft</strong><p>Turn rough notes into a first version you can improve.</p></div>
-        <div class="tile"><strong>Verify</strong><p>Check important claims against trusted sources.</p></div>
-      </div>
-    </div>
-    <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>02 / 08</span></div>
-  </section>
-
-  <section class="slide" id="s2">
-    <div class="header"><span>DGP0959 | Session 02: Better Results</span><span class="topic">Worked example</span></div>
-    <div class="content">
-      <h2>A stronger prompt gives context</h2>
-      <div class="two">
-        <div class="panel">
-          <span class="label">Weak</span>
-          <p>"Write me an email about missing class."</p>
-        </div>
-        <div class="panel good">
-          <span class="label">Better</span>
-          <p>"Draft a polite email to my lecturer explaining that I missed today's session due to illness. Ask what I should review before next week."</p>
-        </div>
-      </div>
-    </div>
-    <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>03 / 08</span></div>
-  </section>
-
-  <section class="slide" id="s3">
-    <div class="header"><span>DGP0959 | Session 03: Documents</span><span class="topic">Reusable prompt</span></div>
-    <div class="content">
-      <h2>Prompt pattern: extract decisions</h2>
-      <div class="prompt">Summarise this document for a student who needs to act on it.
-
-Return:
-1. main point;
-2. dates or deadlines;
-3. decisions already made;
-4. actions I need to take;
-5. claims I should verify.</div>
-    </div>
-    <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>04 / 08</span></div>
-  </section>
-
-  <section class="slide" id="s4">
-    <div class="header"><span>DGP0959 | Session 05: Planning</span><span class="topic">Activity</span></div>
-    <div class="content">
-      <h2>Turn a messy goal into an action plan</h2>
-      <div class="activity-grid">
-        <div class="activity-label">Hands-on activity</div>
-        <div class="steps">
-          <div class="step">Choose one real assignment, project, or student task.</div>
-          <div class="step">Ask AI to break it into milestones, actions, and risks.</div>
-          <div class="step">Revise the result so every action has a clear next step.</div>
-          <div class="step">Mark which parts require human judgement.</div>
-        </div>
-      </div>
-    </div>
-    <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>05 / 08</span></div>
-  </section>
-
-  <section class="slide" id="s5">
-    <div class="header"><span>DGP0959 | Session 01: AI Toolkit</span><span class="topic">Privacy</span></div>
-    <div class="content">
-      <h2>Check before pasting</h2>
-      <div class="warning">
-        <div class="callout"><p>Do not paste private, sensitive, client, patient, student, or unpublished university information into an AI tool unless you know it is allowed.</p></div>
-        <div class="checks">
-          <div class="check">Remove names, IDs, and contact details.</div>
-          <div class="check">Use fictional examples when possible.</div>
-          <div class="check">When in doubt, stop and check policy.</div>
-        </div>
-      </div>
-    </div>
-    <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>06 / 08</span></div>
-  </section>
-
-  <section class="slide" id="s6">
-    <div class="header"><span>DGP0959 | Session 02: Better Results</span><span class="topic">Comparison</span></div>
-    <div class="content">
-      <h2>Do not accept the first answer</h2>
-      <div class="two">
-        <div class="panel">
-          <span class="label">First answer</span>
-          <p>Often sounds polished, but may hide weak assumptions or miss your audience.</p>
-        </div>
-        <div class="panel good">
-          <span class="label">Compared answer</span>
-          <p>Ask for alternatives, critique, and trade-offs. Then combine the best parts yourself.</p>
-        </div>
-      </div>
-    </div>
-    <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>07 / 08</span></div>
-  </section>
-
-  <section class="slide" id="s7">
-    <div class="header"><span>DGP0959 | Session 08: Workflow</span><span class="topic">Recap</span></div>
-    <div class="content">
-      <h2>What to take away</h2>
-      <div class="takeaways">
-        <div class="takeaway"><span>1</span><p>Choose the tool by task: explore, draft, compare, plan, present, or verify.</p></div>
-        <div class="takeaway"><span>2</span><p>Good prompts include purpose, context, audience, constraints, and format.</p></div>
-        <div class="takeaway"><span>3</span><p>The final judgement stays with you, especially for private or important work.</p></div>
-      </div>
-    </div>
-    <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>08 / 08</span></div>
-  </section>
-
-  <script>
+Context: [Provided information]
+Return: [Required output format]</div>
+</div>
+<div class="footer"><span>[Course title]</span><span>[Tutor] | [Programme]</span><span>04 / 08</span></div>
+</section>
+<section class="slide" id="s4">
+<div class="header"><span>[Course code] | [Session title]</span><span class="topic">[Topic]</span></div>
+<div class="content">
+<h2>[Main slide message]</h2>
+<div class="activity-grid">
+<div class="activity-label">[Label]</div>
+<div class="steps">
+<div class="step">[Replace with a short explanation, example, or action.]</div>
+<div class="step">[Replace with a short explanation, example, or action.]</div>
+<div class="step">[Replace with a short explanation, example, or action.]</div>
+<div class="step">[Replace with a short explanation, example, or action.]</div>
+</div>
+</div>
+</div>
+<div class="footer"><span>[Course title]</span><span>[Tutor] | [Programme]</span><span>05 / 08</span></div>
+</section>
+<section class="slide" id="s5">
+<div class="header"><span>[Course code] | [Session title]</span><span class="topic">[Topic]</span></div>
+<div class="content">
+<h2>[Main slide message]</h2>
+<div class="warning">
+<div class="callout"><p>[Replace with a short explanation, example, or action.]</p></div>
+<div class="checks">
+<div class="check">[Replace with a short explanation, example, or action.]</div>
+<div class="check">[Replace with a short explanation, example, or action.]</div>
+<div class="check">[Replace with a short explanation, example, or action.]</div>
+</div>
+</div>
+</div>
+<div class="footer"><span>[Course title]</span><span>[Tutor] | [Programme]</span><span>06 / 08</span></div>
+</section>
+<section class="slide" id="s6">
+<div class="header"><span>[Course code] | [Session title]</span><span class="topic">[Topic]</span></div>
+<div class="content">
+<h2>[Main slide message]</h2>
+<div class="two">
+<div class="panel">
+<span class="label">[Label]</span>
+<p>[Replace with a short explanation, example, or action.]</p>
+</div>
+<div class="panel good">
+<span class="label">[Label]</span>
+<p>[Replace with a short explanation, example, or action.]</p>
+</div>
+</div>
+</div>
+<div class="footer"><span>[Course title]</span><span>[Tutor] | [Programme]</span><span>07 / 08</span></div>
+</section>
+<section class="slide" id="s7">
+<div class="header"><span>[Course code] | [Session title]</span><span class="topic">[Topic]</span></div>
+<div class="content">
+<h2>[Main slide message]</h2>
+<div class="takeaways">
+<div class="takeaway"><span>1</span><p>[Replace with a short explanation, example, or action.]</p></div>
+<div class="takeaway"><span>2</span><p>[Replace with a short explanation, example, or action.]</p></div>
+<div class="takeaway"><span>3</span><p>[Replace with a short explanation, example, or action.]</p></div>
+</div>
+</div>
+<div class="footer"><span>[Course title]</span><span>[Tutor] | [Programme]</span><span>08 / 08</span></div>
+</section>
+<script>
     const slides = [...document.querySelectorAll(".slide")];
     const dots = [...document.querySelectorAll(".rail a")];
     const progress = document.getElementById("progress-bar");

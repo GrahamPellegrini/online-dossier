@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DGP0959 Visual Prototype 03</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Design template 03-workbench</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --red: #BA0C2F;
       --red-deep: #85001D;
@@ -215,133 +216,123 @@
       .brand-rail, .main { min-height: 9in; }
     }
   </style>
-</head>
+<style>@media print{html{scroll-snap-type:none;scroll-behavior:auto}.laser-pointer{display:none}}</style></head>
 <body>
-  <div class="progress"><span id="progress-bar"></span></div>
-  <nav class="rail" aria-label="Slide navigation">
-    <a href="#s0"></a><a href="#s1"></a><a href="#s2"></a><a href="#s3"></a><a href="#s4"></a><a href="#s5"></a>
-  </nav>
+<div class="progress"><span id="progress-bar"></span></div>
+<nav aria-label="Slide navigation" class="rail"><a aria-label="Slide 1" href="#s0"></a><a aria-label="Slide 2" href="#s1"></a><a aria-label="Slide 3" href="#s2"></a><a aria-label="Slide 4" href="#s3"></a><a aria-label="Slide 5" href="#s4"></a><a aria-label="Slide 6" href="#s5"></a></nav>
+<section class="slide" id="s0">
+<aside class="brand-rail red">
+<img alt="[Placeholder institution logo]" src="assets/placeholder-logo-light.svg"/>
+<div class="rail-session"><span>[Course code]</span><strong>[Course title]</strong></div>
+<div class="rail-foot">[Section label]</div>
+</aside>
+<main class="main">
+<div class="topbar"><span>[Course code] | [Session title]</span><span>[Topic]</span></div>
+<div class="content">
+<div class="kicker">[Section label]</div>
+<h1>[Lecture title]</h1>
+<p class="lead">[Replace with a short explanation, example, or action.]</p>
+</div>
+<div class="footer"><span>[Course title]</span><span>[Tutor] | [Programme]</span><span>01 / 06</span></div>
+</main>
+</section>
+<section class="slide" id="s1">
+<aside class="brand-rail">
+<img alt="[Placeholder institution logo]" src="assets/placeholder-logo-light.svg"/>
+<div class="rail-session"><span>[Course title]</span><strong>[Course title]</strong></div>
+<div class="rail-foot">[Section label]</div>
+</aside>
+<main class="main">
+<div class="topbar"><span>[Course code] | [Session title]</span><span>[Topic]</span></div>
+<div class="content">
+<h2>[Main slide message]</h2>
+<div class="workbench">
+<div class="module"><div class="module-head">[Label]</div><div class="module-body">[Replace with a short explanation, example, or action.]</div></div>
+<div class="module"><div class="module-head">[Label]</div><div class="module-body">[Replace with a short explanation, example, or action.]</div></div>
+</div>
+</div>
+<div class="footer"><span>[Course title]</span><span>[Tutor] | [Programme]</span><span>02 / 06</span></div>
+</main>
+</section>
+<section class="slide" id="s2">
+<aside class="brand-rail">
+<img alt="[Placeholder institution logo]" src="assets/placeholder-logo-light.svg"/>
+<div class="rail-session"><span>[Course title]</span><strong>[Course title]</strong></div>
+<div class="rail-foot">[Section label]</div>
+</aside>
+<main class="main">
+<div class="topbar"><span>[Course code] | [Session title]</span><span>[Topic]</span></div>
+<div class="content">
+<h2>[Main slide message]</h2>
+<div class="workbench">
+<div class="module"><div class="module-head">[Label]</div><div class="module-body mono">[Instruction or reusable prompt]
 
-  <section class="slide" id="s0">
-    <aside class="brand-rail red">
-      <img src="assets/UMLOGO_revWHITE.png" alt="University of Malta logo">
-      <div class="rail-session"><span>DGP0959</span><strong>AI Tools for Work and Study</strong></div>
-      <div class="rail-foot">Prototype 03</div>
-    </aside>
-    <main class="main">
-      <div class="topbar"><span>Session 01 / 08</span><span>Teaching Workbench</span></div>
-      <div class="content">
-        <div class="kicker">Alternative visual direction</div>
-        <h1>Your AI Toolkit</h1>
-        <p class="lead">A more interface-like lecture deck: structured, modern, and built around task panels rather than traditional slide blocks.</p>
-      </div>
-      <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>01 / 06</span></div>
-    </main>
-  </section>
-
-  <section class="slide" id="s1">
-    <aside class="brand-rail">
-      <img src="assets/UMLOGO_revWHITE.png" alt="University of Malta logo">
-      <div class="rail-session"><span>Session 01</span><strong>Tool choice</strong></div>
-      <div class="rail-foot">DGP0959</div>
-    </aside>
-    <main class="main">
-      <div class="topbar"><span>DGP0959 | AI Toolkit</span><span>Tool choice</span></div>
-      <div class="content">
-        <h2>Start from the task, not the tool</h2>
-        <div class="workbench">
-          <div class="module"><div class="module-head">Explore</div><div class="module-body">Map a topic, generate questions, and identify what you still need to verify.</div></div>
-          <div class="module"><div class="module-head">Produce</div><div class="module-body">Draft, rewrite, structure, or plan something that you remain responsible for.</div></div>
-        </div>
-      </div>
-      <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>02 / 06</span></div>
-    </main>
-  </section>
-
-  <section class="slide" id="s2">
-    <aside class="brand-rail">
-      <img src="assets/UMLOGO_revWHITE.png" alt="University of Malta logo">
-      <div class="rail-session"><span>Session 02</span><strong>Better prompts</strong></div>
-      <div class="rail-foot">DGP0959</div>
-    </aside>
-    <main class="main">
-      <div class="topbar"><span>DGP0959 | Better Results</span><span>Prompt console</span></div>
-      <div class="content">
-        <h2>Prompt like you are briefing a colleague</h2>
-        <div class="workbench">
-          <div class="module"><div class="module-head">Prompt</div><div class="module-body mono">Draft a polite email to my lecturer.
-
-Context: I missed today's class due to illness.
-Goal: ask what I should review before next week.
-Tone: concise and professional.</div></div>
-          <div class="module"><div class="module-head">Why it works</div><div class="module-body">The AI has a role, context, goal, audience, and tone. The output is easier to judge and revise.</div></div>
-        </div>
-      </div>
-      <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>03 / 06</span></div>
-    </main>
-  </section>
-
-  <section class="slide" id="s3">
-    <aside class="brand-rail">
-      <img src="assets/UMLOGO_revWHITE.png" alt="University of Malta logo">
-      <div class="rail-session"><span>Session 05</span><strong>Activity mode</strong></div>
-      <div class="rail-foot">DGP0959</div>
-    </aside>
-    <main class="main">
-      <div class="topbar"><span>DGP0959 | Planning</span><span>Activity</span></div>
-      <div class="content">
-        <h2>Build a task plan in four passes</h2>
-        <div class="stack">
-          <div class="step red"><span>1</span><p>Describe the real task in one sentence.</p></div>
-          <div class="step"><span>2</span><p>Ask AI for milestones, actions, and risks.</p></div>
-          <div class="step"><span>3</span><p>Remove vague actions and assign the next step.</p></div>
-          <div class="step"><span>4</span><p>Mark what needs verification or human judgement.</p></div>
-        </div>
-      </div>
-      <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>04 / 06</span></div>
-    </main>
-  </section>
-
-  <section class="slide" id="s4">
-    <aside class="brand-rail">
-      <img src="assets/UMLOGO_revWHITE.png" alt="University of Malta logo">
-      <div class="rail-session"><span>Session 01</span><strong>Judgement</strong></div>
-      <div class="rail-foot">DGP0959</div>
-    </aside>
-    <main class="main">
-      <div class="topbar"><span>DGP0959 | AI Toolkit</span><span>Privacy</span></div>
-      <div class="content">
-        <h2>Private information changes the workflow</h2>
-        <div class="comparison">
-          <div class="module"><div class="module-head">Do not paste</div><div class="module-body">Names, IDs, client data, private messages, unpublished work, or sensitive university information.</div></div>
-          <div class="module"><div class="module-head">Use instead</div><div class="module-body">Fictional examples, anonymised structure, or a prompt that asks for a template rather than a decision.</div></div>
-        </div>
-      </div>
-      <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>05 / 06</span></div>
-    </main>
-  </section>
-
-  <section class="slide" id="s5">
-    <aside class="brand-rail red">
-      <img src="assets/UMLOGO_revWHITE.png" alt="University of Malta logo">
-      <div class="rail-session"><span>Recap</span><strong>Keep control</strong></div>
-      <div class="rail-foot">DGP0959</div>
-    </aside>
-    <main class="main">
-      <div class="topbar"><span>DGP0959 | Workflow</span><span>Takeaways</span></div>
-      <div class="content">
-        <h2>Three things to keep</h2>
-        <div class="stack">
-          <div class="step red"><span>1</span><p>Choose tools by task type.</p></div>
-          <div class="step red"><span>2</span><p>Prompt with context, audience, constraints, and format.</p></div>
-          <div class="step red"><span>3</span><p>Verify important claims and keep the final judgement human.</p></div>
-        </div>
-      </div>
-      <div class="footer"><span>AI Tools for Work and Study</span><span>Graham Pellegrini | University of Malta DegreePlus</span><span>06 / 06</span></div>
-    </main>
-  </section>
-
-  <script>
+Context: [Provided information]
+Return: [Required output format]</div></div>
+<div class="module"><div class="module-head">[Label]</div><div class="module-body">[Replace with a short explanation, example, or action.]</div></div>
+</div>
+</div>
+<div class="footer"><span>[Course title]</span><span>[Tutor] | [Programme]</span><span>03 / 06</span></div>
+</main>
+</section>
+<section class="slide" id="s3">
+<aside class="brand-rail">
+<img alt="[Placeholder institution logo]" src="assets/placeholder-logo-light.svg"/>
+<div class="rail-session"><span>[Course title]</span><strong>[Course title]</strong></div>
+<div class="rail-foot">[Section label]</div>
+</aside>
+<main class="main">
+<div class="topbar"><span>[Course code] | [Session title]</span><span>[Topic]</span></div>
+<div class="content">
+<h2>[Main slide message]</h2>
+<div class="stack">
+<div class="step red"><span>1</span><p>[Replace with a short explanation, example, or action.]</p></div>
+<div class="step"><span>2</span><p>[Replace with a short explanation, example, or action.]</p></div>
+<div class="step"><span>3</span><p>[Replace with a short explanation, example, or action.]</p></div>
+<div class="step"><span>4</span><p>[Replace with a short explanation, example, or action.]</p></div>
+</div>
+</div>
+<div class="footer"><span>[Course title]</span><span>[Tutor] | [Programme]</span><span>04 / 06</span></div>
+</main>
+</section>
+<section class="slide" id="s4">
+<aside class="brand-rail">
+<img alt="[Placeholder institution logo]" src="assets/placeholder-logo-light.svg"/>
+<div class="rail-session"><span>[Course title]</span><strong>[Course title]</strong></div>
+<div class="rail-foot">[Section label]</div>
+</aside>
+<main class="main">
+<div class="topbar"><span>[Course code] | [Session title]</span><span>[Topic]</span></div>
+<div class="content">
+<h2>[Main slide message]</h2>
+<div class="comparison">
+<div class="module"><div class="module-head">[Label]</div><div class="module-body">[Replace with a short explanation, example, or action.]</div></div>
+<div class="module"><div class="module-head">[Label]</div><div class="module-body">[Replace with a short explanation, example, or action.]</div></div>
+</div>
+</div>
+<div class="footer"><span>[Course title]</span><span>[Tutor] | [Programme]</span><span>05 / 06</span></div>
+</main>
+</section>
+<section class="slide" id="s5">
+<aside class="brand-rail red">
+<img alt="[Placeholder institution logo]" src="assets/placeholder-logo-light.svg"/>
+<div class="rail-session"><span>[Course title]</span><strong>[Course title]</strong></div>
+<div class="rail-foot">[Section label]</div>
+</aside>
+<main class="main">
+<div class="topbar"><span>[Course code] | [Session title]</span><span>[Topic]</span></div>
+<div class="content">
+<h2>[Main slide message]</h2>
+<div class="stack">
+<div class="step red"><span>1</span><p>[Replace with a short explanation, example, or action.]</p></div>
+<div class="step red"><span>2</span><p>[Replace with a short explanation, example, or action.]</p></div>
+<div class="step red"><span>3</span><p>[Replace with a short explanation, example, or action.]</p></div>
+</div>
+</div>
+<div class="footer"><span>[Course title]</span><span>[Tutor] | [Programme]</span><span>06 / 06</span></div>
+</main>
+</section>
+<script>
     const slides = [...document.querySelectorAll(".slide")];
     const dots = [...document.querySelectorAll(".rail a")];
     const progress = document.getElementById("progress-bar");

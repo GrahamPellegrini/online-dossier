@@ -22,6 +22,12 @@
           "kind": "Folder",
           "href": "DGP0959/",
           "prefetch": true
+        },
+        {
+          "title": "Design templates",
+          "kind": "Folder",
+          "href": "design_templates/",
+          "prefetch": true
         }
       ]
     },
@@ -70,50 +76,8 @@
         }
       ],
       "up": "../",
-      "entries": [
-        {
-          "title": "visual_prototype",
-          "kind": "HTML",
-          "href": "visual_prototype.html",
-          "source": "../DGP0959/prototypes/lecture-design-system/dgp0959-visual-prototype.html",
-          "prefetch": true
-        },
-        {
-          "title": "visual_prototype_02_simple_white",
-          "kind": "HTML",
-          "href": "visual_prototype_02_simple_white.html",
-          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-02-simple-white.html",
-          "prefetch": true
-        },
-        {
-          "title": "visual_prototype_03_workbench",
-          "kind": "HTML",
-          "href": "visual_prototype_03_workbench.html",
-          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-03-workbench.html",
-          "prefetch": true
-        },
-        {
-          "title": "visual_prototype_04_slim_rail",
-          "kind": "HTML",
-          "href": "visual_prototype_04_slim_rail.html",
-          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-04-slim-rail.html",
-          "prefetch": true
-        },
-        {
-          "title": "visual_prototype_05_ribbon",
-          "kind": "HTML",
-          "href": "visual_prototype_05_ribbon.html",
-          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-05-ribbon.html",
-          "prefetch": true
-        },
-        {
-          "title": "visual_prototype_06_dark_lab",
-          "kind": "HTML",
-          "href": "visual_prototype_06_dark_lab.html",
-          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-06-dark-lab.html",
-          "prefetch": true
-        }
-      ]
+      "entries": [],
+      "description": "Lecture materials will appear here as they are developed. Reusable designs are in Design templates on the directory list."
     },
     {
       "path": "DGP0959/pdf/index.html",
@@ -129,44 +93,8 @@
         }
       ],
       "up": "../",
-      "entries": [
-        {
-          "title": "visual_prototype_pdf",
-          "kind": "PDF",
-          "href": "visual_prototype.pdf",
-          "source": "../DGP0959/prototypes/lecture-design-system/dgp0959-visual-prototype.pdf"
-        },
-        {
-          "title": "visual_prototype_02_simple_white_pdf",
-          "kind": "PDF",
-          "href": "visual_prototype_02_simple_white.pdf",
-          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-02-simple-white.pdf"
-        },
-        {
-          "title": "visual_prototype_03_workbench_pdf",
-          "kind": "PDF",
-          "href": "visual_prototype_03_workbench.pdf",
-          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-03-workbench.pdf"
-        },
-        {
-          "title": "visual_prototype_04_slim_rail_pdf",
-          "kind": "PDF",
-          "href": "visual_prototype_04_slim_rail.pdf",
-          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-04-slim-rail.pdf"
-        },
-        {
-          "title": "visual_prototype_05_ribbon_pdf",
-          "kind": "PDF",
-          "href": "visual_prototype_05_ribbon.pdf",
-          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-05-ribbon.pdf"
-        },
-        {
-          "title": "visual_prototype_06_dark_lab_pdf",
-          "kind": "PDF",
-          "href": "visual_prototype_06_dark_lab.pdf",
-          "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-06-dark-lab.pdf"
-        }
-      ]
+      "entries": [],
+      "description": "Lecture materials will appear here as they are developed. Reusable designs are in Design templates on the directory list."
     },
     {
       "path": "DGP0959/resources/index.html",
@@ -182,7 +110,50 @@
         }
       ],
       "up": "../",
-      "entries": []
+      "entries": [
+        {
+          "title": "Workshop roadmap (draft)",
+          "kind": "HTML",
+          "href": "course-roadmap.html",
+          "source": "../DGP0959/resources/course-roadmap.html",
+          "prefetch": true
+        },
+        {
+          "title": "Workshop roadmap (draft) \u2014 PDF",
+          "kind": "PDF",
+          "href": "course-roadmap.pdf",
+          "source": "../DGP0959/resources/course-roadmap.pdf",
+          "prefetch": false
+        },
+        {
+          "title": "AI accounts and first steps (draft)",
+          "kind": "HTML",
+          "href": "getting-started.html",
+          "source": "../DGP0959/resources/getting-started.html",
+          "prefetch": true
+        },
+        {
+          "title": "AI accounts and first steps (draft) \u2014 PDF",
+          "kind": "PDF",
+          "href": "getting-started.pdf",
+          "source": "../DGP0959/resources/getting-started.pdf",
+          "prefetch": false
+        },
+        {
+          "title": "Class starting-point check (draft)",
+          "kind": "HTML",
+          "href": "class-starting-point.html",
+          "source": "../DGP0959/resources/class-starting-point.html",
+          "prefetch": true
+        },
+        {
+          "title": "Class starting-point check (draft) \u2014 PDF",
+          "kind": "PDF",
+          "href": "class-starting-point.pdf",
+          "source": "../DGP0959/resources/class-starting-point.pdf",
+          "prefetch": false
+        }
+      ]
     },
     {
       "path": "masters/index.html",
@@ -265,6 +236,124 @@
           "preview": "previews/placement-one-page-report.png"
         }
       ]
+    },
+    {
+      "path": "design_templates/index.html",
+      "title": "Design templates",
+      "breadcrumb": [
+        {
+          "label": "Directory list",
+          "href": "../"
+        }
+      ],
+      "up": "../",
+      "description": "Seven reusable designs with placeholder names, units, logos and images. Design 07 is the approved DGP0959 style: red sections, dark normal content and blue case studies.",
+      "entries": [
+        {
+          "title": "01 warm academic",
+          "kind": "HTML",
+          "href": "01-warm-academic.html",
+          "source": "../DGP0959/design_templates/01-warm-academic.html",
+          "prefetch": true
+        },
+        {
+          "title": "01 warm academic \u2014 PDF",
+          "kind": "PDF",
+          "href": "01-warm-academic.pdf",
+          "source": "../DGP0959/design_templates/01-warm-academic.pdf",
+          "prefetch": false
+        },
+        {
+          "title": "02 simple white",
+          "kind": "HTML",
+          "href": "02-simple-white.html",
+          "source": "../DGP0959/design_templates/02-simple-white.html",
+          "prefetch": true
+        },
+        {
+          "title": "02 simple white \u2014 PDF",
+          "kind": "PDF",
+          "href": "02-simple-white.pdf",
+          "source": "../DGP0959/design_templates/02-simple-white.pdf",
+          "prefetch": false
+        },
+        {
+          "title": "03 workbench",
+          "kind": "HTML",
+          "href": "03-workbench.html",
+          "source": "../DGP0959/design_templates/03-workbench.html",
+          "prefetch": true
+        },
+        {
+          "title": "03 workbench \u2014 PDF",
+          "kind": "PDF",
+          "href": "03-workbench.pdf",
+          "source": "../DGP0959/design_templates/03-workbench.pdf",
+          "prefetch": false
+        },
+        {
+          "title": "04 slim rail",
+          "kind": "HTML",
+          "href": "04-slim-rail.html",
+          "source": "../DGP0959/design_templates/04-slim-rail.html",
+          "prefetch": true
+        },
+        {
+          "title": "04 slim rail \u2014 PDF",
+          "kind": "PDF",
+          "href": "04-slim-rail.pdf",
+          "source": "../DGP0959/design_templates/04-slim-rail.pdf",
+          "prefetch": false
+        },
+        {
+          "title": "05 ribbon",
+          "kind": "HTML",
+          "href": "05-ribbon.html",
+          "source": "../DGP0959/design_templates/05-ribbon.html",
+          "prefetch": true
+        },
+        {
+          "title": "05 ribbon \u2014 PDF",
+          "kind": "PDF",
+          "href": "05-ribbon.pdf",
+          "source": "../DGP0959/design_templates/05-ribbon.pdf",
+          "prefetch": false
+        },
+        {
+          "title": "06 dark lab",
+          "kind": "HTML",
+          "href": "06-dark-lab.html",
+          "source": "../DGP0959/design_templates/06-dark-lab.html",
+          "prefetch": true
+        },
+        {
+          "title": "06 dark lab \u2014 PDF",
+          "kind": "PDF",
+          "href": "06-dark-lab.pdf",
+          "source": "../DGP0959/design_templates/06-dark-lab.pdf",
+          "prefetch": false
+        },
+        {
+          "title": "07 themed ribbon \u2014 Approved design",
+          "kind": "HTML",
+          "href": "07-themed-ribbon.html",
+          "source": "../DGP0959/design_templates/07-themed-ribbon.html",
+          "prefetch": true
+        },
+        {
+          "title": "07 themed ribbon \u2014 Approved design \u2014 PDF",
+          "kind": "PDF",
+          "href": "07-themed-ribbon.pdf",
+          "source": "../DGP0959/design_templates/07-themed-ribbon.pdf",
+          "prefetch": false
+        },
+        {
+          "title": "Reuse instructions",
+          "kind": "Markdown",
+          "href": "README.md",
+          "source": "../DGP0959/design_templates/README.md"
+        }
+      ]
     }
   ],
   "copies": [
@@ -344,64 +433,104 @@
       "destination": "masters/placement/documents/placement-one-page-report.pdf"
     },
     {
-      "source": "../DGP0959/prototypes/lecture-design-system/dgp0959-visual-prototype.html",
-      "destination": "DGP0959/slides/visual_prototype.html"
+      "source": "../DGP0959/resources/course-roadmap.html",
+      "destination": "DGP0959/resources/course-roadmap.html"
     },
     {
-      "source": "../DGP0959/prototypes/lecture-design-system/dgp0959-visual-prototype.pdf",
-      "destination": "DGP0959/pdf/visual_prototype.pdf"
+      "source": "../DGP0959/resources/course-roadmap.pdf",
+      "destination": "DGP0959/resources/course-roadmap.pdf"
     },
     {
-      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-02-simple-white.html",
-      "destination": "DGP0959/slides/visual_prototype_02_simple_white.html"
+      "source": "../DGP0959/resources/getting-started.html",
+      "destination": "DGP0959/resources/getting-started.html"
     },
     {
-      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-02-simple-white.pdf",
-      "destination": "DGP0959/pdf/visual_prototype_02_simple_white.pdf"
+      "source": "../DGP0959/resources/getting-started.pdf",
+      "destination": "DGP0959/resources/getting-started.pdf"
     },
     {
-      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-03-workbench.html",
-      "destination": "DGP0959/slides/visual_prototype_03_workbench.html"
+      "source": "../DGP0959/resources/class-starting-point.html",
+      "destination": "DGP0959/resources/class-starting-point.html"
     },
     {
-      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-03-workbench.pdf",
-      "destination": "DGP0959/pdf/visual_prototype_03_workbench.pdf"
+      "source": "../DGP0959/resources/class-starting-point.pdf",
+      "destination": "DGP0959/resources/class-starting-point.pdf"
     },
     {
-      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-04-slim-rail.html",
-      "destination": "DGP0959/slides/visual_prototype_04_slim_rail.html"
+      "source": "../DGP0959/design_templates/01-warm-academic.html",
+      "destination": "design_templates/01-warm-academic.html"
     },
     {
-      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-04-slim-rail.pdf",
-      "destination": "DGP0959/pdf/visual_prototype_04_slim_rail.pdf"
+      "source": "../DGP0959/design_templates/01-warm-academic.pdf",
+      "destination": "design_templates/01-warm-academic.pdf"
     },
     {
-      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-05-ribbon.html",
-      "destination": "DGP0959/slides/visual_prototype_05_ribbon.html"
+      "source": "../DGP0959/design_templates/02-simple-white.html",
+      "destination": "design_templates/02-simple-white.html"
     },
     {
-      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-05-ribbon.pdf",
-      "destination": "DGP0959/pdf/visual_prototype_05_ribbon.pdf"
+      "source": "../DGP0959/design_templates/02-simple-white.pdf",
+      "destination": "design_templates/02-simple-white.pdf"
     },
     {
-      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-06-dark-lab.html",
-      "destination": "DGP0959/slides/visual_prototype_06_dark_lab.html"
+      "source": "../DGP0959/design_templates/03-workbench.html",
+      "destination": "design_templates/03-workbench.html"
     },
     {
-      "source": "../DGP0959/prototypes/lecture-design-system-v2/visual-prototype-06-dark-lab.pdf",
-      "destination": "DGP0959/pdf/visual_prototype_06_dark_lab.pdf"
+      "source": "../DGP0959/design_templates/03-workbench.pdf",
+      "destination": "design_templates/03-workbench.pdf"
     },
     {
-      "source": "../DGP0959/prototypes/lecture-design-system-v2/prototype-controls.js",
-      "destination": "DGP0959/slides/prototype-controls.js"
+      "source": "../DGP0959/design_templates/04-slim-rail.html",
+      "destination": "design_templates/04-slim-rail.html"
     },
     {
-      "source": "../DGP0959/prototypes/lecture-design-system-v2/assets/UMLOGO_redRGB.png",
-      "destination": "DGP0959/slides/assets/UMLOGO_redRGB.png"
+      "source": "../DGP0959/design_templates/04-slim-rail.pdf",
+      "destination": "design_templates/04-slim-rail.pdf"
     },
     {
-      "source": "../DGP0959/prototypes/lecture-design-system-v2/assets/UMLOGO_revWHITE.png",
-      "destination": "DGP0959/slides/assets/UMLOGO_revWHITE.png"
+      "source": "../DGP0959/design_templates/05-ribbon.html",
+      "destination": "design_templates/05-ribbon.html"
+    },
+    {
+      "source": "../DGP0959/design_templates/05-ribbon.pdf",
+      "destination": "design_templates/05-ribbon.pdf"
+    },
+    {
+      "source": "../DGP0959/design_templates/06-dark-lab.html",
+      "destination": "design_templates/06-dark-lab.html"
+    },
+    {
+      "source": "../DGP0959/design_templates/06-dark-lab.pdf",
+      "destination": "design_templates/06-dark-lab.pdf"
+    },
+    {
+      "source": "../DGP0959/design_templates/07-themed-ribbon.html",
+      "destination": "design_templates/07-themed-ribbon.html"
+    },
+    {
+      "source": "../DGP0959/design_templates/07-themed-ribbon.pdf",
+      "destination": "design_templates/07-themed-ribbon.pdf"
+    },
+    {
+      "source": "../DGP0959/design_templates/README.md",
+      "destination": "design_templates/README.md"
+    },
+    {
+      "source": "../DGP0959/design_templates/assets/placeholder-image.svg",
+      "destination": "design_templates/assets/placeholder-image.svg"
+    },
+    {
+      "source": "../DGP0959/design_templates/assets/placeholder-logo-dark.svg",
+      "destination": "design_templates/assets/placeholder-logo-dark.svg"
+    },
+    {
+      "source": "../DGP0959/design_templates/assets/placeholder-logo-light.svg",
+      "destination": "design_templates/assets/placeholder-logo-light.svg"
+    },
+    {
+      "source": "../DGP0959/design_templates/prototype-controls.js",
+      "destination": "design_templates/prototype-controls.js"
     }
   ]
 }
