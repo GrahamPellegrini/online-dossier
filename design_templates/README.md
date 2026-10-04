@@ -40,4 +40,4 @@ The library is published at the online dossier root under `design_templates/`. T
 
 `resource-document.html` and its A4 PDF provide the shared document style: compact banner, right-hand institution logo, numbered section navigation, and tutor footer. Replace the placeholders for a case study or homework sheet. The generator `../scripts/build_resources.py` builds actual course resources with UM branding and Graham Pellegrini’s name.
 
-Navigation trials currently compare far-left circles (roadmap), far-right markers (setup), and far-left small tabs (diagnostic). Labels animate on hover/keyboard focus. The generic document template currently uses the circle trial; final navigation choice is pending review.
+Approved document navigation: compact far-left numbered circles on every resource and the reusable document template. Labels animate on hover/keyboard focus; controls fade when idle. Phones use the bottom strip; PDFs hide navigation.
