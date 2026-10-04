@@ -351,68 +351,13 @@
         }
       ],
       "up": "../",
-      "description": "Review draft: original 1 October findings, separately dated corrections, pipeline diagrams and supporting evidence.",
+      "description": "Technical audit, pipeline diagram and supporting evidence. PDF download and original sources are available inside the audit.",
       "entries": [
         {
-          "title": "Audit findings \u2014 read online",
+          "title": "System audit",
           "kind": "HTML",
           "href": "findings.html",
           "prefetch": true
-        },
-        {
-          "title": "Audit findings \u2014 download PDF",
-          "kind": "PDF",
-          "href": "findings.pdf"
-        },
-        {
-          "title": "Original findings \u2014 editable source",
-          "kind": "Markdown",
-          "href": "FINDINGS.md"
-        },
-        {
-          "title": "Refined pipeline",
-          "kind": "PNG",
-          "href": "maestro_pipeline_refined.png"
-        },
-        {
-          "title": "Refined pipeline \u2014 editable diagram",
-          "kind": "Excalidraw",
-          "href": "maestro_pipeline_refined.excalidraw"
-        },
-        {
-          "title": "1 October pipeline",
-          "kind": "PNG",
-          "href": "maestro_pipeline_2026_10_01.png"
-        },
-        {
-          "title": "1 October pipeline \u2014 editable diagram",
-          "kind": "Excalidraw",
-          "href": "maestro_pipeline_2026_10_01.excalidraw"
-        },
-        {
-          "title": "Earlier pipeline",
-          "kind": "PNG",
-          "href": "maestro_pipeline.png"
-        },
-        {
-          "title": "Original DINOv3 log \u2014 superseded",
-          "kind": "Log",
-          "href": "dinov3_eval.log"
-        },
-        {
-          "title": "Original rerun log \u2014 interrupted",
-          "kind": "Log",
-          "href": "dinov3_rerun.log"
-        },
-        {
-          "title": "Corrected DINOv3 S/B evaluation",
-          "kind": "Markdown",
-          "href": "evidence/dinov3_consolidation_proper_eval_2026_10_03.md"
-        },
-        {
-          "title": "Source inventory and rebuild instructions",
-          "kind": "Markdown",
-          "href": "README.md"
         }
       ]
     }
