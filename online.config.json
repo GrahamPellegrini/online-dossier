@@ -603,6 +603,14 @@
       "destination": "maestro/vr/audit/findings.pdf"
     },
     {
+      "source": "../MAESTRO/VR/audit/findings-technical.html",
+      "destination": "maestro/vr/audit/findings-technical.html"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/findings-technical.pdf",
+      "destination": "maestro/vr/audit/findings-technical.pdf"
+    },
+    {
       "source": "../MAESTRO/VR/audit/maestro_pipeline.png",
       "destination": "maestro/vr/audit/maestro_pipeline.png"
     },
