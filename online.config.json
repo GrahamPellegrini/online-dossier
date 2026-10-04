@@ -24,6 +24,12 @@
           "prefetch": true
         },
         {
+          "title": "Maestro",
+          "kind": "Folder",
+          "href": "maestro/",
+          "prefetch": true
+        },
+        {
           "title": "Design templates",
           "kind": "Folder",
           "href": "design_templates/",
@@ -383,6 +389,132 @@
           "prefetch": false
         }
       ]
+    },
+    {
+      "path": "maestro/index.html",
+      "title": "Maestro",
+      "breadcrumb": [
+        {
+          "label": "Directory list",
+          "href": "../"
+        }
+      ],
+      "up": "../",
+      "description": "M.AI.ESTRO project documentation and audits.",
+      "entries": [
+        {
+          "title": "VR",
+          "kind": "Folder",
+          "href": "vr/",
+          "prefetch": true
+        }
+      ]
+    },
+    {
+      "path": "maestro/vr/index.html",
+      "title": "Maestro VR",
+      "breadcrumb": [
+        {
+          "label": "Directory list",
+          "href": "../../"
+        },
+        {
+          "label": "Maestro",
+          "href": "../"
+        }
+      ],
+      "up": "../",
+      "entries": [
+        {
+          "title": "System audit",
+          "kind": "Folder",
+          "href": "audit/",
+          "prefetch": true
+        }
+      ]
+    },
+    {
+      "path": "maestro/vr/audit/index.html",
+      "title": "System audit",
+      "breadcrumb": [
+        {
+          "label": "Directory list",
+          "href": "../../../"
+        },
+        {
+          "label": "Maestro",
+          "href": "../../"
+        },
+        {
+          "label": "VR",
+          "href": "../"
+        }
+      ],
+      "up": "../",
+      "description": "Review draft: original 1 October findings, separately dated corrections, pipeline diagrams and supporting evidence.",
+      "entries": [
+        {
+          "title": "Audit findings \u2014 read online",
+          "kind": "HTML",
+          "href": "findings.html",
+          "prefetch": true
+        },
+        {
+          "title": "Audit findings \u2014 download PDF",
+          "kind": "PDF",
+          "href": "findings.pdf"
+        },
+        {
+          "title": "Original findings \u2014 editable source",
+          "kind": "Markdown",
+          "href": "FINDINGS.md"
+        },
+        {
+          "title": "Refined pipeline",
+          "kind": "PNG",
+          "href": "maestro_pipeline_refined.png"
+        },
+        {
+          "title": "Refined pipeline \u2014 editable diagram",
+          "kind": "Excalidraw",
+          "href": "maestro_pipeline_refined.excalidraw"
+        },
+        {
+          "title": "1 October pipeline",
+          "kind": "PNG",
+          "href": "maestro_pipeline_2026_10_01.png"
+        },
+        {
+          "title": "1 October pipeline \u2014 editable diagram",
+          "kind": "Excalidraw",
+          "href": "maestro_pipeline_2026_10_01.excalidraw"
+        },
+        {
+          "title": "Earlier pipeline",
+          "kind": "PNG",
+          "href": "maestro_pipeline.png"
+        },
+        {
+          "title": "Original DINOv3 log \u2014 superseded",
+          "kind": "Log",
+          "href": "dinov3_eval.log"
+        },
+        {
+          "title": "Original rerun log \u2014 interrupted",
+          "kind": "Log",
+          "href": "dinov3_rerun.log"
+        },
+        {
+          "title": "Corrected DINOv3 S/B evaluation",
+          "kind": "Markdown",
+          "href": "evidence/dinov3_consolidation_proper_eval_2026_10_03.md"
+        },
+        {
+          "title": "Source inventory and rebuild instructions",
+          "kind": "Markdown",
+          "href": "README.md"
+        }
+      ]
     }
   ],
   "copies": [
@@ -584,6 +716,74 @@
     {
       "source": "../DGP0959/design_templates/resource-document.pdf",
       "destination": "design_templates/resource-document.pdf"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/FINDINGS.md",
+      "destination": "maestro/vr/audit/FINDINGS.md"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/README.md",
+      "destination": "maestro/vr/audit/README.md"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/assets/UMLOGO_revWHITE.png",
+      "destination": "maestro/vr/audit/assets/UMLOGO_revWHITE.png"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/assets/audit.css",
+      "destination": "maestro/vr/audit/assets/audit.css"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/dinov3_eval.log",
+      "destination": "maestro/vr/audit/dinov3_eval.log"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/dinov3_rerun.log",
+      "destination": "maestro/vr/audit/dinov3_rerun.log"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/evidence/HANDOVER.md",
+      "destination": "maestro/vr/audit/evidence/HANDOVER.md"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/evidence/code-continuity_2026_10_03.md",
+      "destination": "maestro/vr/audit/evidence/code-continuity_2026_10_03.md"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/evidence/dinov3_consolidation_proper_eval_2026_10_03.md",
+      "destination": "maestro/vr/audit/evidence/dinov3_consolidation_proper_eval_2026_10_03.md"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/findings.html",
+      "destination": "maestro/vr/audit/findings.html"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/findings.pdf",
+      "destination": "maestro/vr/audit/findings.pdf"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/maestro_pipeline.png",
+      "destination": "maestro/vr/audit/maestro_pipeline.png"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/maestro_pipeline_2026_10_01.excalidraw",
+      "destination": "maestro/vr/audit/maestro_pipeline_2026_10_01.excalidraw"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/maestro_pipeline_2026_10_01.png",
+      "destination": "maestro/vr/audit/maestro_pipeline_2026_10_01.png"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/maestro_pipeline_refined.excalidraw",
+      "destination": "maestro/vr/audit/maestro_pipeline_refined.excalidraw"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/maestro_pipeline_refined.png",
+      "destination": "maestro/vr/audit/maestro_pipeline_refined.png"
+    },
+    {
+      "source": "../MAESTRO/VR/audit/source-manifest.json",
+      "destination": "maestro/vr/audit/source-manifest.json"
     }
   ]
 }

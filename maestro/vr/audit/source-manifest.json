@@ -1,0 +1,53 @@
+{
+  "moved_at_utc": "2026-10-04T14:40:42.862055+00:00",
+  "files": [
+    {
+      "name": "FINDINGS.md",
+      "original_path": "/home/graham/projects/maestro-vr/docs/audit/FINDINGS.md",
+      "bytes": 20609,
+      "sha256": "8f0077f8f87f83cc689641f1c3900e26681ff28a487050bc75f1172c57b62c18"
+    },
+    {
+      "name": "dinov3_eval.log",
+      "original_path": "/home/graham/projects/maestro-vr/docs/audit/dinov3_eval.log",
+      "bytes": 6646,
+      "sha256": "732f5c2906d8717e2c1bfee46b4ad6f3ad1b7ea0fcb05542184843cd60608650"
+    },
+    {
+      "name": "dinov3_rerun.log",
+      "original_path": "/home/graham/projects/maestro-vr/docs/audit/dinov3_rerun.log",
+      "bytes": 569,
+      "sha256": "513b77bf8a86d05e14c6b085fdd6e5621a2d0ef3b7a935afc2b3a3f2214ae7f6"
+    },
+    {
+      "name": "maestro_pipeline.png",
+      "original_path": "/home/graham/projects/maestro-vr/docs/audit/maestro_pipeline.png",
+      "bytes": 2530552,
+      "sha256": "3dc6cbc9881a73ca4e0e1828b4d759e21aab8ba424862fc7ba0c2d71ba161b83"
+    },
+    {
+      "name": "maestro_pipeline_2026_10_01.excalidraw",
+      "original_path": "/home/graham/projects/maestro-vr/docs/audit/maestro_pipeline_2026_10_01.excalidraw",
+      "bytes": 52570,
+      "sha256": "eca4530576e06402d58aa53fe55b5533670072e934c31217a97cd55738365c91"
+    },
+    {
+      "name": "maestro_pipeline_2026_10_01.png",
+      "original_path": "/home/graham/projects/maestro-vr/docs/audit/maestro_pipeline_2026_10_01.png",
+      "bytes": 1704505,
+      "sha256": "db178ae2e82c949e894f988af5701b091fe569c962f6b0607905dbfef1df49db"
+    },
+    {
+      "name": "maestro_pipeline_refined.excalidraw",
+      "original_path": "/home/graham/projects/maestro-vr/docs/audit/maestro_pipeline_refined.excalidraw",
+      "bytes": 2169057,
+      "sha256": "7bf9b1d7a738fc5f1a98fb65a1a9fd505648ac41295f5425016d195a499c2e21"
+    },
+    {
+      "name": "maestro_pipeline_refined.png",
+      "original_path": "/home/graham/projects/maestro-vr/docs/audit/maestro_pipeline_refined.png",
+      "bytes": 3106035,
+      "sha256": "083a0f61770c985a1393914a11b30d05990cadd45b9a89c70310d5d3897617e1"
+    }
+  ]
+}

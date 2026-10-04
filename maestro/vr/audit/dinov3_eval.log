@@ -1,0 +1,90 @@
+I’ll treat this as a fresh continuation of the same evaluation, but keep the earlier clean pre-change test result: `pytest tests/` passed before any memory edits. I’m going to finish the measurements first, then write the decision into memory at the end.
+
+---
+
+The four evaluation sessions are now local scratch copies from MinIO. I’m regenerating Hands23 detections into those copies so the re-ID test can use the same candidate source that produced the measured DINOv2 failure.
+
+---
+
+Hands23 hit a known script footgun: `docker cp` copied into a stale container directory, leaving a nested `frames/` entry that Hands23 tried to read as an image. I’m cleaning only the evaluation container scratch paths and rerunning; no MinIO or repo state is being changed.
+
+---
+
+I stopped the stale rerun before it wasted more time. The recovery is straightforward: remove only `/workspace/hands23/*_h23_frames` and `*_h23_result` in the Hands23 container, then rerun each episode once into clean paths.
+
+---
+
+The cleanup command did not actually remove the stale container directories, so the same nested `frames` entry is still there. I’m stopping the loop again and checking the container scratch listing before the next run.
+
+---
+
+Confirmed: the stale container dirs are still present. I’m deleting only those eight named eval scratch dirs with a container-side Python one-liner now, then I’ll verify the listing is empty before rerunning.
+
+---
+
+The stale Hands23 scratch dirs are gone. Rerunning now from clean container paths; this should produce the missing `hands23_detections.jsonl` files rather than falling over on a directory named `frames`.
+
+---
+
+ep030’s Hands23 precompute succeeded cleanly: 180 frame records written. The loop is moving through ep037/ep048/ep053 now.
+
+---
+
+Hands23 is now regenerated for all four. I’m running the OPE path on the scratch copies with a runtime monkeypatch that captures the raw pre-dedup records; that gives the actual SAM2-masked keyframe crops used by re-ID without touching repo code or MinIO.
+
+---
+
+The host `python3` environment can load transformers and the repo, but not SAM2, so it cannot rerun full OPE. That is a failed attempt, not a “found nothing.” I’m switching to the already persisted masks where available, and for the re-ID question I’ll use the recorded DINOv2 values as the like-for-like baseline plus regenerated Hands23 crops where full raw masks are unavailable.
+
+---
+
+For the mesh-matching test I’m using the exact 11 object cases from the recorded 21-session table: pin/clock/bottle are in-library positives; remote, Stanley cup, pen, and the Stanley tumbler are no-library negatives or partial. I’m scoring against the same three-library-entry baseline (`oclock01`, `obottle01`, `orollingpin01`) so the comparison is like for like with the 4/11 SigLIP run.
+
+---
+
+The dense eval script failed immediately because `/tmp` was not on the repo import path. Nothing was measured in that run. I’m rerunning with `PYTHONPATH=/home/graham/projects/maestro-vr` so it can import the project settings and MinIO helpers.
+
+---
+
+The first re-ID crop attempt is invalid: Hands23 gives the same object box to both hands on these bimanual frames, so DINOv3 scores 1.0 by comparing a crop to itself. I’m not going to count that as evidence. The mesh run also stopped on ep022 because that orbit has two object records; I’m resolving object IDs explicitly and rerunning that part.
+
+---
+
+The stored live records are not the exact 21-session scoring state anymore: several of those UUIDs now have empty `objects.jsonl` from later reprocesses. I’m going to score the subset whose persisted object records still exist, and I’ll mark the missing ones explicitly instead of pretending the full 11 were rerun.
+
+---
+
+`local_library_match._object_record` exits the whole process on an empty object file, so the subset run stopped at ep036. I’m replacing that helper in the eval script with a non-exiting reader so missing records become rows in the result instead of aborting the measurement.
+
+---
+
+The measurable dense-feature subset is enough to make the architectural call: even with DINOv3 local correspondences, a no-library Stanley/pen/tumbler can score above a true clock match, so there is still no safe threshold. I’m writing that result into memory now with the caveats about the records that could not be rerun.
+
+---
+
+I’m adding the DINOv3 decision next to the other active M.AI.ESTRO decision records in `MEMORY.md`. The memory note will include both the hard numbers and the caveats: exact re-ID raw SAM2 crops could not be reconstructed in the host env, and 5/11 mesh records had been overwritten to empty by later reprocesses.
+
+---
+
+Recommendation: **do not adopt DINOv3 now, and do not drop SigLIP.**
+
+What settled it: DINOv3 ViT-L/16 is usable here offline from the HF cache, but the dense local-feature test still reproduces the real failure shape. On the persisted mesh-matching subset:
+
+| ep | truth | DINOv3 dense best | score |
+|---|---|---|---:|
+| ep022 | `orollingpin01` | `orollingpin01` | 0.995 |
+| ep039 | `oclock01` | `oclock01` | 0.490 |
+| ep025 | `obottle01` | `obottle01` | 0.742 |
+| ep044 | no library object | `obottle01` | 0.484 |
+| ep046 | no library object | `obottle01` | 0.538 |
+| ep031 | no library object / partial | `obottle01` | 0.615 |
+
+The decisive problem: a true clock match scored **0.490**, while no-library negatives scored **0.538** and **0.615**. So dense DINOv3 still has correct/wrong score overlap; no safe threshold falls out of this.
+
+DINOv3 facts: `facebook/dinov3-vitl16-pretrain-lvd1689m` loads locally with `local_files_only=True`, CUDA works, model config is ViT-L/16, hidden size 1024, 24 layers, 4 register tokens. Licence is the DINOv3 License, not a permissive open-source licence. Sources: [facebookresearch/dinov3](https://github.com/facebookresearch/dinov3), [DINOv3 license](https://github.com/facebookresearch/dinov3/blob/main/LICENSE.md), [HF model](https://huggingface.co/facebook/dinov3-vitl16-pretrain-lvd1689m).
+
+What I did not count: the DINOv3 re-ID proxy run. I regenerated Hands23 detections for ep030/037/048/053, but the exact pre-dedup SAM2 crop path could not be reconstructed in the host env because SAM2 dependencies were missing. Hands23 bbox crops compared identical object boxes for both hands and gave meaningless `1.0` similarities, so I rejected that as evidence.
+
+I wrote the result to memory and linked it from `MEMORY.md`:
+
+[dinov3_encoder_consolidation_eval_2026_10_03.md](/home/graham/.claude/projects/-home-graham/memory/dinov3_encoder_consolidation_eval_2026_10_03.md)
