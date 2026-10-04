@@ -35,3 +35,7 @@ PDF previews are exported in Chromium at 1536×864 with print backgrounds enable
 These are design starting points, not finished teaching material.
 
 The library is published at the online dossier root under `design_templates/`. Template 07 also includes a teaching-image placeholder layout. Actual DGP0959 lectures should restore the supplied University logo from the original prototype assets.
+
+## Case-study and take-home documents
+
+`resource-document.html` and its A4 PDF provide the shared document style: compact banner, right-hand institution logo, numbered section navigation, and tutor footer. Replace the placeholders for a case study or homework sheet. The generator `../scripts/build_resources.py` builds actual course resources with UM branding and Graham Pellegrini’s name.

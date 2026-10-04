@@ -76,8 +76,16 @@
         }
       ],
       "up": "../",
-      "entries": [],
-      "description": "Lecture materials will appear here as they are developed. Reusable designs are in Design templates on the directory list."
+      "entries": [
+        {
+          "title": "Course overview \u2014 introduction slide",
+          "kind": "HTML",
+          "href": "course_overview.html",
+          "source": "../DGP0959/sessions/01-ai-toolkit/course-overview.html",
+          "prefetch": true
+        }
+      ],
+      "description": "Course introduction material. Full lecture decks will be added as they are developed."
     },
     {
       "path": "DGP0959/pdf/index.html",
@@ -93,8 +101,15 @@
         }
       ],
       "up": "../",
-      "entries": [],
-      "description": "Lecture materials will appear here as they are developed. Reusable designs are in Design templates on the directory list."
+      "entries": [
+        {
+          "title": "Course overview \u2014 introduction slide",
+          "kind": "PDF",
+          "href": "course_overview.pdf",
+          "source": "../DGP0959/sessions/01-ai-toolkit/course-overview.pdf"
+        }
+      ],
+      "description": "Lecture downloads. The course overview is a single slide for the Session 1 introduction."
     },
     {
       "path": "DGP0959/resources/index.html",
@@ -247,7 +262,7 @@
         }
       ],
       "up": "../",
-      "description": "Seven reusable designs with placeholder names, units, logos and images. Design 07 is the approved DGP0959 style: red sections, dark normal content and blue case studies.",
+      "description": "Seven slide designs and a reusable case-study / take-home document style. Design 07 is the approved DGP0959 slide style.",
       "entries": [
         {
           "title": "01 warm academic",
@@ -352,6 +367,20 @@
           "kind": "Markdown",
           "href": "README.md",
           "source": "../DGP0959/design_templates/README.md"
+        },
+        {
+          "title": "Case-study / take-home document template",
+          "kind": "HTML",
+          "href": "resource-document.html",
+          "source": "../DGP0959/design_templates/resource-document.html",
+          "prefetch": true
+        },
+        {
+          "title": "Case-study / take-home document template \u2014 PDF",
+          "kind": "PDF",
+          "href": "resource-document.pdf",
+          "source": "../DGP0959/design_templates/resource-document.pdf",
+          "prefetch": false
         }
       ]
     }
@@ -531,6 +560,30 @@
     {
       "source": "../DGP0959/design_templates/prototype-controls.js",
       "destination": "design_templates/prototype-controls.js"
+    },
+    {
+      "source": "../DGP0959/resources/assets/UMLOGO_revWHITE.png",
+      "destination": "DGP0959/resources/assets/UMLOGO_revWHITE.png"
+    },
+    {
+      "source": "../DGP0959/sessions/01-ai-toolkit/assets/UMLOGO_revWHITE.png",
+      "destination": "DGP0959/slides/assets/UMLOGO_revWHITE.png"
+    },
+    {
+      "source": "../DGP0959/sessions/01-ai-toolkit/course-overview.html",
+      "destination": "DGP0959/slides/course_overview.html"
+    },
+    {
+      "source": "../DGP0959/sessions/01-ai-toolkit/course-overview.pdf",
+      "destination": "DGP0959/pdf/course_overview.pdf"
+    },
+    {
+      "source": "../DGP0959/design_templates/resource-document.html",
+      "destination": "design_templates/resource-document.html"
+    },
+    {
+      "source": "../DGP0959/design_templates/resource-document.pdf",
+      "destination": "design_templates/resource-document.pdf"
     }
   ]
 }
