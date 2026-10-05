@@ -2,7 +2,7 @@
   document.querySelectorAll('.info-button').forEach(button => button.addEventListener('click', () => {
     JSON.parse(button.dataset.infoUrls).forEach(url => window.open(url, '_blank', 'noopener'));
   }));
-  const cards = [...document.querySelectorAll('.status-card')];
+  const cards = [...document.querySelectorAll('.status-card, .gantt-entry:not(.gantt-print-notes .gantt-entry)')];
   const opened = [];
   const animations = new Map();
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
