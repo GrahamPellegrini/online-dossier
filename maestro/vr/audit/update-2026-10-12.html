@@ -55,8 +55,6 @@ img.shot { max-width: 480px; }
   <li>The tracker loses the object and makes duplicates</li>
   <li>Flipping sometimes does not work at all: the candle and the stopwatch were not found</li>
   <li>The bottle kept the object but added 4 duplicates</li>
-  <li><span class="green">Next: lock onto one object from the first grip. Merge the duplicates, and treat later changes as flips or rearrangements of that same object</span></li>
-  <li><span class="green">Aim: orbits that capture the whole object, underside included, so the 3D model and tracking cover it and the clock-underside failure above does not happen</span></li>
 </ul>
 <p><b>Bottle, flipped</b></p>
 <video controls playsinline preload="metadata" poster="update-2026-10-12/f-1078d32c.jpg" src="update-2026-10-12/f-1078d32c.mp4"></video>
@@ -90,26 +88,4 @@ img.shot { max-width: 480px; }
   <li>Matching only helps once an object has a 3D model. That is why none of the 2B clips matched</li>
 </ul>
 
-<h2>Found since the audit</h2>
-<ul>
-  <li>Last week's recordings and iterations surfaced many new issues. They are being handled one at a time</li>
-  <li><b>No 3D models are made automatically from orbits.</b> The step was never built. 11 orbits are waiting</li>
-  <li><b>First test of making a model from a new orbit (wooden clock) failed.</b> Fit score 0.42, needed 0.70. The mask covered only the dial and only part of the orbit was usable. The method is being checked on an older good orbit</li>
-  <li><b>Many objects came out "unidentified".</b> Names come from a fixed list. They should come from Qwen's description</li>
-  <li>The printed marker board (ChArUco) used in September is no longer needed for the 3D model route, which gets its scale from the headset's own movement</li>
-</ul>
-
-<h2>Next</h2>
-<ul>
-  <li>Orbit fix: lock onto one object from the first grip, merge duplicates, handle flips. This also fixes split objects and should cover the clock underside</li>
-  <li>Make 3D models right after each orbit, other objects first. Each model is checked before it joins the library</li>
-  <li>Name objects from Qwen</li>
-</ul>
-
-<h2>Still to investigate</h2>
-<ul>
-  <li>How to start tracking small objects that are never found (10 empty clips)</li>
-  <li>Why the clock underside is lost: the model missing the underside, or the tracker</li>
-  <li>Cleaning masks is still open</li>
-</ul>
 </main></body></html>

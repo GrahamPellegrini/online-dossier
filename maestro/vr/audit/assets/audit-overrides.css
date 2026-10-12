@@ -44,3 +44,13 @@ code{font-size:.87em;background:#F6F8FB;padding:1px 4px;overflow-wrap:anywhere}p
 .update-body img.shot{max-width:480px}
 .update-body h3{margin-top:24px}
 .audit-date{font-size:.6em;font-weight:400;color:#6b7178}
+.pre-audit{margin:12px 0 18px;border:1px solid #D9DFE7;border-radius:6px;padding:0 12px;background:#fff}
+.pre-audit>summary{cursor:pointer;font-weight:700;padding:12px 0}
+.pre-audit[open]>summary{border-bottom:1px solid #D9DFE7;margin-bottom:12px}
+.pre-grid{padding-bottom:12px}
+.status-in-progress .status-badge{background:#D97706}
+.status-waiting-confirmation .status-badge{background:#6B4FBB}
+.status-waiting-confirmation{border-color:#6B4FBB}
+.status-awaiting-it .status-badge{background:#1565C0}
+.card-body h4{margin:14px 0 4px;font-size:14px}
+.card-body ul{margin:4px 0 8px;padding-left:20px}

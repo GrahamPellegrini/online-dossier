@@ -27,16 +27,18 @@
       opened.push(card); change(card, true);
     }
   }));
-  const grid = document.querySelector('.status-grid');
   const svg = document.querySelector('.status-connections');
+  const grid = svg ? svg.parentElement : null;
   function draw() {
     if (!svg || !grid) return;
     const bounds = grid.getBoundingClientRect();
     svg.setAttribute('viewBox', `0 0 48 ${bounds.height}`);
     svg.innerHTML = '<defs><marker id="followup-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#8096ab"/></marker></defs>';
-    [['foundation','pca',24], ['orbit','mesh',9], ['orbit','unity',39]].forEach(([from,to,x]) => {
-      const first = document.querySelector(`#status-${from} summary`).getBoundingClientRect();
-      const last = document.querySelector(`#status-${to} summary`).getBoundingClientRect();
+    [['foundation','nomesh',24], ['orbit','meshmatch',9]].forEach(([from,to,x]) => {
+      const a = document.querySelector(`#status-${from} summary`), z = document.querySelector(`#status-${to} summary`);
+      if (!a || !z) return;
+      const first = a.getBoundingClientRect();
+      const last = z.getBoundingClientRect();
       const y1 = first.top - bounds.top + first.height / 2;
       const y2 = last.top - bounds.top + last.height / 2;
       const path = document.createElementNS('http://www.w3.org/2000/svg','path');
