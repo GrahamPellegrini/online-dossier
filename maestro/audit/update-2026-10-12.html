@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>M.AI.ESTRO VR: update since the 5 Oct audit</title>
+<style>
+:root { --bg: #ffffff; --text: #4f555b; --strong: #2f3439; --faint: #858b91; --line: #dde0e3; --red: #b3372d; --green: #1d7a46; color-scheme: light; }
+@media (prefers-color-scheme: dark) { :root { --bg: #1b1d1f; --text: #b4babf; --strong: #d3d8dc; --faint: #7d848a; --line: #34383c; --red: #f08a80; --green: #5fd08b; color-scheme: dark; } }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; padding-inline: 16px; }
+main { max-width: 700px; margin-inline: auto; padding-block: 24px 64px; }
+h1, h2 { color: var(--strong); font-weight: 700; text-wrap: balance; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 32px 0 6px; }
+b { color: var(--strong); }
+a { color: var(--strong); }
+ul { padding-left: 22px; margin: 6px 0; }
+li { margin: 5px 0; }
+p { margin: 10px 0 2px; }
+.meta, .back { color: var(--faint); font-size: 14px; margin: 0; }
+.red { color: var(--red); font-weight: 700; }
+.green { color: var(--green); font-weight: 700; }
+video, img { display: block; width: 100%; max-width: 100%; height: auto; background: #000; margin: 4px 0 2px; }
+img.shot { max-width: 480px; }
+</style></head><body>
+<main>
+<p class="back"><a href="findings.html#system-status">Back to the system audit</a></p>
+<h1>Update since the 5 Oct audit</h1>
+<p class="meta">12 October 2026 · Graham Pellegrini · University of Malta · work in progress</p>
+
+<h2>Recordings</h2>
+<ul>
+  <li>Batch 2 was split into 2A and 2B. Uploads kept failing, so we built an upload queue first (first in, first out, with visible progress)</li>
+  <li>2B: 43 clips processed. None matched a 3D model, because no 3D models exist yet for the new objects. 10 came out empty and 4 split one object into two</li>
+</ul>
+<p><b>Headset Recordings tab.</b> "133.4 MB left" is one old failed clip being counted. A display fix is written and not yet installed</p>
+<img class="shot" src="update-2026-10-12/queue.jpg" alt="Headset Recordings tab: 0 queued, 0 uploading, 133.4 MB left, four recordings">
+
+<h2>Old tracker vs FoundationPose</h2>
+<ul>
+  <li>FoundationPose tracks using the object's 3D model. The old tracker does not</li>
+  <li><b>No smoothing on either side</b></li>
+</ul>
+<p><b>Clock, live clip.</b> The old tracker spikes. FoundationPose stays upright</p>
+<video controls playsinline preload="metadata" poster="update-2026-10-12/d7635050.jpg" src="update-2026-10-12/d7635050.mp4"></video>
+<p><b>Clock, hand task</b></p>
+<video controls playsinline preload="metadata" poster="update-2026-10-12/f205e09c.jpg" src="update-2026-10-12/f205e09c.mp4"></video>
+<p><b>Clock, back view</b></p>
+<video controls playsinline preload="metadata" poster="update-2026-10-12/c63f9a79.jpg" src="update-2026-10-12/c63f9a79.mp4"></video>
+<p><b>Clock plus a second object.</b> Shows the one-object-becomes-two problem</p>
+<video controls playsinline preload="metadata" poster="update-2026-10-12/db47c3fd.jpg" src="update-2026-10-12/db47c3fd.mp4"></video>
+<ul>
+  <li><span class="red">Problem: both trackers lose the clock when its underside faces the camera.</span> Likely an orbit issue, which we are investigating</li>
+</ul>
+
+<h2>Flipping the object mid-orbit</h2>
+<ul>
+  <li>The tracker loses the object and makes duplicates</li>
+  <li>Flipping sometimes does not work at all: the candle and the stopwatch were not found</li>
+  <li>The bottle kept the object but added 4 duplicates</li>
+</ul>
+<p><b>Bottle, flipped</b></p>
+<video controls playsinline preload="metadata" poster="update-2026-10-12/f-1078d32c.jpg" src="update-2026-10-12/f-1078d32c.mp4"></video>
+
+<h2>Steadier pose (W2, W3)</h2>
+<ul>
+  <li><b>W2</b> = symmetry-aware continuity (keeps the box from jumping between look-alike orientations)</li>
+  <li><b>W3</b> = W2 plus a speed limit on turning</li>
+  <li>Done offline, alongside the FoundationPose work, on the old tracker's pose</li>
+  <li>Result: much less shake, but it can lock in the wrong direction. On one clip it ended turned 90 degrees</li>
+  <li>Not adopted for the old tracker</li>
+  <li><b>Open:</b> whether W2 or W3 help on top of FoundationPose. Not tested yet. FoundationPose's 3D model already fixes direction, so the gain may be small</li>
+</ul>
+<p><b>Current, W2, W3 on the same clip.</b> Shake gone, W2 ends wrong</p>
+<video controls playsinline preload="metadata" poster="update-2026-10-12/w1.jpg" src="update-2026-10-12/w1.mp4"></video>
+
+<h2>Cleaning the masks</h2>
+<ul>
+  <li>The mask is the outline of the object, with the hand cut out of it</li>
+  <li><b>Fix 1: cut the hand out using this frame's hand box.</b> Small gain. Fewer broken outlines. Not enough to adopt</li>
+  <li><b>Fix 2: restart the mask when it breaks.</b> No effect</li>
+  <li>Still a problem: many clips never find the object or start badly. That needs a better start, not cleaning</li>
+</ul>
+<p><b>Fix 1 off (left) and on (right), best case.</b> The old version loses the lower half of the bottle (blue = what the fix recovers). The typical gain is much smaller</p>
+<video controls playsinline preload="metadata" poster="update-2026-10-12/hb.jpg" src="update-2026-10-12/hb.mp4"></video>
+
+<h2>Matching</h2>
+<ul>
+  <li>Each clip is compared with reference recordings. The settings were not tuned</li>
+  <li>More reference recordings helped. Wrong matches in a replay of 107 objects: 8, then 2, then 0 (counted by reading, not confirmed labels)</li>
+  <li>Matching only helps once an object has a 3D model. That is why none of the 2B clips matched</li>
+</ul>
+
+</main></body></html>
