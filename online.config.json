@@ -303,29 +303,6 @@
       "description": "M.AI.ESTRO project documentation and audits.",
       "entries": [
         {
-          "title": "VR",
-          "kind": "Folder",
-          "href": "vr/",
-          "prefetch": true
-        }
-      ]
-    },
-    {
-      "path": "maestro/vr/index.html",
-      "title": "Maestro VR",
-      "breadcrumb": [
-        {
-          "label": "Directory list",
-          "href": "../../"
-        },
-        {
-          "label": "Maestro",
-          "href": "../"
-        }
-      ],
-      "up": "../",
-      "entries": [
-        {
           "title": "System audit",
           "kind": "Folder",
           "href": "audit/",
@@ -340,19 +317,15 @@
       ]
     },
     {
-      "path": "maestro/vr/audit/index.html",
+      "path": "maestro/audit/index.html",
       "title": "System audit",
       "breadcrumb": [
         {
           "label": "Directory list",
-          "href": "../../../"
-        },
-        {
-          "label": "Maestro",
           "href": "../../"
         },
         {
-          "label": "VR",
+          "label": "Maestro",
           "href": "../"
         }
       ],
@@ -566,83 +539,83 @@
     },
     {
       "source": "../MAESTRO/VR/audit/FINDINGS.md",
-      "destination": "maestro/vr/audit/FINDINGS.md"
+      "destination": "maestro/audit/FINDINGS.md"
     },
     {
       "source": "../MAESTRO/VR/audit/README.md",
-      "destination": "maestro/vr/audit/README.md"
+      "destination": "maestro/audit/README.md"
     },
     {
       "source": "../MAESTRO/VR/audit/assets/UMLOGO_revWHITE.png",
-      "destination": "maestro/vr/audit/assets/UMLOGO_revWHITE.png"
+      "destination": "maestro/audit/assets/UMLOGO_revWHITE.png"
     },
     {
       "source": "../MAESTRO/VR/audit/assets/audit.css",
-      "destination": "maestro/vr/audit/assets/audit.css"
+      "destination": "maestro/audit/assets/audit.css"
     },
     {
       "source": "../MAESTRO/VR/audit/dinov3_eval.log",
-      "destination": "maestro/vr/audit/dinov3_eval.log"
+      "destination": "maestro/audit/dinov3_eval.log"
     },
     {
       "source": "../MAESTRO/VR/audit/dinov3_rerun.log",
-      "destination": "maestro/vr/audit/dinov3_rerun.log"
+      "destination": "maestro/audit/dinov3_rerun.log"
     },
     {
       "source": "../MAESTRO/VR/audit/evidence/HANDOVER.md",
-      "destination": "maestro/vr/audit/evidence/HANDOVER.md"
+      "destination": "maestro/audit/evidence/HANDOVER.md"
     },
     {
       "source": "../MAESTRO/VR/audit/evidence/code-continuity_2026_10_03.md",
-      "destination": "maestro/vr/audit/evidence/code-continuity_2026_10_03.md"
+      "destination": "maestro/audit/evidence/code-continuity_2026_10_03.md"
     },
     {
       "source": "../MAESTRO/VR/audit/evidence/dinov3_consolidation_proper_eval_2026_10_03.md",
-      "destination": "maestro/vr/audit/evidence/dinov3_consolidation_proper_eval_2026_10_03.md"
+      "destination": "maestro/audit/evidence/dinov3_consolidation_proper_eval_2026_10_03.md"
     },
     {
       "source": "../MAESTRO/VR/audit/findings.html",
-      "destination": "maestro/vr/audit/findings.html"
+      "destination": "maestro/audit/findings.html"
     },
     {
       "source": "../MAESTRO/VR/audit/findings.pdf",
-      "destination": "maestro/vr/audit/findings.pdf"
+      "destination": "maestro/audit/findings.pdf"
     },
     {
       "source": "../MAESTRO/VR/audit/findings-technical.html",
-      "destination": "maestro/vr/audit/findings-technical.html"
+      "destination": "maestro/audit/findings-technical.html"
     },
     {
       "source": "../MAESTRO/VR/audit/findings-technical.pdf",
-      "destination": "maestro/vr/audit/findings-technical.pdf"
+      "destination": "maestro/audit/findings-technical.pdf"
     },
     {
       "source": "../MAESTRO/VR/audit/maestro_pipeline.png",
-      "destination": "maestro/vr/audit/maestro_pipeline.png"
+      "destination": "maestro/audit/maestro_pipeline.png"
     },
     {
       "source": "../MAESTRO/VR/audit/maestro_pipeline_2026_10_01.excalidraw",
-      "destination": "maestro/vr/audit/maestro_pipeline_2026_10_01.excalidraw"
+      "destination": "maestro/audit/maestro_pipeline_2026_10_01.excalidraw"
     },
     {
       "source": "../MAESTRO/VR/audit/maestro_pipeline_2026_10_01.png",
-      "destination": "maestro/vr/audit/maestro_pipeline_2026_10_01.png"
+      "destination": "maestro/audit/maestro_pipeline_2026_10_01.png"
     },
     {
       "source": "../MAESTRO/VR/audit/maestro_pipeline_refined.excalidraw",
-      "destination": "maestro/vr/audit/maestro_pipeline_refined.excalidraw"
+      "destination": "maestro/audit/maestro_pipeline_refined.excalidraw"
     },
     {
       "source": "../MAESTRO/VR/audit/maestro_pipeline_refined.png",
-      "destination": "maestro/vr/audit/maestro_pipeline_refined.png"
+      "destination": "maestro/audit/maestro_pipeline_refined.png"
     },
     {
       "source": "../MAESTRO/VR/audit/source-manifest.json",
-      "destination": "maestro/vr/audit/source-manifest.json"
+      "destination": "maestro/audit/source-manifest.json"
     },
     {
       "source": "../EEAI/2026-10-XX_Presentation_ID_Conference_EDGE AI_Malta_EEAI_2026.pptx",
-      "destination": "maestro/vr/eeai/eeai-2026-presentation.pptx"
+      "destination": "maestro/eeai/eeai-2026-presentation.pptx"
     },
     {
       "source": "../DGP0959/sessions/01-ai-toolkit/opening-slides.html",
