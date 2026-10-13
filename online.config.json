@@ -330,6 +330,12 @@
           "kind": "Folder",
           "href": "audit/",
           "prefetch": true
+        },
+        {
+          "title": "EEAI 2026 presentation",
+          "kind": "PPTX",
+          "href": "eeai/eeai-2026-presentation.pptx",
+          "source": "../EEAI/2026-10-XX_Presentation_ID_Conference_EDGE AI_Malta_EEAI_2026.pptx"
         }
       ]
     },
@@ -633,6 +639,10 @@
     {
       "source": "../MAESTRO/VR/audit/source-manifest.json",
       "destination": "maestro/vr/audit/source-manifest.json"
+    },
+    {
+      "source": "../EEAI/2026-10-XX_Presentation_ID_Conference_EDGE AI_Malta_EEAI_2026.pptx",
+      "destination": "maestro/vr/eeai/eeai-2026-presentation.pptx"
     },
     {
       "source": "../DGP0959/sessions/01-ai-toolkit/opening-slides.html",
