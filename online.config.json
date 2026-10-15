@@ -614,7 +614,7 @@
       "destination": "maestro/audit/source-manifest.json"
     },
     {
-      "source": "../EEAI/2026-10-XX_Presentation_ID_Conference_EDGE AI_Malta_EEAI_2026.pptx",
+      "source": "../EEAI/eeai-2026-presentation_rev2.pptx",
       "destination": "maestro/eeai/eeai-2026-presentation.pptx"
     },
     {
