@@ -8,6 +8,9 @@
 
   let pointerOn = false;
   let hideTimer = null;
+  let cur = 0;
+  let resizing = false;
+  let resizeTimer = null;
 
   function activeIndex() {
     let active = 0;
@@ -37,7 +40,8 @@
       clearTimeout(hideTimer);
       hideTimer = setTimeout(() => progress.parentElement.classList.remove("show"), 1400);
     }
-    const active = activeIndex();
+    if (!resizing) cur = activeIndex();
+    const active = resizing ? cur : activeIndex();
     dots.forEach((dot, index) => dot.classList.toggle("active", index === active));
   }
 
@@ -71,6 +75,16 @@
   }, { passive: true });
 
   window.addEventListener("scroll", update, { passive: true });
-  window.addEventListener("resize", update);
+  window.addEventListener("resize", () => {
+    resizing = true;
+    const keep = cur;
+    window.scrollTo({ top: slides[keep].offsetTop, behavior: "instant" });
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      window.scrollTo({ top: slides[keep].offsetTop, behavior: "instant" });
+      resizing = false;
+      update();
+    }, 250);
+  });
   update();
 })();
