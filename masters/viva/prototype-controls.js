@@ -7,6 +7,7 @@
   document.body.appendChild(pointer);
 
   let pointerOn = false;
+  let hideTimer = null;
 
   function activeIndex() {
     let active = 0;
@@ -31,6 +32,11 @@
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     const ratio = maxScroll > 0 ? window.scrollY / maxScroll : 0;
     if (progress) progress.style.width = `${Math.min(100, Math.max(0, ratio * 100))}%`;
+    if (progress && progress.parentElement) {
+      progress.parentElement.classList.add("show");
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(() => progress.parentElement.classList.remove("show"), 1400);
+    }
     const active = activeIndex();
     dots.forEach((dot, index) => dot.classList.toggle("active", index === active));
   }
