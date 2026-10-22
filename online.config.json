@@ -163,6 +163,12 @@
           "source": "../Masters/Thesis/review_diff.pdf"
         },
         {
+          "title": "viva",
+          "kind": "HTML, presentation deck (PDF inside)",
+          "href": "viva/",
+          "prefetch": true
+        },
+        {
           "title": "umre_2026",
           "kind": "HTML",
           "href": "umre_2026/",
@@ -603,7 +609,7 @@
       "destination": "maestro/audit/source-manifest.json"
     },
     {
-      "source": "../EEAI/eeai-2026-presentation_rev2.pptx",
+      "source": "../EEAI/eeai-2026-presentation.pre-notes-backup.pptx",
       "destination": "maestro/eeai/eeai-2026-presentation.pptx"
     },
     {
@@ -613,6 +619,82 @@
     {
       "source": "../DGP0959/sessions/01-ai-toolkit/lecture-01.pdf",
       "destination": "DGP0959/slides/lecture-01.pdf"
+    },
+    {
+      "source": "../Masters/Viva/assets/UMLOGO_redRGB.png",
+      "destination": "masters/viva/assets/UMLOGO_redRGB.png"
+    },
+    {
+      "source": "../Masters/Viva/assets/UMLOGO_revWHITE.png",
+      "destination": "masters/viva/assets/UMLOGO_revWHITE.png"
+    },
+    {
+      "source": "../Masters/Viva/assets/d1_policy.png",
+      "destination": "masters/viva/assets/d1_policy.png"
+    },
+    {
+      "source": "../Masters/Viva/assets/d2_world_model.png",
+      "destination": "masters/viva/assets/d2_world_model.png"
+    },
+    {
+      "source": "../Masters/Viva/assets/d3_problem.png",
+      "destination": "masters/viva/assets/d3_problem.png"
+    },
+    {
+      "source": "../Masters/Viva/assets/d4_vla_vs_world_model.png",
+      "destination": "masters/viva/assets/d4_vla_vs_world_model.png"
+    },
+    {
+      "source": "../Masters/Viva/assets/d5_diwa_vs_study.png",
+      "destination": "masters/viva/assets/d5_diwa_vs_study.png"
+    },
+    {
+      "source": "../Masters/Viva/assets/diwa_fig1.png",
+      "destination": "masters/viva/assets/diwa_fig1.png"
+    },
+    {
+      "source": "../Masters/Viva/assets/frame_end.jpg",
+      "destination": "masters/viva/assets/frame_end.jpg"
+    },
+    {
+      "source": "../Masters/Viva/assets/frame_start.jpg",
+      "destination": "masters/viva/assets/frame_start.jpg"
+    },
+    {
+      "source": "../Masters/Viva/assets/lecun_lineage_split.png",
+      "destination": "masters/viva/assets/lecun_lineage_split.png"
+    },
+    {
+      "source": "../Masters/Viva/assets/out1.jpg",
+      "destination": "masters/viva/assets/out1.jpg"
+    },
+    {
+      "source": "../Masters/Viva/assets/out2.jpg",
+      "destination": "masters/viva/assets/out2.jpg"
+    },
+    {
+      "source": "../Masters/Viva/assets/out3.jpg",
+      "destination": "masters/viva/assets/out3.jpg"
+    },
+    {
+      "source": "../Masters/Viva/assets/out4.jpg",
+      "destination": "masters/viva/assets/out4.jpg"
+    },
+    {
+      "source": "../Masters/Viva/assets/out5.jpg",
+      "destination": "masters/viva/assets/out5.jpg"
+    },
+    {
+      "source": "../Masters/Viva/viva-deck.html",
+      "destination": "masters/viva/index.html"
+    },
+    {
+      "source": "../Masters/Viva/prototype-controls.js",
+      "destination": "masters/viva/prototype-controls.js"
+    },
+    {
+      "source": "../Masters/Viva/viva-deck.pdf",
+      "destination": "masters/viva/viva-deck.pdf"
     }
   ]
 }

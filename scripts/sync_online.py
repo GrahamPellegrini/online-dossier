@@ -154,6 +154,10 @@ def generate_pdf_preview(source: Path, preview: Path) -> None:
 
 def main() -> None:
     config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+    # Check every source before deleting anything, so a missing file cannot leave the site half-cleaned.
+    missing = [item["source"] for item in config["copies"] if not (ROOT / item["source"]).resolve().exists()]
+    if missing:
+        raise SystemExit("Missing sources (nothing was changed):\n  " + "\n  ".join(missing))
     clean_generated()
     write_text(ROOT / ".nojekyll", "")
     write_text(
