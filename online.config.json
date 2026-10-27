@@ -43,11 +43,11 @@
           "prefetch": true
         },
         {
-          "title": "masters_proposal",
+          "title": "proposal",
           "kind": "PDF",
-          "href": "documents/masters_proposal.pdf",
+          "href": "documents/proposal.pdf",
           "source": "../Masters/Proposal/build/ARI5902Assignment.pdf",
-          "preview": "previews/masters_proposal.png"
+          "preview": "previews/proposal.png"
         },
         {
           "title": "thesis",
@@ -203,7 +203,7 @@
     },
     {
       "source": "../Masters/Proposal/build/ARI5902Assignment.pdf",
-      "destination": "masters/documents/masters_proposal.pdf"
+      "destination": "masters/documents/proposal.pdf"
     },
     {
       "source": "../Masters/Placement/GrahamPellegrini-Placement-Final-Report.pdf",
