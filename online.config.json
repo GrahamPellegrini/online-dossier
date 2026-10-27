@@ -326,6 +326,10 @@
       "destination": "masters/viva/assets/diwa_fig1.png"
     },
     {
+      "source": "../Masters/Viva/assets/diwa_fig1c.png",
+      "destination": "masters/viva/assets/diwa_fig1c.png"
+    },
+    {
       "source": "../Masters/Viva/assets/frame_end.jpg",
       "destination": "masters/viva/assets/frame_end.jpg"
     },
