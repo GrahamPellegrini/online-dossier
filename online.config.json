@@ -18,12 +18,6 @@
           "prefetch": true
         },
         {
-          "title": "DGP0959",
-          "kind": "Folder",
-          "href": "DGP0959/",
-          "prefetch": true
-        },
-        {
           "title": "Maestro",
           "kind": "Folder",
           "href": "maestro/",
@@ -33,94 +27,6 @@
           "title": "Design templates",
           "kind": "Folder",
           "href": "design_templates/",
-          "prefetch": true
-        }
-      ]
-    },
-    {
-      "path": "DGP0959/index.html",
-      "title": "DGP0959",
-      "breadcrumb": [
-        {
-          "label": "Directory list",
-          "href": "../"
-        }
-      ],
-      "up": "../",
-      "entries": [
-        {
-          "title": "Slides",
-          "kind": "Folder",
-          "href": "slides/",
-          "prefetch": true
-        },
-        {
-          "title": "Resources",
-          "kind": "Folder",
-          "href": "resources/",
-          "prefetch": true
-        }
-      ]
-    },
-    {
-      "path": "DGP0959/slides/index.html",
-      "title": "Slides",
-      "breadcrumb": [
-        {
-          "label": "Directory list",
-          "href": "../../"
-        },
-        {
-          "label": "DGP0959",
-          "href": "../"
-        }
-      ],
-      "up": "../",
-      "entries": [
-        {
-          "title": "Lecture 1 — Meet AI",
-          "kind": "HTML",
-          "href": "lecture-01.html",
-          "source": "../DGP0959/sessions/01-ai-toolkit/lecture-01.html",
-          "prefetch": true
-        }
-      ],
-      "description": "Lecture slides. Open a deck to view it; download or print the PDF from inside the page."
-    },
-    {
-      "path": "DGP0959/resources/index.html",
-      "title": "Resources",
-      "breadcrumb": [
-        {
-          "label": "Directory list",
-          "href": "../../"
-        },
-        {
-          "label": "DGP0959",
-          "href": "../"
-        }
-      ],
-      "up": "../",
-      "entries": [
-        {
-          "title": "Workshop roadmap",
-          "kind": "HTML",
-          "href": "course-roadmap.html",
-          "source": "../DGP0959/resources/course-roadmap.html",
-          "prefetch": true
-        },
-        {
-          "title": "AI accounts and first steps",
-          "kind": "HTML",
-          "href": "getting-started.html",
-          "source": "../DGP0959/resources/getting-started.html",
-          "prefetch": true
-        },
-        {
-          "title": "Class starting-point check",
-          "kind": "HTML",
-          "href": "class-starting-point.html",
-          "source": "../DGP0959/resources/class-starting-point.html",
           "prefetch": true
         }
       ]
@@ -417,30 +323,6 @@
       "destination": "masters/placement/documents/placement-one-page-report.pdf"
     },
     {
-      "source": "../DGP0959/resources/course-roadmap.html",
-      "destination": "DGP0959/resources/course-roadmap.html"
-    },
-    {
-      "source": "../DGP0959/resources/course-roadmap.pdf",
-      "destination": "DGP0959/resources/course-roadmap.pdf"
-    },
-    {
-      "source": "../DGP0959/resources/getting-started.html",
-      "destination": "DGP0959/resources/getting-started.html"
-    },
-    {
-      "source": "../DGP0959/resources/getting-started.pdf",
-      "destination": "DGP0959/resources/getting-started.pdf"
-    },
-    {
-      "source": "../DGP0959/resources/class-starting-point.html",
-      "destination": "DGP0959/resources/class-starting-point.html"
-    },
-    {
-      "source": "../DGP0959/resources/class-starting-point.pdf",
-      "destination": "DGP0959/resources/class-starting-point.pdf"
-    },
-    {
       "source": "../DGP0959/design_templates/01-warm-academic.html",
       "destination": "design_templates/01-warm-academic.html"
     },
@@ -515,14 +397,6 @@
     {
       "source": "../DGP0959/design_templates/prototype-controls.js",
       "destination": "design_templates/prototype-controls.js"
-    },
-    {
-      "source": "../DGP0959/resources/assets/UMLOGO_revWHITE.png",
-      "destination": "DGP0959/resources/assets/UMLOGO_revWHITE.png"
-    },
-    {
-      "source": "../DGP0959/sessions/01-ai-toolkit/assets/UMLOGO_revWHITE.png",
-      "destination": "DGP0959/slides/assets/UMLOGO_revWHITE.png"
     },
     {
       "source": "../DGP0959/design_templates/resource-document.html",
@@ -611,14 +485,6 @@
     {
       "source": "../EEAI/eeai-2026-presentation.pre-notes-backup.pptx",
       "destination": "maestro/eeai/eeai-2026-presentation.pptx"
-    },
-    {
-      "source": "../DGP0959/sessions/01-ai-toolkit/lecture-01.html",
-      "destination": "DGP0959/slides/lecture-01.html"
-    },
-    {
-      "source": "../DGP0959/sessions/01-ai-toolkit/lecture-01.pdf",
-      "destination": "DGP0959/slides/lecture-01.pdf"
     },
     {
       "source": "../Masters/Viva/assets/UMLOGO_redRGB.png",
