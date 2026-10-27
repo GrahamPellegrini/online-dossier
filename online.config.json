@@ -57,6 +57,13 @@
           "preview": "previews/thesis.png"
         },
         {
+          "title": "review_paper",
+          "kind": "PDF, condensed review paper",
+          "href": "documents/review_paper.pdf",
+          "source": "../Masters/Review-Paper/paper.pdf",
+          "preview": "previews/review_paper.png"
+        },
+        {
           "title": "viva",
           "kind": "HTML, presentation deck (PDF inside)",
           "href": "viva/",
@@ -361,6 +368,10 @@
     {
       "source": "../Masters/Viva/viva-deck.pdf",
       "destination": "masters/viva/viva-deck.pdf"
+    },
+    {
+      "source": "../Masters/Review-Paper/paper.pdf",
+      "destination": "masters/documents/review_paper.pdf"
     }
   ]
 }
