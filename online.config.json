@@ -57,11 +57,11 @@
           "preview": "previews/thesis.png"
         },
         {
-          "title": "review_paper",
+          "title": "review",
           "kind": "PDF, condensed review paper",
-          "href": "documents/review_paper.pdf",
+          "href": "documents/review.pdf",
           "source": "../Masters/Review-Paper/paper.pdf",
-          "preview": "previews/review_paper.png"
+          "preview": "previews/review.png"
         },
         {
           "title": "viva",
@@ -371,7 +371,7 @@
     },
     {
       "source": "../Masters/Review-Paper/paper.pdf",
-      "destination": "masters/documents/review_paper.pdf"
+      "destination": "masters/documents/review.pdf"
     }
   ]
 }
