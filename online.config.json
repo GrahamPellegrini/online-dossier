@@ -18,15 +18,9 @@
           "prefetch": true
         },
         {
-          "title": "Maestro",
+          "title": "Maiestro",
           "kind": "Folder",
-          "href": "maestro/",
-          "prefetch": true
-        },
-        {
-          "title": "Design templates",
-          "kind": "Folder",
-          "href": "design_templates/",
+          "href": "maiestro/",
           "prefetch": true
         }
       ]
@@ -56,28 +50,16 @@
           "preview": "previews/masters_proposal.png"
         },
         {
-          "title": "thesis_draft",
-          "kind": "PDF",
-          "href": "documents/thesis_draft.pdf",
-          "source": "../Masters/Thesis/review.pdf",
-          "preview": "previews/thesis_draft.png"
-        },
-        {
-          "title": "thesis_draft_diff",
-          "kind": "PDF, highlighted vs. pre-feedback draft",
-          "href": "documents/thesis_draft_diff.pdf",
-          "source": "../Masters/Thesis/review_diff.pdf"
+          "title": "thesis",
+          "kind": "PDF, submitted version",
+          "href": "documents/thesis.pdf",
+          "source": "../Masters/Thesis/main.pdf",
+          "preview": "previews/thesis.png"
         },
         {
           "title": "viva",
           "kind": "HTML, presentation deck (PDF inside)",
           "href": "viva/",
-          "prefetch": true
-        },
-        {
-          "title": "umre_2026",
-          "kind": "HTML",
-          "href": "umre_2026/",
           "prefetch": true
         }
       ]
@@ -120,8 +102,8 @@
       ]
     },
     {
-      "path": "design_templates/index.html",
-      "title": "Design templates",
+      "path": "maiestro/index.html",
+      "title": "Maiestro",
       "breadcrumb": [
         {
           "label": "Directory list",
@@ -129,88 +111,12 @@
         }
       ],
       "up": "../",
-      "description": "Seven slide designs and a reusable case-study / take-home document style. Design 07 is the approved DGP0959 slide style.",
-      "entries": [
-        {
-          "title": "01 warm academic",
-          "kind": "HTML",
-          "href": "01-warm-academic.html",
-          "source": "../DGP0959/design_templates/01-warm-academic.html",
-          "prefetch": true
-        },
-        {
-          "title": "02 simple white",
-          "kind": "HTML",
-          "href": "02-simple-white.html",
-          "source": "../DGP0959/design_templates/02-simple-white.html",
-          "prefetch": true
-        },
-        {
-          "title": "03 workbench",
-          "kind": "HTML",
-          "href": "03-workbench.html",
-          "source": "../DGP0959/design_templates/03-workbench.html",
-          "prefetch": true
-        },
-        {
-          "title": "04 slim rail",
-          "kind": "HTML",
-          "href": "04-slim-rail.html",
-          "source": "../DGP0959/design_templates/04-slim-rail.html",
-          "prefetch": true
-        },
-        {
-          "title": "05 ribbon",
-          "kind": "HTML",
-          "href": "05-ribbon.html",
-          "source": "../DGP0959/design_templates/05-ribbon.html",
-          "prefetch": true
-        },
-        {
-          "title": "06 dark lab",
-          "kind": "HTML",
-          "href": "06-dark-lab.html",
-          "source": "../DGP0959/design_templates/06-dark-lab.html",
-          "prefetch": true
-        },
-        {
-          "title": "07 themed ribbon — Approved design",
-          "kind": "HTML",
-          "href": "07-themed-ribbon.html",
-          "source": "../DGP0959/design_templates/07-themed-ribbon.html",
-          "prefetch": true
-        },
-        {
-          "title": "Reuse instructions",
-          "kind": "Markdown",
-          "href": "README.md",
-          "source": "../DGP0959/design_templates/README.md"
-        },
-        {
-          "title": "Case-study / take-home document template",
-          "kind": "HTML",
-          "href": "resource-document.html",
-          "source": "../DGP0959/design_templates/resource-document.html",
-          "prefetch": true
-        }
-      ]
-    },
-    {
-      "path": "maestro/index.html",
-      "title": "Maestro",
-      "breadcrumb": [
-        {
-          "label": "Directory list",
-          "href": "../"
-        }
-      ],
-      "up": "../",
-      "description": "M.AI.ESTRO project documentation and audits.",
+      "description": "M.AI.ESTRO project documentation, audit and presentations.",
       "entries": [
         {
           "title": "System audit",
-          "kind": "Folder",
-          "href": "audit/",
+          "kind": "HTML (PDF and sources inside)",
+          "href": "audit/findings.html",
           "prefetch": true
         },
         {
@@ -218,29 +124,11 @@
           "kind": "PPTX",
           "href": "eeai/eeai-2026-presentation.pptx",
           "source": "../EEAI/2026-10-XX_Presentation_ID_Conference_EDGE AI_Malta_EEAI_2026.pptx"
-        }
-      ]
-    },
-    {
-      "path": "maestro/audit/index.html",
-      "title": "System audit",
-      "breadcrumb": [
-        {
-          "label": "Directory list",
-          "href": "../../"
         },
         {
-          "label": "Maestro",
-          "href": "../"
-        }
-      ],
-      "up": "../",
-      "description": "Technical audit, pipeline diagram and supporting evidence. PDF download and original sources are available inside the audit.",
-      "entries": [
-        {
-          "title": "System audit",
+          "title": "umre_2026",
           "kind": "HTML",
-          "href": "findings.html",
+          "href": "umre_2026/",
           "prefetch": true
         }
       ]
@@ -288,27 +176,23 @@
     },
     {
       "source": "../UMRE_2026/umre-2026-action-judges.html",
-      "destination": "masters/umre_2026/index.html"
+      "destination": "maiestro/umre_2026/index.html"
     },
     {
       "source": "../UMRE_2026/assets/policy_correct.png",
-      "destination": "masters/umre_2026/assets/policy_correct.png"
+      "destination": "maiestro/umre_2026/assets/policy_correct.png"
     },
     {
       "source": "../UMRE_2026/assets/policy_incorrect.png",
-      "destination": "masters/umre_2026/assets/policy_incorrect.png"
+      "destination": "maiestro/umre_2026/assets/policy_incorrect.png"
     },
     {
       "source": "../UMRE_2026/assets/world_model.png",
-      "destination": "masters/umre_2026/assets/world_model.png"
+      "destination": "maiestro/umre_2026/assets/world_model.png"
     },
     {
-      "source": "../Masters/Thesis/review.pdf",
-      "destination": "masters/documents/thesis_draft.pdf"
-    },
-    {
-      "source": "../Masters/Thesis/review_diff.pdf",
-      "destination": "masters/documents/thesis_draft_diff.pdf"
+      "source": "../Masters/Thesis/main.pdf",
+      "destination": "masters/documents/thesis.pdf"
     },
     {
       "source": "../Masters/Proposal/build/ARI5902Assignment.pdf",
@@ -323,168 +207,84 @@
       "destination": "masters/placement/documents/placement-one-page-report.pdf"
     },
     {
-      "source": "../DGP0959/design_templates/01-warm-academic.html",
-      "destination": "design_templates/01-warm-academic.html"
-    },
-    {
-      "source": "../DGP0959/design_templates/01-warm-academic.pdf",
-      "destination": "design_templates/01-warm-academic.pdf"
-    },
-    {
-      "source": "../DGP0959/design_templates/02-simple-white.html",
-      "destination": "design_templates/02-simple-white.html"
-    },
-    {
-      "source": "../DGP0959/design_templates/02-simple-white.pdf",
-      "destination": "design_templates/02-simple-white.pdf"
-    },
-    {
-      "source": "../DGP0959/design_templates/03-workbench.html",
-      "destination": "design_templates/03-workbench.html"
-    },
-    {
-      "source": "../DGP0959/design_templates/03-workbench.pdf",
-      "destination": "design_templates/03-workbench.pdf"
-    },
-    {
-      "source": "../DGP0959/design_templates/04-slim-rail.html",
-      "destination": "design_templates/04-slim-rail.html"
-    },
-    {
-      "source": "../DGP0959/design_templates/04-slim-rail.pdf",
-      "destination": "design_templates/04-slim-rail.pdf"
-    },
-    {
-      "source": "../DGP0959/design_templates/05-ribbon.html",
-      "destination": "design_templates/05-ribbon.html"
-    },
-    {
-      "source": "../DGP0959/design_templates/05-ribbon.pdf",
-      "destination": "design_templates/05-ribbon.pdf"
-    },
-    {
-      "source": "../DGP0959/design_templates/06-dark-lab.html",
-      "destination": "design_templates/06-dark-lab.html"
-    },
-    {
-      "source": "../DGP0959/design_templates/06-dark-lab.pdf",
-      "destination": "design_templates/06-dark-lab.pdf"
-    },
-    {
-      "source": "../DGP0959/design_templates/07-themed-ribbon.html",
-      "destination": "design_templates/07-themed-ribbon.html"
-    },
-    {
-      "source": "../DGP0959/design_templates/07-themed-ribbon.pdf",
-      "destination": "design_templates/07-themed-ribbon.pdf"
-    },
-    {
-      "source": "../DGP0959/design_templates/README.md",
-      "destination": "design_templates/README.md"
-    },
-    {
-      "source": "../DGP0959/design_templates/assets/placeholder-image.svg",
-      "destination": "design_templates/assets/placeholder-image.svg"
-    },
-    {
-      "source": "../DGP0959/design_templates/assets/placeholder-logo-dark.svg",
-      "destination": "design_templates/assets/placeholder-logo-dark.svg"
-    },
-    {
-      "source": "../DGP0959/design_templates/assets/placeholder-logo-light.svg",
-      "destination": "design_templates/assets/placeholder-logo-light.svg"
-    },
-    {
-      "source": "../DGP0959/design_templates/prototype-controls.js",
-      "destination": "design_templates/prototype-controls.js"
-    },
-    {
-      "source": "../DGP0959/design_templates/resource-document.html",
-      "destination": "design_templates/resource-document.html"
-    },
-    {
-      "source": "../DGP0959/design_templates/resource-document.pdf",
-      "destination": "design_templates/resource-document.pdf"
-    },
-    {
       "source": "../MAESTRO/VR/audit/FINDINGS.md",
-      "destination": "maestro/audit/FINDINGS.md"
+      "destination": "maiestro/audit/FINDINGS.md"
     },
     {
       "source": "../MAESTRO/VR/audit/README.md",
-      "destination": "maestro/audit/README.md"
+      "destination": "maiestro/audit/README.md"
     },
     {
       "source": "../MAESTRO/VR/audit/assets/UMLOGO_revWHITE.png",
-      "destination": "maestro/audit/assets/UMLOGO_revWHITE.png"
+      "destination": "maiestro/audit/assets/UMLOGO_revWHITE.png"
     },
     {
       "source": "../MAESTRO/VR/audit/assets/audit.css",
-      "destination": "maestro/audit/assets/audit.css"
+      "destination": "maiestro/audit/assets/audit.css"
     },
     {
       "source": "../MAESTRO/VR/audit/dinov3_eval.log",
-      "destination": "maestro/audit/dinov3_eval.log"
+      "destination": "maiestro/audit/dinov3_eval.log"
     },
     {
       "source": "../MAESTRO/VR/audit/dinov3_rerun.log",
-      "destination": "maestro/audit/dinov3_rerun.log"
+      "destination": "maiestro/audit/dinov3_rerun.log"
     },
     {
       "source": "../MAESTRO/VR/audit/evidence/HANDOVER.md",
-      "destination": "maestro/audit/evidence/HANDOVER.md"
+      "destination": "maiestro/audit/evidence/HANDOVER.md"
     },
     {
       "source": "../MAESTRO/VR/audit/evidence/code-continuity_2026_10_03.md",
-      "destination": "maestro/audit/evidence/code-continuity_2026_10_03.md"
+      "destination": "maiestro/audit/evidence/code-continuity_2026_10_03.md"
     },
     {
       "source": "../MAESTRO/VR/audit/evidence/dinov3_consolidation_proper_eval_2026_10_03.md",
-      "destination": "maestro/audit/evidence/dinov3_consolidation_proper_eval_2026_10_03.md"
+      "destination": "maiestro/audit/evidence/dinov3_consolidation_proper_eval_2026_10_03.md"
     },
     {
       "source": "../MAESTRO/VR/audit/findings.html",
-      "destination": "maestro/audit/findings.html"
+      "destination": "maiestro/audit/findings.html"
     },
     {
       "source": "../MAESTRO/VR/audit/findings.pdf",
-      "destination": "maestro/audit/findings.pdf"
+      "destination": "maiestro/audit/findings.pdf"
     },
     {
       "source": "../MAESTRO/VR/audit/findings-technical.html",
-      "destination": "maestro/audit/findings-technical.html"
+      "destination": "maiestro/audit/findings-technical.html"
     },
     {
       "source": "../MAESTRO/VR/audit/findings-technical.pdf",
-      "destination": "maestro/audit/findings-technical.pdf"
+      "destination": "maiestro/audit/findings-technical.pdf"
     },
     {
       "source": "../MAESTRO/VR/audit/maestro_pipeline.png",
-      "destination": "maestro/audit/maestro_pipeline.png"
+      "destination": "maiestro/audit/maestro_pipeline.png"
     },
     {
       "source": "../MAESTRO/VR/audit/maestro_pipeline_2026_10_01.excalidraw",
-      "destination": "maestro/audit/maestro_pipeline_2026_10_01.excalidraw"
+      "destination": "maiestro/audit/maestro_pipeline_2026_10_01.excalidraw"
     },
     {
       "source": "../MAESTRO/VR/audit/maestro_pipeline_2026_10_01.png",
-      "destination": "maestro/audit/maestro_pipeline_2026_10_01.png"
+      "destination": "maiestro/audit/maestro_pipeline_2026_10_01.png"
     },
     {
       "source": "../MAESTRO/VR/audit/maestro_pipeline_refined.excalidraw",
-      "destination": "maestro/audit/maestro_pipeline_refined.excalidraw"
+      "destination": "maiestro/audit/maestro_pipeline_refined.excalidraw"
     },
     {
       "source": "../MAESTRO/VR/audit/maestro_pipeline_refined.png",
-      "destination": "maestro/audit/maestro_pipeline_refined.png"
+      "destination": "maiestro/audit/maestro_pipeline_refined.png"
     },
     {
       "source": "../MAESTRO/VR/audit/source-manifest.json",
-      "destination": "maestro/audit/source-manifest.json"
+      "destination": "maiestro/audit/source-manifest.json"
     },
     {
       "source": "../EEAI/eeai-2026-presentation.pre-notes-backup.pptx",
-      "destination": "maestro/eeai/eeai-2026-presentation.pptx"
+      "destination": "maiestro/eeai/eeai-2026-presentation.pptx"
     },
     {
       "source": "../Masters/Viva/assets/UMLOGO_redRGB.png",
