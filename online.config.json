@@ -376,6 +376,38 @@
     {
       "source": "../Masters/Review-Paper/paper.pdf",
       "destination": "masters/documents/review.pdf"
+    },
+    {
+      "source": "../Masters/Viva/assets/logo_claude.png",
+      "destination": "masters/viva/assets/logo_claude.png"
+    },
+    {
+      "source": "../Masters/Viva/assets/logo_notebooklm.png",
+      "destination": "masters/viva/assets/logo_notebooklm.png"
+    },
+    {
+      "source": "../Masters/Viva/assets/logo_gemini.png",
+      "destination": "masters/viva/assets/logo_gemini.png"
+    },
+    {
+      "source": "../Masters/Viva/assets/logo_google.png",
+      "destination": "masters/viva/assets/logo_google.png"
+    },
+    {
+      "source": "../Masters/Viva/assets/logo_chatgpt.png",
+      "destination": "masters/viva/assets/logo_chatgpt.png"
+    },
+    {
+      "source": "../Masters/Viva/assets/logo_codex.png",
+      "destination": "masters/viva/assets/logo_codex.png"
+    },
+    {
+      "source": "../Masters/Viva/assets/logo_claudecode.png",
+      "destination": "masters/viva/assets/logo_claudecode.png"
+    },
+    {
+      "source": "../Masters/Viva/assets/logo_obsidian.png",
+      "destination": "masters/viva/assets/logo_obsidian.png"
     }
   ]
 }
