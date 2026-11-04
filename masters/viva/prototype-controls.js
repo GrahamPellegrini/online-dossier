@@ -32,8 +32,8 @@
   }
 
   function update() {
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    const ratio = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+    const nMain = window.N_MAIN || slides.length;
+    const ratio = nMain > 1 ? Math.min(1, activeIndex() / (nMain - 1)) : 0;
     if (progress) progress.style.width = `${Math.min(100, Math.max(0, ratio * 100))}%`;
     if (progress && progress.parentElement) {
       progress.parentElement.classList.add("show");
