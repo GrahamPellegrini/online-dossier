@@ -1,7 +1,7 @@
 <!-- class="slide top" topic="The problem | Compounding error" num="1" -->
-<h2 class="h1l">Why it fails: one wrong move feeds the next</h2>
-<div class="row" style="align-items:center;gap:44px;margin-top:auto">
- <div style="flex:0 0 520px"><figure class="tile">
+<h2 class="h1l">Why it fails the task</h2>
+<div class="row" style="align-items:center;gap:60px;margin-top:auto">
+ <div style="flex:0 0 600px"><figure class="tile">
 <div class="pic dim w"><img src="assets/frame_start.jpg" alt=""/><svg viewBox="0 18.75 100 62.5">
 <defs>
 <marker id="cr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
@@ -24,9 +24,6 @@
 <path d="M82,46 C72,47 80,54 72,58" class="tr" stroke="#195D91" style="stroke-width:1.1" marker-end="url(#cb)"/>
 <circle cx="72" cy="58" r="3.4" fill="#fff" stroke="#195D91" stroke-width=".7"/><text x="72" y="59.4" text-anchor="middle" class="tn" fill="#195D91">4</text>
 </svg></div>
-<figcaption>One policy, many possible movements: each random start gives a different candidate. Only a few reach success.</figcaption></figure></div>
- <div style="flex:1">
-  <p style="font-size:1.45rem;font-weight:700;line-height:1.5;margin:0 0 22px">Action &rarr; the scene moves &rarr; that new frame is the next input.<br><span style="color:var(--muted);font-weight:600">So one skewed movement skews every movement after it.</span></p>
-  <p class="bigline">Suboptimal candidate &rarr; compounding error &rarr; unsuccessful or dangerous state</p>
- </div>
+</figure><p style="font-size:1.75rem;font-weight:800;line-height:1.3;margin:18px 0 0">In 3D space: many possible movements, only a few succeed</p></div>
+ <div class="vstack"><b>Suboptimal candidate</b><i>&darr;</i><b>Compounding error</b><i>&darr;</i><b class="end">Unsuccessful state</b></div>
 </div>

@@ -1,7 +1,7 @@
 <!-- class="slide material" topic="Interpretation | Finetuning vs selection" num="1" -->
 
 <div class="vs">
- <div><span class="label">DiWA: fine-tunes the policy offline (illustrative)</span><svg viewBox="0 0 620 428" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
+ <div><span class="label" style="font-size:1.5rem">DiWA: fine-tunes the policy offline</span><svg viewBox="0 0 620 428" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
 <defs>
 <marker id="{i}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
 <path d="M0,0 L10,5 L0,10 z" fill="{c}"/>
@@ -31,28 +31,20 @@
 <path d="M286,234 L209.7,279.8" stroke="#222831" stroke-width="3.5"/>
 <polygon points="196,288 205.1,272.1 214.4,287.5" fill="#222831"/><text x="428" y="172" font-size="15" font-weight="800" fill="#15171A">reward, PPO update</text><text x="262" y="288" font-size="15" font-weight="800" fill="#15171A">reward, PPO update</text>
 </svg></div>
- <div><span class="label">Ours: chooses at inference time</span><svg viewBox="0 0 620 428" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
+ <div><span class="label" style="font-size:1.5rem">Ours: chooses at inference time</span><svg viewBox="0 0 620 428" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
 <defs>
 <marker id="{i}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
 <path d="M0,0 L10,5 L0,10 z" fill="{c}"/>
 </marker>
 </defs>
-<line x1="76.0" y1="366" x2="76.0" y2="373" stroke="#222831" stroke-width="2.5"/><text x="76.0" y="392" text-anchor="middle" font-size="16" font-weight="700" fill="#616873">0</text>
-<line x1="241.0" y1="366" x2="241.0" y2="373" stroke="#222831" stroke-width="2.5"/><text x="241.0" y="392" text-anchor="middle" font-size="16" font-weight="700" fill="#616873">0.05</text>
-<line x1="406.0" y1="366" x2="406.0" y2="373" stroke="#222831" stroke-width="2.5"/><text x="406.0" y="392" text-anchor="middle" font-size="16" font-weight="700" fill="#616873">0.10</text>
-<line x1="571.0" y1="366" x2="571.0" y2="373" stroke="#222831" stroke-width="2.5"/><text x="571.0" y="392" text-anchor="middle" font-size="16" font-weight="700" fill="#616873">0.15</text>
-<line x1="69" y1="366.0" x2="76" y2="366.0" stroke="#222831" stroke-width="2.5"/><text x="63" y="372.0" text-anchor="end" font-size="16" font-weight="700" fill="#616873">0</text>
-<line x1="69" y1="265.42857142857144" x2="76" y2="265.42857142857144" stroke="#222831" stroke-width="2.5"/><text x="63" y="271.42857142857144" text-anchor="end" font-size="16" font-weight="700" fill="#616873">10</text>
-<line x1="69" y1="164.85714285714286" x2="76" y2="164.85714285714286" stroke="#222831" stroke-width="2.5"/><text x="63" y="170.85714285714286" text-anchor="end" font-size="16" font-weight="700" fill="#616873">20</text>
-<line x1="69" y1="64.28571428571428" x2="76" y2="64.28571428571428" stroke="#222831" stroke-width="2.5"/><text x="63" y="70.28571428571428" text-anchor="end" font-size="16" font-weight="700" fill="#616873">30</text>
 <path d="M76,366 L226,366 A150,150 0 0 0 76,216 Z" fill="#BFE5CC"/><text x="82" y="250" font-size="16" font-weight="800" fill="#1B5E3D">success</text>
-<path d="M76,14 L76,366 L604,366" fill="none" stroke="#222831" stroke-width="3"/><text transform="translate(20 190.0) rotate(-90)" text-anchor="middle" font-size="22" font-weight="800" fill="#15171A">Rotation error (degrees)</text><text x="340.0" y="420" text-anchor="middle" font-size="22" font-weight="800" fill="#15171A">Translation error (m)</text>
+<path d="M76,14 L76,366 L604,366" fill="none" stroke="#222831" stroke-width="3"/><text transform="translate(20 190.0) rotate(-90)" text-anchor="middle" font-size="22" font-weight="800" fill="#15171A">Rotation error</text><text x="340.0" y="420" text-anchor="middle" font-size="22" font-weight="800" fill="#15171A">Translation error</text>
 <path d="M347.2,155.8 L191.5,270.0" stroke="#BA0C2F" stroke-width="3.5" stroke-dasharray="9 7"/><text x="250" y="252" font-size="16" font-weight="800" fill="#BA0C2F">Unreachable</text><text x="250" y="271" font-size="16" font-weight="800" fill="#BA0C2F">by selection</text>
-<circle cx="392.8" cy="117.6" r="11" fill="#C3CBD4" stroke="#222831" stroke-width="2" opacity="1"/>
-<circle cx="578.9" cy="132.7" r="11" fill="#C3CBD4" stroke="#222831" stroke-width="2" opacity="1"/>
+<circle cx="392.8" cy="117.6" r="11" fill="#195D91" stroke="#222831" stroke-width="2" opacity="1"/>
+<circle cx="455" cy="108" r="11" fill="#C3CBD4" stroke="#222831" stroke-width="2" opacity="1"/>
 <circle cx="426.1" cy="64.3" r="11" fill="#E0A100" stroke="#222831" stroke-width="2" opacity="1"/>
-<circle cx="398.4" cy="70.3" r="11" fill="#195D91" stroke="#222831" stroke-width="2" opacity="1"/>
-<circle cx="358.2" cy="146.8" r="11" fill="#E07B00" stroke="#222831" stroke-width="2" opacity="1"/><text x="404.4" y="52.3" text-anchor="end" font-size="15" font-weight="800" fill="#15171A">World model&#39;s pick</text><text x="420.1" y="46.3" font-size="15" font-weight="800" fill="#15171A">Candidate 0 (policy&#39;s pick)</text><text x="348.2" y="131.8" text-anchor="end" font-size="15" font-weight="800" fill="#15171A">Best in pool</text>
+<circle cx="398.4" cy="70.3" r="11" fill="#C3CBD4" stroke="#222831" stroke-width="2" opacity="1"/>
+<circle cx="358.2" cy="146.8" r="11" fill="#E07B00" stroke="#222831" stroke-width="2" opacity="1"/><text x="408" y="128" font-size="15" font-weight="800" fill="#195D91">World model&#39;s pick</text><text x="420.1" y="46.3" font-size="15" font-weight="800" fill="#15171A">Candidate 0 (policy&#39;s pick)</text><text x="348.2" y="131.8" text-anchor="end" font-size="15" font-weight="800" fill="#15171A">Best in pool</text>
 </svg></div>
 </div>
-<p class="contrib pin" style="font-size:1.6rem;max-width:none;bottom:60px">Finetuning improves the policy. Selection improves the choice.</p>
+<p class="contrib pin" style="font-size:2.1rem;max-width:none;bottom:50px;border:0;padding:0;text-align:center;color:var(--ink)">Finetuning improves the policy. Selection improves the choice.</p>

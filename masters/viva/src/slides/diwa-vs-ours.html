@@ -1,13 +1,14 @@
 <!-- class="slide" topic="Related work | DiWA vs our approach" num="1" -->
 
 <div class="row" style="align-items:flex-start;justify-content:center;gap:0;margin-top:0">
- <div style="flex:0 0 400px">
-<div class="bigline" style="border:0;padding:0;margin-bottom:12px;color:var(--ink);font-size:1.75rem">DiWA<br><span style="font-size:1.25rem;color:var(--muted)">fine-tunes the policy offline</span></div>
-  <div class="fig" style="padding:4px;border-radius:12px"><img src="assets/diwa_fig1c.png" alt="DiWA offline fine-tuning, panel (c)" style="display:block;width:100%;height:auto"/></div>
+ <div style="flex:0 0 470px">
+<div class="bigline" style="border:0;padding:0;margin-bottom:12px;color:var(--ink);font-size:2.4rem;text-align:center">DiWA</div>
+  <div class="fig" style="padding:4px;border-radius:12px"><img src="assets/diwa_fig1c_crop.png" alt="DiWA offline fine-tuning" style="display:block;width:100%;height:auto"/></div>
+<p class="small" style="text-align:center;margin-top:8px">Adapted from Chandra et al. (2025), Fig. 1 (c)</p>
 </div>
  <div style="flex:0 0 3px;align-self:stretch;background:#222831;margin:0 40px"></div>
- <div style="flex:0 0 360px">
-<div class="bigline" style="border:0;padding:0;margin-bottom:12px;color:var(--ink);font-size:1.75rem">Our approach<br><span style="font-size:1.25rem;color:var(--muted)">chooses at inference time, no retraining</span></div>
+ <div style="flex:0 0 440px">
+<div class="bigline" style="border:0;padding:0;margin-bottom:12px;color:var(--ink);font-size:2.4rem;text-align:center">Our approach</div>
   <div class="fig" style="padding:4px;border-radius:12px"><svg viewBox="0 0 300 410" xmlns="http://www.w3.org/2000/svg" font-family="Verdana, 'DejaVu Sans', Geneva, sans-serif" class="dw" style="paint-order:stroke">
 <style>.dw text{stroke:currentColor;stroke-width:.45px}</style>
 <defs>
@@ -26,11 +27,11 @@
 <rect x="4" y="190" width="292" height="122" rx="16" fill="#D8F0DF"/><text x="150" y="208" text-anchor="middle" font-size="15" font-weight="700">World Model</text>
 <image href="assets/out3.jpg" x="17" y="216" width="46" height="46" preserveAspectRatio="xMidYMid slice"/>
 <rect x="17" y="216" width="46" height="46" rx="5" fill="none" stroke="#222831" stroke-width="2"/><text x="40" y="284" text-anchor="middle" font-size="22" font-weight="800" fill="#E03131">&#10007;</text>
-<image href="assets/frame_start.jpg" x="70" y="216" width="46" height="46" preserveAspectRatio="xMidYMid slice"/>
+<image href="assets/out1.jpg" x="70" y="216" width="46" height="46" preserveAspectRatio="xMidYMid slice"/>
 <rect x="70" y="216" width="46" height="46" rx="5" fill="none" stroke="#222831" stroke-width="2"/><text x="93" y="284" text-anchor="middle" font-size="22" font-weight="800" fill="#E03131">&#10007;</text>
 <image href="assets/out2.jpg" x="123" y="216" width="46" height="46" preserveAspectRatio="xMidYMid slice"/>
 <rect x="123" y="216" width="46" height="46" rx="5" fill="none" stroke="#222831" stroke-width="2"/><text x="146" y="284" text-anchor="middle" font-size="22" font-weight="800" fill="#E03131">&#10007;</text>
-<image href="assets/frame_end.jpg" x="176" y="216" width="46" height="46" preserveAspectRatio="xMidYMid slice"/>
+<image href="assets/lock/wm_ok.jpg" x="176" y="216" width="46" height="46" preserveAspectRatio="xMidYMid slice"/>
 <rect x="176" y="216" width="46" height="46" rx="5" fill="none" stroke="#222831" stroke-width="2"/><text x="199" y="284" text-anchor="middle" font-size="22" font-weight="800" fill="#2E7D5B">&#10003;</text>
 <image href="assets/out4.jpg" x="229" y="216" width="46" height="46" preserveAspectRatio="xMidYMid slice"/>
 <rect x="229" y="216" width="46" height="46" rx="5" fill="none" stroke="#222831" stroke-width="2"/><text x="252" y="284" text-anchor="middle" font-size="22" font-weight="800" fill="#E03131">&#10007;</text><text x="150" y="304" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2E7D5B">Imagined outcome per candidate</text>
@@ -40,5 +41,3 @@
 </svg></div>
 </div>
 </div>
-<p class="under" style="margin-top:14px"><b>Both use a frozen world model.</b> DiWA changes the policy; we only change which of its movements is used.</p>
-<p class="small" style="text-align:center;margin-top:6px">Left: adapted from Chandra et al. (2025)</p>
