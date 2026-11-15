@@ -1,0 +1,8 @@
+<!-- class="slide top" topic="Method | ACT" num="1" -->
+<h2 class="h1l">ACT: five samples, one movement, and the fix</h2>
+<div class="steps3">
+ <div><i>1</i><b>The problem</b><p>ACT should give five different movements when sampled five times. It gave five identical ones: the model learned to ignore its random input (posterior collapse).</p></div>
+ <div><i>2</i><b>Four retraining recipes</b><p>Stronger penalty, cyclical annealing with dropout, free bits. None brought the variety back.</p></div>
+ <div><i>3</i><b>The fix: CEMP</b><p>Widen the pool around ACT&#39;s answer, then let the world model refine it. Used only where the pool collapsed.</p></div>
+</div>
+<p class="bigline" style="margin-top:28px">So Diffusion Policy, whose samples really differ, carries the main result.</p>

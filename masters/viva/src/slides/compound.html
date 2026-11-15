@@ -1,0 +1,32 @@
+<!-- class="slide top" topic="The problem | Compounding error" num="1" -->
+<h2 class="h1l">Why it fails: one wrong move feeds the next</h2>
+<div class="row" style="align-items:center;gap:44px;margin-top:auto">
+ <div style="flex:0 0 520px"><figure class="tile">
+<div class="pic dim w"><img src="assets/frame_start.jpg" alt=""/><svg viewBox="0 18.75 100 62.5">
+<defs>
+<marker id="cr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#BA0C2F"/>
+</marker>
+</defs>
+<defs>
+<marker id="cb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#195D91"/>
+</marker>
+</defs>
+<path d="M82,46 C68,47 63,56 55,60" class="tr" stroke="#BA0C2F" style="stroke-width:1.8" marker-end="url(#cr)"/>
+<circle cx="55" cy="60" r="3.4" fill="#fff" stroke="#BA0C2F" stroke-width=".7"/><text x="55" y="61.4" text-anchor="middle" class="tn" fill="#BA0C2F">0</text>
+<path d="M82,46 C68,47 50,44 42,48" class="tr" stroke="#195D91" style="stroke-width:1.1" marker-end="url(#cb)"/>
+<circle cx="42" cy="48" r="3.4" fill="#fff" stroke="#195D91" stroke-width=".7"/><text x="42" y="49.4" text-anchor="middle" class="tn" fill="#195D91">1</text>
+<path d="M82,46 C72,47 68,70 60,74" class="tr" stroke="#195D91" style="stroke-width:1.1" marker-end="url(#cb)"/>
+<circle cx="60" cy="74" r="3.4" fill="#fff" stroke="#195D91" stroke-width=".7"/><text x="60" y="75.4" text-anchor="middle" class="tn" fill="#195D91">2</text>
+<path d="M82,46 C68,47 46,64 38,68" class="tr" stroke="#195D91" style="stroke-width:1.1" marker-end="url(#cb)"/>
+<circle cx="38" cy="68" r="3.4" fill="#fff" stroke="#195D91" stroke-width=".7"/><text x="38" y="69.4" text-anchor="middle" class="tn" fill="#195D91">3</text>
+<path d="M82,46 C72,47 80,54 72,58" class="tr" stroke="#195D91" style="stroke-width:1.1" marker-end="url(#cb)"/>
+<circle cx="72" cy="58" r="3.4" fill="#fff" stroke="#195D91" stroke-width=".7"/><text x="72" y="59.4" text-anchor="middle" class="tn" fill="#195D91">4</text>
+</svg></div>
+<figcaption>One policy, many possible movements: each random start gives a different candidate. Only a few reach success.</figcaption></figure></div>
+ <div style="flex:1">
+  <p style="font-size:1.45rem;font-weight:700;line-height:1.5;margin:0 0 22px">Action &rarr; the scene moves &rarr; that new frame is the next input.<br><span style="color:var(--muted);font-weight:600">So one skewed movement skews every movement after it.</span></p>
+  <p class="bigline">Suboptimal candidate &rarr; compounding error &rarr; unsuccessful or dangerous state</p>
+ </div>
+</div>

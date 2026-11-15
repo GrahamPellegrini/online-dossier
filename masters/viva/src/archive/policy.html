@@ -1,0 +1,31 @@
+<!-- class="slide top" topic="Background | Policy" num="1" -->
+
+<h2 class="h1l">What is a policy?</h2>
+<p class="lead" style="margin-top:8px!important;max-width:none;font-size:1.3rem">A policy is a model that learns from demonstrations (human, robot or simulated) to turn the current scene into a chunk of future actions.</p>
+<div class="row wide" style="margin-top:auto">
+ <figure class="tile big">
+<div class="pic"><img src="assets/frame_start.jpg" alt=""/><svg viewBox="0 0 100 100">
+</svg></div>
+<figcaption>In this study, input: the current scene</figcaption></figure>
+ <div class="farrow"><span></span><b>&#10142;</b></div>
+ <div class="blk"><svg viewBox="0 0 200 260" class="trap">
+<polygon points="10,10 190,60 190,200 10,250" fill="#F6F8FB" stroke="#222831" stroke-width="3"/><text x="100" y="125" text-anchor="middle" class="tt">Policy</text><text x="100" y="152" text-anchor="middle" class="ts">ACT or Diffusion Policy</text>
+</svg></div>
+ <div class="farrow"><span></span><b>&#10142;</b></div>
+ <figure class="tile big">
+<div class="pic dim"><img src="assets/frame_start.jpg" alt=""/><svg viewBox="0 0 100 100">
+<defs>
+<marker id="pL" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#195D91"/>
+</marker>
+</defs>
+<defs>
+<marker id="pR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#2E7D5B"/>
+</marker>
+</defs>
+<path d="M7,47 C18,45 28,50 36,57" class="tr" stroke="#195D91" marker-end="url(#pL)"/>
+<path d="M82,46 C72,47 62,54 55,60" class="tr" stroke="#2E7D5B" marker-end="url(#pR)"/><text x="2" y="38" class="tl" fill="#195D91">left wrist</text><text x="62" y="38" class="tl" fill="#2E7D5B">right wrist</text>
+</svg></div>
+<figcaption>In this study, output: an action chunk, the next 16 wrist poses for both hands (18 numbers per step)</figcaption></figure>
+</div>

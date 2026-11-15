@@ -1,0 +1,116 @@
+<!-- class="slide top" topic="Data | Our windows" num="1" -->
+
+<h2 class="h1l">Windowing scheme and data representation</h2>
+<div style="margin-top:18px"><svg viewBox="0 0 1040 124" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
+<defs>
+<marker id="{i}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="{c}"/>
+</marker>
+</defs>
+<rect x="0" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="1"/>
+<rect x="15" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="1"/>
+<rect x="30" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="1"/>
+<rect x="45" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="1"/>
+<rect x="60" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="1"/>
+<rect x="75" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="1"/>
+<rect x="90" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="1"/>
+<rect x="105" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="1"/>
+<rect x="120" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="1"/>
+<rect x="135" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="1"/>
+<rect x="150" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="1"/>
+<rect x="165" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="1"/>
+<rect x="180" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="1"/>
+<rect x="195" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="1"/>
+<rect x="210" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="1"/>
+<rect x="225" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="1"/>
+<rect x="240" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="1"/>
+<rect x="255" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="1"/>
+<rect x="270" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="1"/>
+<rect x="285" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="1"/>
+<rect x="300" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="1"/>
+<rect x="315" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="1"/>
+<rect x="330" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="1"/>
+<rect x="345" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="1"/>
+<rect x="360" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="1"/>
+<rect x="375" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="1"/>
+<rect x="390" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="1"/>
+<rect x="405" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="1"/>
+<rect x="420" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="1"/>
+<rect x="435" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="1"/>
+<rect x="450" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="1"/>
+<rect x="465" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="1"/>
+<rect x="560" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="0.45"/>
+<rect x="575" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="0.45"/>
+<rect x="590" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="0.45"/>
+<rect x="605" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="0.45"/>
+<rect x="620" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="0.45"/>
+<rect x="635" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="0.45"/>
+<rect x="650" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="0.45"/>
+<rect x="665" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="0.45"/>
+<rect x="680" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="0.45"/>
+<rect x="695" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="0.45"/>
+<rect x="710" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="0.45"/>
+<rect x="725" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="0.45"/>
+<rect x="740" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="0.45"/>
+<rect x="755" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="0.45"/>
+<rect x="770" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="0.45"/>
+<rect x="785" y="40" width="12" height="34" rx="2" fill="#CFE0F5" stroke="#195D91" stroke-width="1.5" opacity="0.45"/>
+<rect x="800" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="0.45"/>
+<rect x="815" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="0.45"/>
+<rect x="830" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="0.45"/>
+<rect x="845" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="0.45"/>
+<rect x="860" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="0.45"/>
+<rect x="875" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="0.45"/>
+<rect x="890" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="0.45"/>
+<rect x="905" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="0.45"/>
+<rect x="920" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="0.45"/>
+<rect x="935" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="0.45"/>
+<rect x="950" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="0.45"/>
+<rect x="965" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="0.45"/>
+<rect x="980" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="0.45"/>
+<rect x="995" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="0.45"/>
+<rect x="1010" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="0.45"/>
+<rect x="1025" y="40" width="12" height="34" rx="2" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="1.5" opacity="0.45"/><text x="0" y="28" font-size="17" font-weight="800" fill="#195D91">16 frames observed</text><text x="240" y="28" font-size="17" font-weight="800" fill="#2E7D5B">16 steps predicted</text><text x="560" y="28" font-size="17" font-weight="800" fill="#8A93A0">next window</text>
+<path d="M0,92 L548,92" stroke="#222831" stroke-width="2.5"/>
+<polygon points="548,86 560,92 548,98" fill="#222831"/><text x="0" y="118" font-size="16" font-weight="700" fill="#616873">32 frames per window (about 1 s); a new window starts every 128 frames, about 4.3 s</text>
+</svg></div>
+<div class="row" style="gap:30px;margin-top:10px;align-items:center">
+ <div style="flex:0 0 520px"><svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
+<defs>
+<marker id="{i}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="{c}"/>
+</marker>
+</defs>
+<rect x="42" y="14" width="470" height="262" rx="18" fill="#F1F3F5" stroke="#CBD2DA" stroke-width="2"/>
+<rect x="28" y="24" width="470" height="262" rx="18" fill="#F1F3F5" stroke="#CBD2DA" stroke-width="2"/>
+<rect x="14" y="34" width="470" height="262" rx="18" fill="#F1F3F5" stroke="#CBD2DA" stroke-width="2"/>
+<rect x="0" y="46" width="470" height="262" rx="18" fill="#fff" stroke="#222831" stroke-width="2.5"/><text x="235" y="82" text-anchor="middle" font-size="21" font-weight="800">One future step: 18 numbers</text><text x="24" y="124" font-size="19" font-weight="800" fill="#195D91">Left wrist</text><text x="24" y="152" font-size="15" font-weight="700" fill="#616873">position (3)</text>
+<rect x="24" y="162" width="38" height="38" rx="5" fill="#CFE0F5" stroke="#195D91" stroke-width="2"/>
+<rect x="68" y="162" width="38" height="38" rx="5" fill="#CFE0F5" stroke="#195D91" stroke-width="2"/>
+<rect x="112" y="162" width="38" height="38" rx="5" fill="#CFE0F5" stroke="#195D91" stroke-width="2"/><text x="24" y="232" font-size="15" font-weight="700" fill="#616873">orientation (6)</text>
+<rect x="24" y="242" width="28" height="28" rx="5" fill="#CFE0F5" stroke="#195D91" stroke-width="2"/>
+<rect x="58" y="242" width="28" height="28" rx="5" fill="#CFE0F5" stroke="#195D91" stroke-width="2"/>
+<rect x="92" y="242" width="28" height="28" rx="5" fill="#CFE0F5" stroke="#195D91" stroke-width="2"/>
+<rect x="126" y="242" width="28" height="28" rx="5" fill="#CFE0F5" stroke="#195D91" stroke-width="2"/>
+<rect x="160" y="242" width="28" height="28" rx="5" fill="#CFE0F5" stroke="#195D91" stroke-width="2"/>
+<rect x="194" y="242" width="28" height="28" rx="5" fill="#CFE0F5" stroke="#195D91" stroke-width="2"/><text x="250" y="124" font-size="19" font-weight="800" fill="#2E7D5B">Right wrist</text><text x="250" y="152" font-size="15" font-weight="700" fill="#616873">position (3)</text>
+<rect x="250" y="162" width="38" height="38" rx="5" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="2"/>
+<rect x="294" y="162" width="38" height="38" rx="5" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="2"/>
+<rect x="338" y="162" width="38" height="38" rx="5" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="2"/><text x="250" y="232" font-size="15" font-weight="700" fill="#616873">orientation (6)</text>
+<rect x="250" y="242" width="28" height="28" rx="5" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="2"/>
+<rect x="284" y="242" width="28" height="28" rx="5" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="2"/>
+<rect x="318" y="242" width="28" height="28" rx="5" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="2"/>
+<rect x="352" y="242" width="28" height="28" rx="5" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="2"/>
+<rect x="386" y="242" width="28" height="28" rx="5" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="2"/>
+<rect x="420" y="242" width="28" height="28" rx="5" fill="#D3EEDD" stroke="#2E7D5B" stroke-width="2"/><text x="522" y="30" font-size="18" font-weight="800" fill="#222831">16 steps</text>
+</svg></div>
+ <div style="flex:1">
+<p style="font-size:1.45rem;font-weight:800;line-height:1.3;margin:0 0 6px">18 numbers per step</p>
+  <p style="font-size:1.2rem;font-weight:600;line-height:1.4;margin:0">Per wrist: 3 position + 6 orientation (6-D rotation encoding)</p>
+  <p class="small" style="margin:4px 0 16px">12 DoF in total, 6 per wrist. Poses come from the headset&#39;s hand tracking.</p>
+  <div class="facts" style="grid-template-columns:1fr 1fr;margin:0">
+<div class="fact"><b>430,962</b><span>training windows</span></div>
+<div class="fact"><b>7,607</b><span>test windows</span></div>
+</div>
+</div>
+</div>
