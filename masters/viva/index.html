@@ -46,7 +46,7 @@ table.t{margin-top:22px;width:100%;border-collapse:collapse;font-size:1.25rem}ta
 .colcard p{font-size:1.35rem;line-height:1.42;margin:0 0 8px;font-weight:560;color:#3A414B}
 .colcard.wm{background:#EAF6EE;border-color:#9CCFB0}
 .bigline{font-size:1.6rem;font-weight:800;line-height:1.35;color:var(--deep);border-left:6px solid var(--red);padding-left:18px}
-.rqa .hl1{background:#DCE6F7}.rqa .hl2{background:#D8F0DF}.rqa .hl3{color:#195D91}.rqa .hl4{color:#C2255C}.rqa .hl5{color:#6741D9}.rqa .hl6{color:#D9480F}.rqa span[class^=hl]{font-weight:800}
+.rqa .hl1{background:#DCE6F7}.rqa .hl2{background:#D8F0DF}.rqa .hl3{background:#FFE27A}.rqa .hl4{background:#B5E8C3}.rqa .hl5{background:#BFDBFF}.rqa .hl6{background:#FFC79A}
 .rqa span[class^=hl]{border-radius:6px;padding:0 1px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .gloss{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
 .gloss div{border-radius:12px;padding:12px 16px;font-size:1.12rem;font-weight:600;line-height:1.35}
@@ -147,7 +147,7 @@ table.t{margin-top:22px;width:100%;border-collapse:collapse;font-size:1.25rem}ta
  <div class="vstack"><b>Suboptimal candidate</b><i>&darr;</i><b>Compounding error</b><i>&darr;</i><b class="end">Unsuccessful state</b></div>
 </div>
 </main><footer class="foot"><span>Learning to Select Actions for Complex Hand Tasks</span><span>Graham Pellegrini | University of Malta</span><span>04 / 23</span></footer></div></section><section class="slide top" id="s4"><div class="stage"><header class="ribbon"><div class="ribbon-inner"><img alt="University of Malta" src="assets/UMLOGO_revWHITE.png"/><span class="course">MSc AI Dissertation Viva</span><span class="topic">5 | Background | World models</span></div></header><main class="content"><h2 class="h1l">A world model imagines the outcome first</h2>
-<div style="margin:auto -190px 0"><svg viewBox="-10 0 1650 400" style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
+<div style="margin:auto -190px 0"><svg viewBox="-10 0 1680 400" style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
 <defs><marker id="wiA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222831"/></marker></defs>
 <clipPath id="cin"><rect x="0" y="80" width="220" height="220" rx="12"/></clipPath><image href="assets/lock/lock3_in.jpg" x="0" y="80" width="220" height="220" preserveAspectRatio="xMidYMid slice" clip-path="url(#cin)"/><rect x="0" y="80" width="220" height="220" rx="12" fill="none" stroke="#D9DFE7" stroke-width="2"/>
 <text x="110" y="340" text-anchor="middle" style="font:700 26px var(--font)" fill="#15171A">Input</text>
@@ -173,7 +173,7 @@ table.t{margin-top:22px;width:100%;border-collapse:collapse;font-size:1.25rem}ta
 <text x="882" y="364" text-anchor="middle" style="font:700 28px var(--font)" fill="#15171A">imagines where each movement leads</text>
 <path d="M1340,190 L1368,190" stroke="#222831" stroke-width="4" marker-end="url(#wiA)"/>
 <clipPath id="cout"><rect x="1376" y="80" width="220" height="220" rx="16"/></clipPath><image href="assets/lock/wm_open.jpg" x="1376" y="80" width="220" height="220" preserveAspectRatio="xMidYMid slice" clip-path="url(#cout)"/><rect x="1376" y="80" width="220" height="220" rx="16" fill="none" stroke="#2E7D5B" stroke-width="5"/>
-<text x="1486" y="340" text-anchor="middle" style="font:700 26px var(--font)" fill="#15171A">Picks the one that works</text>
+<text x="1508" y="340" text-anchor="middle" style="font:700 26px var(--font)" fill="#15171A">Picks the one that works</text>
 </svg></div>
 </main><footer class="foot"><span>Learning to Select Actions for Complex Hand Tasks</span><span>Graham Pellegrini | University of Malta</span><span>05 / 23</span></footer></div></section><section class="slide top" id="s5"><div class="stage"><header class="ribbon"><div class="ribbon-inner"><img alt="University of Malta" src="assets/UMLOGO_revWHITE.png"/><span class="course">MSc AI Dissertation Viva</span><span class="topic">6 | Background | VLA vs world model</span></div></header><main class="content"><div style="margin:auto -170px"><svg viewBox="0 0 1600 680" style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
 <defs><marker id="vA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222831"/></marker></defs>
@@ -269,16 +269,16 @@ table.t{margin-top:22px;width:100%;border-collapse:collapse;font-size:1.25rem}ta
 <text x="460" y="98" text-anchor="start" style="font:700 32px var(--font)" fill="#15171A">Position:</text>
 <circle cx="478" cy="138" r="11" fill="#195D91"/><text x="502" y="150" text-anchor="start" style="font:800 34px var(--font)" fill="#195D91">(x, y, z)</text>
 <text x="460" y="212" text-anchor="start" style="font:700 32px var(--font)" fill="#15171A">Orientation:</text>
-<path d="M462,252 L506,252" stroke="#222831" stroke-width="6" marker-end="url(#dA1)"/><text x="520" y="264" text-anchor="start" style="font:800 34px var(--font)" fill="#BA0C2F">(x<tspan baseline-shift="sub" font-size="20">1</tspan>, y<tspan baseline-shift="sub" font-size="20">1</tspan>, z<tspan baseline-shift="sub" font-size="20">1</tspan>)</text>
-<path d="M484,334 L484,290" stroke="#222831" stroke-width="6" marker-end="url(#dA2)"/><text x="520" y="322" text-anchor="start" style="font:800 34px var(--font)" fill="#2E7D5B">(x<tspan baseline-shift="sub" font-size="20">2</tspan>, y<tspan baseline-shift="sub" font-size="20">2</tspan>, z<tspan baseline-shift="sub" font-size="20">2</tspan>)</text>
+<path d="M462,252 L506,252" stroke="#BA0C2F" stroke-width="6" marker-end="url(#dA1)"/><text x="520" y="264" text-anchor="start" style="font:800 34px var(--font)" fill="#BA0C2F">(x<tspan baseline-shift="sub" font-size="20">1</tspan>, y<tspan baseline-shift="sub" font-size="20">1</tspan>, z<tspan baseline-shift="sub" font-size="20">1</tspan>)</text>
+<path d="M484,334 L484,290" stroke="#2E7D5B" stroke-width="6" marker-end="url(#dA2)"/><text x="520" y="322" text-anchor="start" style="font:800 34px var(--font)" fill="#2E7D5B">(x<tspan baseline-shift="sub" font-size="20">2</tspan>, y<tspan baseline-shift="sub" font-size="20">2</tspan>, z<tspan baseline-shift="sub" font-size="20">2</tspan>)</text>
 <text x="760" y="150" text-anchor="start" style="font:800 36px var(--font)" fill="#15171A">= 3</text>
 <text x="760" y="296" text-anchor="start" style="font:800 36px var(--font)" fill="#15171A">= 6</text>
 <path d="M842,124 Q862,124 862,160 L862,196 Q862,214 880,218 Q862,222 862,240 L862,276 Q862,312 842,312" fill="none" stroke="#222831" stroke-width="3.5"/>
-<text x="896" y="206" text-anchor="start" style="font:800 34px var(--font)" fill="#15171A">+</text>
-<text x="896" y="250" text-anchor="start" style="font:800 40px var(--font)" fill="#15171A">= 9</text>
-<text x="1000" y="250" text-anchor="start" style="font:800 36px var(--font)" fill="#15171A">&#215; 2 wrists</text>
-<text x="1000" y="330" text-anchor="start" style="font:800 64px var(--font)" fill="#BA0C2F">= 18D</text>
-<text x="1000" y="372" text-anchor="start" style="font:700 28px var(--font)" fill="#3A414B">(18 dimensions)</text>
+
+<text x="896" y="230" text-anchor="start" style="font:800 40px var(--font)" fill="#15171A">= 9</text>
+<text x="1000" y="230" text-anchor="start" style="font:800 36px var(--font)" fill="#15171A">&#215; 2 wrists</text>
+<text x="1000" y="310" text-anchor="start" style="font:800 64px var(--font)" fill="#BA0C2F">= 18D</text>
+<text x="1000" y="352" text-anchor="start" style="font:700 28px var(--font)" fill="#3A414B">(18 dimensions)</text>
 </svg></div>
 </div>
 </main><footer class="foot"><span>Learning to Select Actions for Complex Hand Tasks</span><span>Graham Pellegrini | University of Malta</span><span>10 / 23</span></footer></div></section><section class="slide top" id="s10"><div class="stage"><header class="ribbon"><div class="ribbon-inner"><img alt="University of Malta" src="assets/UMLOGO_revWHITE.png"/><span class="course">MSc AI Dissertation Viva</span><span class="topic">11 | Method | What I built</span></div></header><main class="content"><h2 class="h1l">What I built</h2>
