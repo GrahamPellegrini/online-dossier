@@ -46,7 +46,7 @@ table.t{margin-top:22px;width:100%;border-collapse:collapse;font-size:1.25rem}ta
 .colcard p{font-size:1.35rem;line-height:1.42;margin:0 0 8px;font-weight:560;color:#3A414B}
 .colcard.wm{background:#EAF6EE;border-color:#9CCFB0}
 .bigline{font-size:1.6rem;font-weight:800;line-height:1.35;color:var(--deep);border-left:6px solid var(--red);padding-left:18px}
-.rqa .hl1{background:#DCE6F7}.rqa .hl2{background:#D8F0DF}.rqa .hl3{background:#FFDD3C}.rqa .hl4{background:#FF8FA3}.rqa .hl5{background:#B99CF2}.rqa .hl6{background:#FFAA5C}
+.rqa .hl1{background:#DCE6F7}.rqa .hl2{background:#D8F0DF}.rqa .hl3{color:#195D91}.rqa .hl4{color:#C2255C}.rqa .hl5{color:#6741D9}.rqa .hl6{color:#D9480F}.rqa span[class^=hl]{font-weight:800}
 .rqa span[class^=hl]{border-radius:6px;padding:0 1px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .gloss{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
 .gloss div{border-radius:12px;padding:12px 16px;font-size:1.12rem;font-weight:600;line-height:1.35}
@@ -147,71 +147,76 @@ table.t{margin-top:22px;width:100%;border-collapse:collapse;font-size:1.25rem}ta
  <div class="vstack"><b>Suboptimal candidate</b><i>&darr;</i><b>Compounding error</b><i>&darr;</i><b class="end">Unsuccessful state</b></div>
 </div>
 </main><footer class="foot"><span>Learning to Select Actions for Complex Hand Tasks</span><span>Graham Pellegrini | University of Malta</span><span>04 / 23</span></footer></div></section><section class="slide top" id="s4"><div class="stage"><header class="ribbon"><div class="ribbon-inner"><img alt="University of Malta" src="assets/UMLOGO_revWHITE.png"/><span class="course">MSc AI Dissertation Viva</span><span class="topic">5 | Background | World models</span></div></header><main class="content"><h2 class="h1l">A world model imagines the outcome first</h2>
-<div style="margin:auto -200px 0"><svg viewBox="-10 0 1600 380" style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
-<defs><marker id="wiA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222831"/></marker><clipPath id="cin"><rect x="0" y="40" width="260" height="260" rx="16"/></clipPath><clipPath id="cout"><rect x="1300" y="40" width="260" height="260" rx="16"/></clipPath><clipPath id="ct0"><rect x="650" y="110" width="112" height="112" rx="10"/></clipPath><clipPath id="ct1"><rect x="778" y="110" width="112" height="112" rx="10"/></clipPath><clipPath id="ct2"><rect x="906" y="110" width="112" height="112" rx="10"/></clipPath><clipPath id="ct3"><rect x="1034" y="110" width="112" height="112" rx="10"/></clipPath><clipPath id="ct4"><rect x="1162" y="110" width="112" height="112" rx="10"/></clipPath></defs>
-<image href="assets/lock/lock3_in.jpg" x="0" y="40" width="260" height="260" preserveAspectRatio="xMidYMid slice" clip-path="url(#cin)"/><rect x="0" y="40" width="260" height="260" rx="16" fill="none" stroke="#D9DFE7" stroke-width="2"/>
-<text x="130" y="340" text-anchor="middle" font-size="24" font-weight="700">Input</text>
-<path d="M270,170 L300,170" stroke="#222831" stroke-width="4" marker-end="url(#wiA)"/>
-<rect x="308" y="60" width="292" height="220" rx="20" fill="#DCE6F7" stroke="#B9C8E2" stroke-width="2"/><text x="454" y="115" text-anchor="middle" class="fh">Policy</text>
-<circle cx="350" cy="190" r="22" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="350" y="197" text-anchor="middle" class="fn">0</text><circle cx="402" cy="190" r="22" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="402" y="197" text-anchor="middle" class="fn">1</text><circle cx="454" cy="190" r="22" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="454" y="197" text-anchor="middle" class="fn">2</text><circle cx="506" cy="190" r="22" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="506" y="197" text-anchor="middle" class="fn">3</text><circle cx="558" cy="190" r="22" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="558" y="197" text-anchor="middle" class="fn">4</text><text x="454" y="250" text-anchor="middle" class="fs2">5 candidate movements</text>
-<path d="M608,170 L626,170" stroke="#222831" stroke-width="4" marker-end="url(#wiA)"/>
-<rect x="632" y="20" width="642" height="300" rx="24" fill="#D8F0DF" stroke="#9CCFB0" stroke-width="2.5"/><text x="953" y="76" text-anchor="middle" style="font:800 34px var(--font)">World model</text>
-<image href="assets/out3.jpg" x="650" y="110" width="112" height="112" preserveAspectRatio="xMidYMid slice" clip-path="url(#ct0)"/><rect x="650" y="110" width="112" height="112" rx="10" fill="none" stroke="#222831" stroke-width="2.5"/><text x="706" y="262" text-anchor="middle" font-size="40" font-weight="800" fill="#E03131">&#10007;</text>
-<image href="assets/out2.jpg" x="778" y="110" width="112" height="112" preserveAspectRatio="xMidYMid slice" clip-path="url(#ct1)"/><rect x="778" y="110" width="112" height="112" rx="10" fill="none" stroke="#222831" stroke-width="2.5"/><text x="834" y="262" text-anchor="middle" font-size="40" font-weight="800" fill="#E03131">&#10007;</text>
-<image href="assets/lock/wm_ok.jpg" x="906" y="110" width="112" height="112" preserveAspectRatio="xMidYMid slice" clip-path="url(#ct2)"/><rect x="906" y="110" width="112" height="112" rx="10" fill="none" stroke="#2E7D5B" stroke-width="5"/><text x="962" y="262" text-anchor="middle" font-size="40" font-weight="800" fill="#2E7D5B">&#10003;</text>
-<image href="assets/out1.jpg" x="1034" y="110" width="112" height="112" preserveAspectRatio="xMidYMid slice" clip-path="url(#ct3)"/><rect x="1034" y="110" width="112" height="112" rx="10" fill="none" stroke="#222831" stroke-width="2.5"/><text x="1090" y="262" text-anchor="middle" font-size="40" font-weight="800" fill="#E03131">&#10007;</text>
-<image href="assets/out4.jpg" x="1162" y="110" width="112" height="112" preserveAspectRatio="xMidYMid slice" clip-path="url(#ct4)"/><rect x="1162" y="110" width="112" height="112" rx="10" fill="none" stroke="#222831" stroke-width="2.5"/><text x="1218" y="262" text-anchor="middle" font-size="40" font-weight="800" fill="#E03131">&#10007;</text>
-<text x="953" y="305" text-anchor="middle" class="fs2">imagines where each movement leads</text>
-<path d="M1280,170 L1294,170" stroke="#222831" stroke-width="4" marker-end="url(#wiA)"/>
-<image href="assets/lock/wm_open.jpg" x="1300" y="40" width="260" height="260" preserveAspectRatio="xMidYMid slice" clip-path="url(#cout)"/><rect x="1300" y="40" width="260" height="260" rx="16" fill="none" stroke="#2E7D5B" stroke-width="5"/>
-<text x="1430" y="340" text-anchor="middle" font-size="24" font-weight="700">Picks the one that works</text>
+<div style="margin:auto -190px 0"><svg viewBox="-10 0 1650 400" style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
+<defs><marker id="wiA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222831"/></marker></defs>
+<clipPath id="cin"><rect x="0" y="80" width="220" height="220" rx="12"/></clipPath><image href="assets/lock/lock3_in.jpg" x="0" y="80" width="220" height="220" preserveAspectRatio="xMidYMid slice" clip-path="url(#cin)"/><rect x="0" y="80" width="220" height="220" rx="12" fill="none" stroke="#D9DFE7" stroke-width="2"/>
+<text x="110" y="340" text-anchor="middle" style="font:700 26px var(--font)" fill="#15171A">Input</text>
+<path d="M228,190 L256,190" stroke="#222831" stroke-width="4" marker-end="url(#wiA)"/>
+<rect x="264" y="0" width="124" height="390" rx="20" fill="#DCE6F7" stroke="#B9C8E2" stroke-width="2"/><text x="326" y="42" text-anchor="middle" style="font:800 28px var(--font)" fill="#15171A">Policy</text>
+<circle cx="326" cy="92" r="25" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="326" y="100" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">0</text>
+<circle cx="326" cy="158" r="25" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="326" y="166" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">1</text>
+<circle cx="326" cy="224" r="25" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="326" y="232" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">2</text>
+<circle cx="326" cy="290" r="25" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="326" y="298" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">3</text>
+<circle cx="326" cy="356" r="25" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="326" y="364" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">4</text>
+<path d="M396,190 L424,190" stroke="#222831" stroke-width="4" marker-end="url(#wiA)"/>
+<rect x="432" y="0" width="900" height="390" rx="24" fill="#D8F0DF" stroke="#9CCFB0" stroke-width="2.5"/><text x="882" y="56" text-anchor="middle" style="font:800 40px var(--font)" fill="#15171A">World model</text>
+<clipPath id="ct0"><rect x="456" y="88" width="154" height="154" rx="10"/></clipPath><image href="assets/out3.jpg" x="456" y="88" width="154" height="154" preserveAspectRatio="xMidYMid slice" clip-path="url(#ct0)"/><rect x="456" y="88" width="154" height="154" rx="10" fill="none" stroke="#222831" stroke-width="2.5"/>
+<text x="533" y="296" text-anchor="middle" style="font:800 46px var(--font)" fill="#E03131">&#10007;</text>
+<clipPath id="ct1"><rect x="630" y="88" width="154" height="154" rx="10"/></clipPath><image href="assets/out2.jpg" x="630" y="88" width="154" height="154" preserveAspectRatio="xMidYMid slice" clip-path="url(#ct1)"/><rect x="630" y="88" width="154" height="154" rx="10" fill="none" stroke="#222831" stroke-width="2.5"/>
+<text x="707" y="296" text-anchor="middle" style="font:800 46px var(--font)" fill="#E03131">&#10007;</text>
+<clipPath id="ct2"><rect x="804" y="88" width="154" height="154" rx="10"/></clipPath><image href="assets/lock/wm_ok.jpg" x="804" y="88" width="154" height="154" preserveAspectRatio="xMidYMid slice" clip-path="url(#ct2)"/><rect x="804" y="88" width="154" height="154" rx="10" fill="none" stroke="#2E7D5B" stroke-width="5"/>
+<text x="881" y="296" text-anchor="middle" style="font:800 46px var(--font)" fill="#2E7D5B">&#10003;</text>
+<clipPath id="ct3"><rect x="978" y="88" width="154" height="154" rx="10"/></clipPath><image href="assets/out1.jpg" x="978" y="88" width="154" height="154" preserveAspectRatio="xMidYMid slice" clip-path="url(#ct3)"/><rect x="978" y="88" width="154" height="154" rx="10" fill="none" stroke="#222831" stroke-width="2.5"/>
+<text x="1055" y="296" text-anchor="middle" style="font:800 46px var(--font)" fill="#E03131">&#10007;</text>
+<clipPath id="ct4"><rect x="1152" y="88" width="154" height="154" rx="10"/></clipPath><image href="assets/out4.jpg" x="1152" y="88" width="154" height="154" preserveAspectRatio="xMidYMid slice" clip-path="url(#ct4)"/><rect x="1152" y="88" width="154" height="154" rx="10" fill="none" stroke="#222831" stroke-width="2.5"/>
+<text x="1229" y="296" text-anchor="middle" style="font:800 46px var(--font)" fill="#E03131">&#10007;</text>
+<text x="882" y="364" text-anchor="middle" style="font:700 28px var(--font)" fill="#15171A">imagines where each movement leads</text>
+<path d="M1340,190 L1368,190" stroke="#222831" stroke-width="4" marker-end="url(#wiA)"/>
+<clipPath id="cout"><rect x="1376" y="80" width="220" height="220" rx="16"/></clipPath><image href="assets/lock/wm_open.jpg" x="1376" y="80" width="220" height="220" preserveAspectRatio="xMidYMid slice" clip-path="url(#cout)"/><rect x="1376" y="80" width="220" height="220" rx="16" fill="none" stroke="#2E7D5B" stroke-width="5"/>
+<text x="1486" y="340" text-anchor="middle" style="font:700 26px var(--font)" fill="#15171A">Picks the one that works</text>
 </svg></div>
-</main><footer class="foot"><span>Learning to Select Actions for Complex Hand Tasks</span><span>Graham Pellegrini | University of Malta</span><span>05 / 23</span></footer></div></section><section class="slide top" id="s5"><div class="stage"><header class="ribbon"><div class="ribbon-inner"><img alt="University of Malta" src="assets/UMLOGO_revWHITE.png"/><span class="course">MSc AI Dissertation Viva</span><span class="topic">6 | Background | VLA vs world model</span></div></header><main class="content"><h2 class="h1l">A VLA generates. A world model predicts consequences.</h2>
-<div style="margin:auto -150px 0"><svg viewBox="0 0 1400 640" style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
+</main><footer class="foot"><span>Learning to Select Actions for Complex Hand Tasks</span><span>Graham Pellegrini | University of Malta</span><span>05 / 23</span></footer></div></section><section class="slide top" id="s5"><div class="stage"><header class="ribbon"><div class="ribbon-inner"><img alt="University of Malta" src="assets/UMLOGO_revWHITE.png"/><span class="course">MSc AI Dissertation Viva</span><span class="topic">6 | Background | VLA vs world model</span></div></header><main class="content"><div style="margin:auto -170px"><svg viewBox="0 0 1600 680" style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
 <defs><marker id="vA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222831"/></marker></defs>
-<clipPath id="vi1"><rect x="265" y="0" width="130" height="130" rx="12"/></clipPath><image href="assets/lock/lock3_in.jpg" x="265" y="0" width="130" height="130" preserveAspectRatio="xMidYMid slice" clip-path="url(#vi1)"/><rect x="265" y="0" width="130" height="130" rx="12" fill="none" stroke="#D9DFE7" stroke-width="2"/>
-<path d="M330,138 L330,170" stroke="#222831" stroke-width="4" marker-end="url(#vA)"/>
-<clipPath id="vi2"><rect x="1005" y="0" width="130" height="130" rx="12"/></clipPath><image href="assets/lock/lock3_in.jpg" x="1005" y="0" width="130" height="130" preserveAspectRatio="xMidYMid slice" clip-path="url(#vi2)"/><rect x="1005" y="0" width="130" height="130" rx="12" fill="none" stroke="#D9DFE7" stroke-width="2"/>
-<path d="M1070,138 L1070,170" stroke="#222831" stroke-width="4" marker-end="url(#vA)"/>
-<line x1="700" y1="0" x2="700" y2="640" stroke="#C3CBD4" stroke-width="3"/>
-<rect x="40" y="178" width="580" height="290" rx="24" fill="#F6F8FB" stroke="#222831" stroke-width="3"/>
-<text x="330" y="282" text-anchor="middle" style="font:800 44px var(--font)" fill="#15171A">VLA</text>
-<text x="330" y="336" text-anchor="middle" style="font:700 27px var(--font)" fill="#3A414B">a policy with a large pre-trained</text>
-<text x="330" y="372" text-anchor="middle" style="font:700 27px var(--font)" fill="#3A414B">backbone, generative like an LLM</text>
-<path d="M200,476 L200,508" stroke="#222831" stroke-width="4" marker-end="url(#vA)"/>
-<clipPath id="vo1"><rect x="140" y="516" width="120" height="120" rx="12"/></clipPath><image href="assets/lock/lock3_fail.jpg" x="140" y="516" width="120" height="120" preserveAspectRatio="xMidYMid slice" clip-path="url(#vo1)"/><rect x="140" y="516" width="120" height="120" rx="12" fill="none" stroke="#BA0C2F" stroke-width="5"/>
-<text x="285" y="562" text-anchor="start" style="font:800 28px var(--font)" fill="#BA0C2F">&#10007; generates one action</text>
-<text x="285" y="598" text-anchor="start" style="font:800 28px var(--font)" fill="#15171A">without its consequence</text>
-<rect x="740" y="178" width="660" height="290" rx="24" fill="#D8F0DF" stroke="#9CCFB0" stroke-width="3"/>
-<text x="1070" y="224" text-anchor="middle" style="font:800 38px var(--font)" fill="#15171A">World model</text>
-<text x="1070" y="258" text-anchor="middle" style="font:700 22px var(--font)" fill="#1B5E3D">scores each action by its learned latent</text>
-<text x="1070" y="284" text-anchor="middle" style="font:700 22px var(--font)" fill="#1B5E3D">correlation to its consequence</text>
-<rect x="760" y="300" width="180" height="50" rx="10" fill="#F6C1C8" stroke="#222831" stroke-width="2"/>
-<text x="850" y="334" text-anchor="middle" style="font:800 25px var(--font)" fill="#15171A">action 1</text>
-<path d="M850,354 L850,372" stroke="#222831" stroke-width="3" marker-end="url(#vA)"/>
-<clipPath id="vw0"><rect x="805" y="376" width="84" height="84" rx="8"/></clipPath><image href="assets/out3.jpg" x="805" y="376" width="84" height="84" preserveAspectRatio="xMidYMid slice" clip-path="url(#vw0)"/><rect x="805" y="376" width="84" height="84" rx="8" fill="none" stroke="#222831" stroke-width="2"/>
-<text x="918" y="430" text-anchor="middle" style="font:800 34px var(--font)" fill="#E03131">&#10007;</text>
-<rect x="980" y="300" width="180" height="50" rx="10" fill="#F6C1C8" stroke="#222831" stroke-width="2"/>
-<text x="1070" y="334" text-anchor="middle" style="font:800 25px var(--font)" fill="#15171A">action 2</text>
-<path d="M1070,354 L1070,372" stroke="#222831" stroke-width="3" marker-end="url(#vA)"/>
-<clipPath id="vw1"><rect x="1025" y="376" width="84" height="84" rx="8"/></clipPath><image href="assets/lock/wm_ok.jpg" x="1025" y="376" width="84" height="84" preserveAspectRatio="xMidYMid slice" clip-path="url(#vw1)"/><rect x="1025" y="376" width="84" height="84" rx="8" fill="none" stroke="#2E7D5B" stroke-width="5"/>
-<text x="1138" y="430" text-anchor="middle" style="font:800 34px var(--font)" fill="#2E7D5B">&#10003;</text>
-<rect x="1200" y="300" width="180" height="50" rx="10" fill="#F6C1C8" stroke="#222831" stroke-width="2"/>
-<text x="1290" y="334" text-anchor="middle" style="font:800 25px var(--font)" fill="#15171A">action 3</text>
-<path d="M1290,354 L1290,372" stroke="#222831" stroke-width="3" marker-end="url(#vA)"/>
-<clipPath id="vw2"><rect x="1245" y="376" width="84" height="84" rx="8"/></clipPath><image href="assets/out2.jpg" x="1245" y="376" width="84" height="84" preserveAspectRatio="xMidYMid slice" clip-path="url(#vw2)"/><rect x="1245" y="376" width="84" height="84" rx="8" fill="none" stroke="#222831" stroke-width="2"/>
-<text x="1358" y="430" text-anchor="middle" style="font:800 34px var(--font)" fill="#E03131">&#10007;</text>
-<path d="M940,476 L940,508" stroke="#222831" stroke-width="4" marker-end="url(#vA)"/>
-<clipPath id="vo2"><rect x="880" y="516" width="120" height="120" rx="12"/></clipPath><image href="assets/lock/wm_ok.jpg" x="880" y="516" width="120" height="120" preserveAspectRatio="xMidYMid slice" clip-path="url(#vo2)"/><rect x="880" y="516" width="120" height="120" rx="12" fill="none" stroke="#2E7D5B" stroke-width="5"/>
-<text x="1025" y="554" text-anchor="start" style="font:800 28px var(--font)" fill="#2E7D5B">&#10003; selects the action with</text>
-<text x="1025" y="590" text-anchor="start" style="font:800 28px var(--font)" fill="#15171A">the most plausible</text>
-<text x="1025" y="626" text-anchor="start" style="font:800 28px var(--font)" fill="#15171A">consequence</text>
+<clipPath id="vi1"><rect x="300" y="0" width="130" height="130" rx="12"/></clipPath><image href="assets/lock/lock3_in.jpg" x="300" y="0" width="130" height="130" preserveAspectRatio="xMidYMid slice" clip-path="url(#vi1)"/><rect x="300" y="0" width="130" height="130" rx="12" fill="none" stroke="#D9DFE7" stroke-width="2"/>
+<path d="M365,138 L365,170" stroke="#222831" stroke-width="4" marker-end="url(#vA)"/>
+<clipPath id="vi2"><rect x="1070" y="0" width="130" height="130" rx="12"/></clipPath><image href="assets/lock/lock3_in.jpg" x="1070" y="0" width="130" height="130" preserveAspectRatio="xMidYMid slice" clip-path="url(#vi2)"/><rect x="1070" y="0" width="130" height="130" rx="12" fill="none" stroke="#D9DFE7" stroke-width="2"/>
+<path d="M1135,138 L1135,170" stroke="#222831" stroke-width="4" marker-end="url(#vA)"/>
+<line x1="750" y1="0" x2="750" y2="680" stroke="#C3CBD4" stroke-width="3"/>
+<rect x="40" y="178" width="650" height="310" rx="24" fill="#F6F8FB" stroke="#222831" stroke-width="3"/>
+<text x="365" y="290" text-anchor="middle" style="font:800 48px var(--font)" fill="#15171A">VLA</text>
+<text x="365" y="350" text-anchor="middle" style="font:700 30px var(--font)" fill="#3A414B">a policy with a large pre-trained</text>
+<text x="365" y="390" text-anchor="middle" style="font:700 30px var(--font)" fill="#3A414B">backbone, generative like an LLM</text>
+<path d="M365,496 L365,528" stroke="#222831" stroke-width="4" marker-end="url(#vA)"/>
+<clipPath id="vo1"><rect x="300" y="536" width="130" height="130" rx="12"/></clipPath><image href="assets/lock/lock3_fail.jpg" x="300" y="536" width="130" height="130" preserveAspectRatio="xMidYMid slice" clip-path="url(#vo1)"/><rect x="300" y="536" width="130" height="130" rx="12" fill="none" stroke="#BA0C2F" stroke-width="5"/>
+<text x="280" y="585" text-anchor="end" style="font:800 30px var(--font)" fill="#BA0C2F">&#10007; generates one</text>
+<text x="280" y="623" text-anchor="end" style="font:800 30px var(--font)" fill="#15171A">action without</text>
+<text x="280" y="661" text-anchor="end" style="font:800 30px var(--font)" fill="#15171A">its consequence</text>
+<rect x="790" y="178" width="700" height="310" rx="24" fill="#D8F0DF" stroke="#9CCFB0" stroke-width="3"/>
+<text x="1135" y="222" text-anchor="middle" style="font:800 40px var(--font)" fill="#15171A">World model</text>
+<rect x="820" y="244" width="180" height="52" rx="10" fill="#F6C1C8" stroke="#222831" stroke-width="2"/><text x="910" y="281" text-anchor="middle" style="font:800 27px var(--font)" fill="#15171A">action 1</text>
+<path d="M910,300 L910,318" stroke="#222831" stroke-width="3" marker-end="url(#vA)"/>
+<clipPath id="vw0"><rect x="860" y="324" width="100" height="100" rx="8"/></clipPath><image href="assets/out3.jpg" x="860" y="324" width="100" height="100" preserveAspectRatio="xMidYMid slice" clip-path="url(#vw0)"/><rect x="860" y="324" width="100" height="100" rx="8" fill="none" stroke="#222831" stroke-width="2"/>
+<text x="988" y="392" text-anchor="middle" style="font:800 38px var(--font)" fill="#E03131">&#10007;</text>
+<rect x="1045" y="244" width="180" height="52" rx="10" fill="#F6C1C8" stroke="#222831" stroke-width="2"/><text x="1135" y="281" text-anchor="middle" style="font:800 27px var(--font)" fill="#15171A">action 2</text>
+<path d="M1135,300 L1135,318" stroke="#222831" stroke-width="3" marker-end="url(#vA)"/>
+<clipPath id="vw1"><rect x="1085" y="324" width="100" height="100" rx="8"/></clipPath><image href="assets/lock/wm_ok.jpg" x="1085" y="324" width="100" height="100" preserveAspectRatio="xMidYMid slice" clip-path="url(#vw1)"/><rect x="1085" y="324" width="100" height="100" rx="8" fill="none" stroke="#2E7D5B" stroke-width="5"/>
+<text x="1213" y="392" text-anchor="middle" style="font:800 38px var(--font)" fill="#2E7D5B">&#10003;</text>
+<rect x="1270" y="244" width="180" height="52" rx="10" fill="#F6C1C8" stroke="#222831" stroke-width="2"/><text x="1360" y="281" text-anchor="middle" style="font:800 27px var(--font)" fill="#15171A">action 3</text>
+<path d="M1360,300 L1360,318" stroke="#222831" stroke-width="3" marker-end="url(#vA)"/>
+<clipPath id="vw2"><rect x="1310" y="324" width="100" height="100" rx="8"/></clipPath><image href="assets/out2.jpg" x="1310" y="324" width="100" height="100" preserveAspectRatio="xMidYMid slice" clip-path="url(#vw2)"/><rect x="1310" y="324" width="100" height="100" rx="8" fill="none" stroke="#222831" stroke-width="2"/>
+<text x="1438" y="392" text-anchor="middle" style="font:800 38px var(--font)" fill="#E03131">&#10007;</text>
+<text x="1135" y="468" text-anchor="middle" style="font:800 30px var(--font)" fill="#1B5E3D">imagines each outcome and scores it</text>
+<path d="M1135,496 L1135,528" stroke="#222831" stroke-width="4" marker-end="url(#vA)"/>
+<clipPath id="vo2"><rect x="1070" y="536" width="130" height="130" rx="12"/></clipPath><image href="assets/lock/wm_ok.jpg" x="1070" y="536" width="130" height="130" preserveAspectRatio="xMidYMid slice" clip-path="url(#vo2)"/><rect x="1070" y="536" width="130" height="130" rx="12" fill="none" stroke="#2E7D5B" stroke-width="5"/>
+<text x="1220" y="585" text-anchor="start" style="font:800 30px var(--font)" fill="#2E7D5B">&#10003; selects the action</text>
+<text x="1220" y="623" text-anchor="start" style="font:800 30px var(--font)" fill="#15171A">with the most plausible</text>
+<text x="1220" y="661" text-anchor="start" style="font:800 30px var(--font)" fill="#15171A">consequence</text>
 </svg></div>
 </main><footer class="foot"><span>Learning to Select Actions for Complex Hand Tasks</span><span>Graham Pellegrini | University of Malta</span><span>06 / 23</span></footer></div></section><section class="slide" id="s6"><div class="stage"><header class="ribbon"><div class="ribbon-inner"><img alt="University of Malta" src="assets/UMLOGO_revWHITE.png"/><span class="course">MSc AI Dissertation Viva</span><span class="topic">7 | Research question</span></div></header><main class="content"><div class="kicker">Research question</div>
 <p class="big-q" style="font-size:2.6rem;max-width:1080px">Under a controlled offline benchmark, does a frozen world model, acting only as the final decision stage, improve which candidate bimanual hand-motion chunk is chosen from a pool already proposed by ACT or DP?</p>
-</main><footer class="foot"><span>Learning to Select Actions for Complex Hand Tasks</span><span>Graham Pellegrini | University of Malta</span><span>07 / 23</span></footer></div></section><section class="slide" id="s7"><div class="stage"><header class="ribbon"><div class="ribbon-inner"><img alt="University of Malta" src="assets/UMLOGO_revWHITE.png"/><span class="course">MSc AI Dissertation Viva</span><span class="topic">8 | Research question | Unpacked</span></div></header><main class="content"><div class="kicker">Research question, unpacked</div>
+</main><footer class="foot"><span>Learning to Select Actions for Complex Hand Tasks</span><span>Graham Pellegrini | University of Malta</span><span>07 / 23</span></footer></div></section><section class="slide" id="s7"><div class="stage"><header class="ribbon"><div class="ribbon-inner"><img alt="University of Malta" src="assets/UMLOGO_revWHITE.png"/><span class="course">MSc AI Dissertation Viva</span><span class="topic">8 | Research question | Unpacked</span></div></header><main class="content"><div class="kicker" style="font-size:1.5rem;color:var(--red)">Research question, unpacked</div>
 <p class="big-q rqa" style="font-size:2.6rem;max-width:1080px">Under a controlled offline benchmark, does a frozen world model, acting only as the <span class="hl3">final decision stage</span>, <span class="hl6">improve which</span> <span class="hl4">candidate bimanual hand-motion chunk</span> is chosen from a <span class="hl5">pool already proposed by ACT or DP</span>?</p>
-<p class="simple rqa" style="font-size:2.6rem;color:#15171A;font-weight:700;line-height:1.4"><b>In plain words</b>In an offline benchmark can a frozen world model, <span class="hl3">used as an external selector</span>, <span class="hl6">pick a better</span> <span class="hl4">hand movement</span> from <span class="hl5">the policy&#39;s candidates</span>?</p>
+<p class="simple rqa" style="font-size:2.6rem;color:#15171A;font-weight:700;line-height:1.4"><b style="font-size:1.5rem;color:var(--red)">In plain words</b>In an offline benchmark can a frozen world model, <span class="hl3">used as an external selector</span>, <span class="hl6">pick a better</span> <span class="hl4">hand movement</span> from <span class="hl5">the policy&#39;s candidates</span>?</p>
 </main><footer class="foot"><span>Learning to Select Actions for Complex Hand Tasks</span><span>Graham Pellegrini | University of Malta</span><span>08 / 23</span></footer></div></section><section class="slide" id="s8"><div class="stage"><header class="ribbon"><div class="ribbon-inner"><img alt="University of Malta" src="assets/UMLOGO_revWHITE.png"/><span class="course">MSc AI Dissertation Viva</span><span class="topic">9 | Related work | DiWA vs our approach</span></div></header><main class="content">
 <div class="row" style="align-items:flex-start;justify-content:center;gap:0;margin-top:0">
  <div style="flex:0 0 470px">
@@ -222,21 +227,21 @@ table.t{margin-top:22px;width:100%;border-collapse:collapse;font-size:1.25rem}ta
  <div style="flex:0 0 3px;align-self:stretch;background:#222831;margin:0 40px"></div>
  <div style="flex:0 0 440px">
 <div class="bigline" style="border:0;padding:0;margin-bottom:12px;color:var(--ink);font-size:2.4rem;text-align:center">Our approach</div>
-  <div class="fig" style="padding:4px;border-radius:12px"><svg viewBox="0 0 300 410" xmlns="http://www.w3.org/2000/svg" font-family="'DejaVu Sans', Verdana, Geneva, sans-serif" class="dw">
+  <div class="fig" style="padding:4px;border-radius:12px"><svg viewBox="0 0 300 410" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
 <defs>
 <marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto">
 <path d="M0,0 L10,5 L0,10 z" fill="#15171A"/>
 </marker>
-</defs><text x="150" y="36" text-anchor="middle" font-size="15.5" font-weight="bold">World Model as a Selector</text>
-<rect x="4" y="56" width="292" height="100" rx="16" fill="#DCE6F7"/><text x="150" y="82" text-anchor="middle" font-size="15" font-weight="bold">Policy (frozen)</text>
+</defs><text x="150" y="36" text-anchor="middle" font-size="15.5" font-weight="800">World Model as a Selector</text>
+<rect x="4" y="56" width="292" height="100" rx="16" fill="#DCE6F7"/><text x="150" y="82" text-anchor="middle" font-size="15" font-weight="800">Policy (frozen)</text>
 <circle cx="50" cy="122" r="19" fill="#F6C1C8" stroke="#15171A" stroke-width="5"/>
 <circle cx="110" cy="122" r="19" fill="#F6C1C8" stroke="#15171A" stroke-width="5"/>
 <circle cx="250" cy="122" r="19" fill="#F6C1C8" stroke="#15171A" stroke-width="5"/>
 <path d="M70,122 L89,122" stroke="#15171A" stroke-width="3.5" marker-end="url(#ah2)"/>
 <path d="M130,122 L148,122" stroke="#15171A" stroke-width="3.5" marker-end="url(#ah2)"/>
-<path d="M196,122 L229,122" stroke="#15171A" stroke-width="3.5" marker-end="url(#ah2)"/><text x="168" y="128" text-anchor="middle" font-size="22" font-weight="bold">&#183;&#183;&#183;</text>
-<path d="M150,160 L150,186" stroke="#222831" stroke-width="3.5" marker-end="url(#ah2)"/><text x="164" y="178" font-size="12.5" font-weight="bold">K candidates</text>
-<rect x="4" y="190" width="292" height="122" rx="16" fill="#D8F0DF"/><text x="150" y="208" text-anchor="middle" font-size="15" font-weight="bold">World Model</text>
+<path d="M196,122 L229,122" stroke="#15171A" stroke-width="3.5" marker-end="url(#ah2)"/><text x="168" y="128" text-anchor="middle" font-size="22" font-weight="800">&#183;&#183;&#183;</text>
+<path d="M150,160 L150,186" stroke="#222831" stroke-width="3.5" marker-end="url(#ah2)"/><text x="164" y="178" font-size="12.5" font-weight="800">K candidates</text>
+<rect x="4" y="190" width="292" height="122" rx="16" fill="#D8F0DF"/><text x="150" y="208" text-anchor="middle" font-size="15" font-weight="800">World Model</text>
 <image href="assets/out3.jpg" x="17" y="216" width="46" height="46" preserveAspectRatio="xMidYMid slice"/>
 <rect x="17" y="216" width="46" height="46" rx="5" fill="none" stroke="#222831" stroke-width="2"/><text x="40" y="284" text-anchor="middle" font-size="22" font-weight="800" fill="#E03131">&#10007;</text>
 <image href="assets/out1.jpg" x="70" y="216" width="46" height="46" preserveAspectRatio="xMidYMid slice"/>
@@ -246,31 +251,34 @@ table.t{margin-top:22px;width:100%;border-collapse:collapse;font-size:1.25rem}ta
 <image href="assets/lock/wm_ok.jpg" x="176" y="216" width="46" height="46" preserveAspectRatio="xMidYMid slice"/>
 <rect x="176" y="216" width="46" height="46" rx="5" fill="none" stroke="#222831" stroke-width="2"/><text x="199" y="284" text-anchor="middle" font-size="22" font-weight="800" fill="#2E7D5B">&#10003;</text>
 <image href="assets/out4.jpg" x="229" y="216" width="46" height="46" preserveAspectRatio="xMidYMid slice"/>
-<rect x="229" y="216" width="46" height="46" rx="5" fill="none" stroke="#222831" stroke-width="2"/><text x="252" y="284" text-anchor="middle" font-size="22" font-weight="800" fill="#E03131">&#10007;</text><text x="150" y="304" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#2E7D5B">Imagined outcome per candidate</text>
+<rect x="229" y="216" width="46" height="46" rx="5" fill="none" stroke="#222831" stroke-width="2"/><text x="252" y="284" text-anchor="middle" font-size="22" font-weight="800" fill="#E03131">&#10007;</text><text x="150" y="304" text-anchor="middle" font-size="10.5" font-weight="800" fill="#2E7D5B">Imagined outcome per candidate</text>
 <path d="M150,316 L150,336" stroke="#222831" stroke-width="3.5" marker-end="url(#ah2)"/>
-<rect x="40" y="340" width="220" height="36" rx="12" fill="#FFF3C4"/><text x="150" y="363" text-anchor="middle" font-size="13.5" font-weight="bold">Argmax: best outcome</text>
-<path d="M150,378 L150,402" stroke="#222831" stroke-width="3.5" marker-end="url(#ah2)"/><text x="164" y="398" font-size="12" font-weight="bold" fill="#2E7D5B">Selected motion</text>
+<rect x="40" y="340" width="220" height="36" rx="12" fill="#FFF3C4"/><text x="150" y="363" text-anchor="middle" font-size="13.5" font-weight="800">Argmax: best outcome</text>
+<path d="M150,378 L150,402" stroke="#222831" stroke-width="3.5" marker-end="url(#ah2)"/><text x="164" y="398" font-size="12" font-weight="800" fill="#2E7D5B">Selected motion</text>
 </svg></div>
 </div>
 </div>
 </main><footer class="foot"><span>Learning to Select Actions for Complex Hand Tasks</span><span>Graham Pellegrini | University of Malta</span><span>09 / 23</span></footer></div></section><section class="slide top" id="s9"><div class="stage"><header class="ribbon"><div class="ribbon-inner"><img alt="University of Malta" src="assets/UMLOGO_revWHITE.png"/><span class="course">MSc AI Dissertation Viva</span><span class="topic">10 | Data | EgoDex</span></div></header><main class="content"><h2 class="h1l">Why EgoDex: both wrists, tracked in 3D</h2>
-<div class="row" style="gap:50px;margin:auto -120px 0;align-items:center">
- <div style="flex:0 0 420px;text-align:center"><img src="assets/avp.jpg" alt="Apple Vision Pro" style="width:100%;height:auto;display:block"/>
+<div class="row" style="gap:30px;margin:auto -200px 0;align-items:center">
+ <div style="flex:0 0 380px;text-align:center"><img src="assets/avp.jpg" alt="Apple Vision Pro" style="width:100%;height:auto;display:block"/>
   <p style="font-size:1.4rem;font-weight:700;margin:6px 0 0">Recorded on Apple Vision Pro<br><span style="color:var(--muted);font-weight:600">both hands tracked at 30 fps</span></p></div>
- <div style="flex:1"><svg viewBox="0 0 900 380" style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
-<defs><marker id="dA1" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#BA0C2F"/></marker><marker id="dA2" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2E7D5B"/></marker>
-<clipPath id="dimg"><rect x="0" y="0" width="420" height="300" rx="16"/></clipPath></defs>
-<image href="assets/frame_start.jpg" x="0" y="0" width="420" height="300" preserveAspectRatio="xMidYMid slice" clip-path="url(#dimg)" opacity=".55"/>
-<rect x="0" y="0" width="420" height="300" rx="16" fill="none" stroke="#D9DFE7" stroke-width="2"/>
-<g><circle cx="70" cy="150" r="6" fill="#195D91"/><path d="M70,150 l70,0" stroke="#BA0C2F" stroke-width="5" marker-end="url(#dA1)"/><path d="M70,150 l0,-70" stroke="#2E7D5B" stroke-width="5" marker-end="url(#dA2)"/><text x="70" y="220" text-anchor="middle" style="font:800 22px var(--font)" fill="#195D91">left wrist</text></g><g><circle cx="330" cy="140" r="6" fill="#195D91"/><path d="M330,140 l70,0" stroke="#BA0C2F" stroke-width="5" marker-end="url(#dA1)"/><path d="M330,140 l0,-70" stroke="#2E7D5B" stroke-width="5" marker-end="url(#dA2)"/><text x="330" y="210" text-anchor="middle" style="font:800 22px var(--font)" fill="#195D91">right wrist</text></g>
-<text x="460" y="36" style="font:800 34px var(--font)">Each wrist, each step:</text>
-<circle cx="472" cy="82" r="9" fill="#195D91"/><text x="492" y="90" style="font:700 30px var(--font)">Position: (x, y, z) = <tspan font-weight="800">3</tspan></text>
-<text x="460" y="140" style="font:700 30px var(--font)">Orientation:</text>
-<path d="M462,174 l36,0" stroke="#BA0C2F" stroke-width="5" marker-end="url(#dA1)"/><text x="512" y="182" style="font:700 30px var(--font)" fill="#BA0C2F">(x<tspan baseline-shift="sub" font-size="18">1</tspan>, y<tspan baseline-shift="sub" font-size="18">1</tspan>, z<tspan baseline-shift="sub" font-size="18">1</tspan>)</text>
-<path d="M480,232 l0,-34" stroke="#2E7D5B" stroke-width="5" marker-end="url(#dA2)"/><text x="512" y="226" style="font:700 30px var(--font)" fill="#2E7D5B">(x<tspan baseline-shift="sub" font-size="18">2</tspan>, y<tspan baseline-shift="sub" font-size="18">2</tspan>, z<tspan baseline-shift="sub" font-size="18">2</tspan>)</text>
-<text x="704" y="208" style="font:700 30px var(--font)">= <tspan font-weight="800">6</tspan></text>
-<text x="460" y="286" style="font:800 32px var(--font)">(3 + 6) &#215; 2 wrists</text>
-<text x="460" y="346" style="font:800 56px var(--font)" fill="#BA0C2F">= 18D</text><text x="616" y="344" style="font:700 26px var(--font)" fill="#3A414B">(18 dimensions)</text>
+ <div style="flex:1"><svg viewBox="0 0 1260 390" style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
+<defs><marker id="dA1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#BA0C2F"/></marker><marker id="dA2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2E7D5B"/></marker><clipPath id="dimg"><rect x="0" y="0" width="420" height="300" rx="16"/></clipPath></defs>
+<g transform="translate(0,70)"><image href="assets/frame_start.jpg" x="0" y="0" width="420" height="300" preserveAspectRatio="xMidYMid slice" clip-path="url(#dimg)" opacity=".55"/><rect x="0" y="0" width="420" height="300" rx="16" fill="none" stroke="#D9DFE7" stroke-width="2"/><g><circle cx="70" cy="150" r="6" fill="#195D91"/><path d="M70,150 l70,0" stroke="#BA0C2F" stroke-width="5" marker-end="url(#dA1)"/><path d="M70,150 l0,-70" stroke="#2E7D5B" stroke-width="5" marker-end="url(#dA2)"/><text x="70" y="220" text-anchor="middle" style="font:800 22px var(--font)" fill="#195D91">left wrist</text></g><g><circle cx="330" cy="140" r="6" fill="#195D91"/><path d="M330,140 l70,0" stroke="#BA0C2F" stroke-width="5" marker-end="url(#dA1)"/><path d="M330,140 l0,-70" stroke="#2E7D5B" stroke-width="5" marker-end="url(#dA2)"/><text x="330" y="210" text-anchor="middle" style="font:800 22px var(--font)" fill="#195D91">right wrist</text></g></g>
+<text x="460" y="40" text-anchor="start" style="font:800 36px var(--font)" fill="#15171A">Each wrist, each step:</text>
+<text x="460" y="98" text-anchor="start" style="font:700 32px var(--font)" fill="#15171A">Position:</text>
+<circle cx="478" cy="138" r="11" fill="#195D91"/><text x="502" y="150" text-anchor="start" style="font:800 34px var(--font)" fill="#195D91">(x, y, z)</text>
+<text x="460" y="212" text-anchor="start" style="font:700 32px var(--font)" fill="#15171A">Orientation:</text>
+<path d="M462,252 L506,252" stroke="#222831" stroke-width="6" marker-end="url(#dA1)"/><text x="520" y="264" text-anchor="start" style="font:800 34px var(--font)" fill="#BA0C2F">(x<tspan baseline-shift="sub" font-size="20">1</tspan>, y<tspan baseline-shift="sub" font-size="20">1</tspan>, z<tspan baseline-shift="sub" font-size="20">1</tspan>)</text>
+<path d="M484,334 L484,290" stroke="#222831" stroke-width="6" marker-end="url(#dA2)"/><text x="520" y="322" text-anchor="start" style="font:800 34px var(--font)" fill="#2E7D5B">(x<tspan baseline-shift="sub" font-size="20">2</tspan>, y<tspan baseline-shift="sub" font-size="20">2</tspan>, z<tspan baseline-shift="sub" font-size="20">2</tspan>)</text>
+<text x="760" y="150" text-anchor="start" style="font:800 36px var(--font)" fill="#15171A">= 3</text>
+<text x="760" y="296" text-anchor="start" style="font:800 36px var(--font)" fill="#15171A">= 6</text>
+<path d="M842,124 Q862,124 862,160 L862,196 Q862,214 880,218 Q862,222 862,240 L862,276 Q862,312 842,312" fill="none" stroke="#222831" stroke-width="3.5"/>
+<text x="896" y="206" text-anchor="start" style="font:800 34px var(--font)" fill="#15171A">+</text>
+<text x="896" y="250" text-anchor="start" style="font:800 40px var(--font)" fill="#15171A">= 9</text>
+<text x="1000" y="250" text-anchor="start" style="font:800 36px var(--font)" fill="#15171A">&#215; 2 wrists</text>
+<text x="1000" y="330" text-anchor="start" style="font:800 64px var(--font)" fill="#BA0C2F">= 18D</text>
+<text x="1000" y="372" text-anchor="start" style="font:700 28px var(--font)" fill="#3A414B">(18 dimensions)</text>
 </svg></div>
 </div>
 </main><footer class="foot"><span>Learning to Select Actions for Complex Hand Tasks</span><span>Graham Pellegrini | University of Malta</span><span>10 / 23</span></footer></div></section><section class="slide top" id="s10"><div class="stage"><header class="ribbon"><div class="ribbon-inner"><img alt="University of Malta" src="assets/UMLOGO_revWHITE.png"/><span class="course">MSc AI Dissertation Viva</span><span class="topic">11 | Method | What I built</span></div></header><main class="content"><h2 class="h1l">What I built</h2>
@@ -332,48 +340,47 @@ table.t{margin-top:22px;width:100%;border-collapse:collapse;font-size:1.25rem}ta
 <rect x="790" y="404" width="250" height="62" rx="14" fill="#FFF3C4" stroke="#E3B341" stroke-width="2.5"/><text x="915" y="431" text-anchor="middle" class="fh">Argmax</text><text x="915" y="453" text-anchor="middle" class="fs2">best of 1 to 4</text>
 </svg></div>
 </main><footer class="foot"><span>Learning to Select Actions for Complex Hand Tasks</span><span>Graham Pellegrini | University of Malta</span><span>12 / 23</span></footer></div></section><section class="slide top" id="s12"><div class="stage"><header class="ribbon"><div class="ribbon-inner"><img alt="University of Malta" src="assets/UMLOGO_revWHITE.png"/><span class="course">MSc AI Dissertation Viva</span><span class="topic">13 | Method | Posterior collapse</span></div></header><main class="content"><h2 class="h1l">Posterior collapse</h2>
-<div style="margin:auto -100px 0"><svg viewBox="0 0 1260 430" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
-<defs><marker id="pcA" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222831"/></marker><marker id="pcR" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#BA0C2F"/></marker></defs>
-<text x="290" y="36" text-anchor="middle" style="font:800 40px var(--font)" fill="#15171A">Diffusion Policy</text>
-<text x="290" y="84" text-anchor="middle" style="font:700 24px var(--font)" fill="#15171A">5 independently sampled Gaussian noise</text>
-<rect x="36" y="100" width="520" height="80" rx="18" fill="#DCE6F7"/>
-<circle cx="90" cy="140" r="28" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="90" y="147" text-anchor="middle" class="fn">0</text>
-<circle cx="190" cy="140" r="28" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="190" y="147" text-anchor="middle" class="fn">1</text>
-<circle cx="290" cy="140" r="28" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="290" y="147" text-anchor="middle" class="fn">2</text>
-<circle cx="390" cy="140" r="28" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="390" y="147" text-anchor="middle" class="fn">3</text>
-<circle cx="490" cy="140" r="28" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="490" y="147" text-anchor="middle" class="fn">4</text>
-<path d="M90,172 L90,278" stroke="#222831" stroke-width="3.5" marker-end="url(#pcA)"/>
-<rect x="46" y="290" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,58 C28,52 52,28 80,14" transform="translate(46,290)" fill="none" stroke="#195D91" stroke-width="4" stroke-linecap="round"/>
-<path d="M190,172 L190,278" stroke="#222831" stroke-width="3.5" marker-end="url(#pcA)"/>
-<rect x="146" y="290" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,58 C32,58 56,42 80,40" transform="translate(146,290)" fill="none" stroke="#195D91" stroke-width="4" stroke-linecap="round"/>
-<path d="M290,172 L290,278" stroke="#222831" stroke-width="3.5" marker-end="url(#pcA)"/>
-<rect x="246" y="290" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,36 C30,48 56,56 80,58" transform="translate(246,290)" fill="none" stroke="#195D91" stroke-width="4" stroke-linecap="round"/>
-<path d="M390,172 L390,278" stroke="#222831" stroke-width="3.5" marker-end="url(#pcA)"/>
-<rect x="346" y="290" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,58 C20,32 48,20 80,22" transform="translate(346,290)" fill="none" stroke="#195D91" stroke-width="4" stroke-linecap="round"/>
-<path d="M490,172 L490,278" stroke="#222831" stroke-width="3.5" marker-end="url(#pcA)"/>
-<rect x="446" y="290" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,36 C34,58 58,28 80,30" transform="translate(446,290)" fill="none" stroke="#195D91" stroke-width="4" stroke-linecap="round"/>
-<text x="547" y="224" text-anchor="start" style="font:700 18px var(--font)" fill="#616873">DDIM</text>
-<text x="547" y="248" text-anchor="start" style="font:700 18px var(--font)" fill="#616873">denoising</text>
-<text x="290" y="402" text-anchor="middle" style="font:800 25px var(--font)" fill="#2E7D5B">5 varied candidates</text>
-<line x1="648" y1="10" x2="648" y2="420" stroke="#222831" stroke-width="3.5"/>
-<text x="970" y="36" text-anchor="middle" style="font:800 40px var(--font)" fill="#15171A">ACT</text>
-<text x="970" y="84" text-anchor="middle" style="font:700 24px var(--font)" fill="#15171A">5 different latent samples of z</text>
-<rect x="716" y="100" width="520" height="80" rx="18" fill="#DCE6F7"/>
-<circle cx="770" cy="140" r="28" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="770" y="147" text-anchor="middle" class="fn">0</text>
-<circle cx="870" cy="140" r="28" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="870" y="147" text-anchor="middle" class="fn">1</text>
-<circle cx="970" cy="140" r="28" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="970" y="147" text-anchor="middle" class="fn">2</text>
-<circle cx="1070" cy="140" r="28" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="1070" y="147" text-anchor="middle" class="fn">3</text>
-<circle cx="1170" cy="140" r="28" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="1170" y="147" text-anchor="middle" class="fn">4</text>
-<path d="M770,170 L770,214" stroke="#BA0C2F" stroke-width="3.5" fill="none"/>
-<path d="M870,170 L870,214" stroke="#BA0C2F" stroke-width="3.5" fill="none"/>
-<path d="M970,170 L970,214" stroke="#BA0C2F" stroke-width="3.5" fill="none"/>
-<path d="M1070,170 L1070,214" stroke="#BA0C2F" stroke-width="3.5" fill="none"/>
-<path d="M1170,170 L1170,214" stroke="#BA0C2F" stroke-width="3.5" fill="none"/>
-<path d="M768,214 L1172,214" stroke="#BA0C2F" stroke-width="3.5" fill="none"/>
-<path d="M970,214 L970,278" stroke="#BA0C2F" stroke-width="3.5" marker-end="url(#pcR)"/>
-<text x="986" y="252" text-anchor="start" style="font:700 20px var(--font)" fill="#616873">CVAE decoder</text>
-<rect x="934" y="298" width="88" height="70" rx="9" fill="#fff" stroke="#C3CBD4" stroke-width="2"/><rect x="930" y="294" width="88" height="70" rx="9" fill="#fff" stroke="#C3CBD4" stroke-width="2"/><rect x="926" y="290" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,58 C28,52 52,28 80,14" transform="translate(926,290)" fill="none" stroke="#BA0C2F" stroke-width="4" stroke-linecap="round"/>
-<text x="970" y="402" text-anchor="middle" style="font:800 25px var(--font)" fill="#BA0C2F">Posterior collapse to the same single candidate</text>
+<div style="margin:auto -150px 0"><svg viewBox="0 0 1300 470" style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
+<defs><marker id="pcA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222831"/></marker><marker id="pcR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#BA0C2F"/></marker></defs>
+<text x="290" y="44" text-anchor="middle" style="font:800 46px var(--font)" fill="#15171A">Diffusion Policy</text>
+<text x="290" y="94" text-anchor="middle" style="font:700 29px var(--font)" fill="#15171A">5 independently sampled Gaussian noise</text>
+<rect x="30" y="108" width="520" height="80" rx="18" fill="#DCE6F7"/>
+<circle cx="84" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="84" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">0</text>
+<circle cx="184" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="184" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">1</text>
+<circle cx="284" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="284" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">2</text>
+<circle cx="384" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="384" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">3</text>
+<circle cx="484" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="484" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">4</text>
+<path d="M84,182 L84,288" stroke="#222831" stroke-width="3.5" marker-end="url(#pcA)"/>
+<rect x="40" y="298" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,58 C28,52 52,28 80,14" transform="translate(40,298)" fill="none" stroke="#195D91" stroke-width="4" stroke-linecap="round"/>
+<path d="M184,182 L184,288" stroke="#222831" stroke-width="3.5" marker-end="url(#pcA)"/>
+<rect x="140" y="298" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,58 C32,58 56,42 80,40" transform="translate(140,298)" fill="none" stroke="#195D91" stroke-width="4" stroke-linecap="round"/>
+<path d="M284,182 L284,288" stroke="#222831" stroke-width="3.5" marker-end="url(#pcA)"/>
+<rect x="240" y="298" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,36 C30,48 56,56 80,58" transform="translate(240,298)" fill="none" stroke="#195D91" stroke-width="4" stroke-linecap="round"/>
+<path d="M384,182 L384,288" stroke="#222831" stroke-width="3.5" marker-end="url(#pcA)"/>
+<rect x="340" y="298" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,58 C20,32 48,20 80,22" transform="translate(340,298)" fill="none" stroke="#195D91" stroke-width="4" stroke-linecap="round"/>
+<path d="M484,182 L484,288" stroke="#222831" stroke-width="3.5" marker-end="url(#pcA)"/>
+<rect x="440" y="298" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,36 C34,58 58,28 80,30" transform="translate(440,298)" fill="none" stroke="#195D91" stroke-width="4" stroke-linecap="round"/>
+<rect x="160" y="214" width="260" height="44" rx="10" fill="#fff" stroke="#C3CBD4" stroke-width="2"/><text x="290" y="245" text-anchor="middle" style="font:800 26px var(--font)" fill="#3A414B">DDIM denoising</text>
+<text x="290" y="416" text-anchor="middle" style="font:800 32px var(--font)" fill="#2E7D5B">5 varied candidates</text>
+<line x1="680" y1="10" x2="680" y2="460" stroke="#222831" stroke-width="3.5"/>
+<text x="990" y="44" text-anchor="middle" style="font:800 46px var(--font)" fill="#15171A">ACT</text>
+<text x="990" y="94" text-anchor="middle" style="font:700 29px var(--font)" fill="#15171A">5 different latent samples of z</text>
+<rect x="730" y="108" width="520" height="80" rx="18" fill="#DCE6F7"/>
+<circle cx="784" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="784" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">0</text>
+<circle cx="884" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="884" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">1</text>
+<circle cx="984" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="984" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">2</text>
+<circle cx="1084" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="1084" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">3</text>
+<circle cx="1184" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="1184" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">4</text>
+<path d="M784,180 L784,218" stroke="#BA0C2F" stroke-width="3.5" fill="none"/>
+<path d="M884,180 L884,218" stroke="#BA0C2F" stroke-width="3.5" fill="none"/>
+<path d="M984,180 L984,218" stroke="#BA0C2F" stroke-width="3.5" fill="none"/>
+<path d="M1084,180 L1084,218" stroke="#BA0C2F" stroke-width="3.5" fill="none"/>
+<path d="M1184,180 L1184,218" stroke="#BA0C2F" stroke-width="3.5" fill="none"/>
+<path d="M782,218 L1186,218" stroke="#BA0C2F" stroke-width="3.5" fill="none"/><path d="M984,218 L984,288" stroke="#BA0C2F" stroke-width="3.5" marker-end="url(#pcR)"/>
+<text x="1002" y="262" text-anchor="start" style="font:800 26px var(--font)" fill="#3A414B">CVAE decoder</text>
+<rect x="948" y="306" width="88" height="70" rx="9" fill="#fff" stroke="#C3CBD4" stroke-width="2"/><rect x="944" y="302" width="88" height="70" rx="9" fill="#fff" stroke="#C3CBD4" stroke-width="2"/><rect x="940" y="298" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,58 C28,52 52,28 80,14" transform="translate(940,298)" fill="none" stroke="#BA0C2F" stroke-width="4" stroke-linecap="round"/>
+<text x="990" y="416" text-anchor="middle" style="font:800 32px var(--font)" fill="#BA0C2F">Posterior collapse to the</text>
+<text x="990" y="454" text-anchor="middle" style="font:800 32px var(--font)" fill="#BA0C2F">same single candidate</text>
 </svg></div>
 </main><footer class="foot"><span>Learning to Select Actions for Complex Hand Tasks</span><span>Graham Pellegrini | University of Malta</span><span>13 / 23</span></footer></div></section><section class="slide top" id="s13"><div class="stage"><header class="ribbon"><div class="ribbon-inner"><img alt="University of Malta" src="assets/UMLOGO_revWHITE.png"/><span class="course">MSc AI Dissertation Viva</span><span class="topic">14 | Method | ACT retraining</span></div></header><main class="content">
 <h2 class="h1l">ACT: four latent training configurations</h2>
