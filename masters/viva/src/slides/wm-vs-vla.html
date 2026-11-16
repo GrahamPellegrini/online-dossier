@@ -1,22 +1,42 @@
 <!-- class="slide top" topic="Background | VLA vs world model" num="1" -->
 <h2 class="h1l">A VLA generates. A world model predicts consequences.</h2>
-<div style="margin:auto -200px 0"><svg viewBox="-105 0 1500 470" style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
+<div style="margin:auto -150px 0"><svg viewBox="0 0 1400 640" style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
 <defs><marker id="vA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222831"/></marker></defs>
-<text x="0" y="40" style="font:800 30px var(--font)">VLA</text>
-<clipPath id="vi1"><rect x="0" y="60" width="150" height="150" rx="12"/></clipPath><image href="assets/lock/lock3_in.jpg" x="0" y="60" width="150" height="150" preserveAspectRatio="xMidYMid slice" clip-path="url(#vi1)"/><rect x="0" y="60" width="150" height="150" rx="12" fill="none" stroke="#D9DFE7" stroke-width="2"/><path d="M160,135 L200,135" stroke="#222831" stroke-width="4" marker-end="url(#vA)"/>
-<rect x="210" y="70" width="380" height="130" rx="20" fill="#F6F8FB" stroke="#222831" stroke-width="3"/>
-<text x="400" y="122" text-anchor="middle" class="fh">VLA</text>
-<text x="400" y="155" text-anchor="middle" style="font:700 19px var(--font)" fill="#616873">a policy with a large pre-trained</text>
-<text x="400" y="180" text-anchor="middle" style="font:700 19px var(--font)" fill="#616873">backbone, generative like an LLM</text>
-<path d="M600,135 L640,135" stroke="#222831" stroke-width="4" marker-end="url(#vA)"/><clipPath id="vo1"><rect x="650" y="60" width="150" height="150" rx="12"/></clipPath><image href="assets/lock/lock3_fail.jpg" x="650" y="60" width="150" height="150" preserveAspectRatio="xMidYMid slice" clip-path="url(#vo1)"/><rect x="650" y="60" width="150" height="150" rx="12" fill="none" stroke="#BA0C2F" stroke-width="4"/>
-<text x="830" y="128" style="font:800 30px var(--font)" fill="#BA0C2F">&#10007;</text><text x="830" y="160" style="font:700 22px var(--font)">generates one action,</text><text x="830" y="188" style="font:700 22px var(--font)">without its consequence</text>
-<line x1="0" y1="232" x2="1500" y2="232" stroke="#D9DFE7" stroke-width="2"/>
-<text x="0" y="276" style="font:800 30px var(--font)">World model</text>
-<clipPath id="vi2"><rect x="0" y="296" width="150" height="150" rx="12"/></clipPath><image href="assets/lock/lock3_in.jpg" x="0" y="296" width="150" height="150" preserveAspectRatio="xMidYMid slice" clip-path="url(#vi2)"/><rect x="0" y="296" width="150" height="150" rx="12" fill="none" stroke="#D9DFE7" stroke-width="2"/><path d="M160,371 L200,371" stroke="#222831" stroke-width="4" marker-end="url(#vA)"/>
-<rect x="210" y="246" width="720" height="210" rx="22" fill="#D8F0DF" stroke="#9CCFB0" stroke-width="2.5"/>
-<text x="400" y="330" text-anchor="middle" class="fh">World model</text>
-<text x="400" y="366" text-anchor="middle" style="font:700 19px var(--font)" fill="#1B5E3D">for each action,</text>
-<text x="400" y="392" text-anchor="middle" style="font:700 19px var(--font)" fill="#1B5E3D">predicts what happens next</text>
-<rect x="600" y="262" width="150" height="48" rx="10" fill="#F6C1C8" stroke="#222831" stroke-width="2"/><text x="675" y="293" text-anchor="middle" style="font:700 19px var(--font)">action 1</text><path d="M756,286 L790,286" stroke="#222831" stroke-width="3" marker-end="url(#vA)"/><clipPath id="vw0"><rect x="798" y="258" width="56" height="56" rx="8"/></clipPath><image href="assets/out3.jpg" x="798" y="258" width="56" height="56" preserveAspectRatio="xMidYMid slice" clip-path="url(#vw0)"/><rect x="798" y="258" width="56" height="56" rx="8" fill="none" stroke="#222831" stroke-width="2"/><text x="876" y="298" style="font:800 30px var(--font)" fill="#E03131">&#10007;</text><rect x="600" y="324" width="150" height="48" rx="10" fill="#F6C1C8" stroke="#222831" stroke-width="2"/><text x="675" y="355" text-anchor="middle" style="font:700 19px var(--font)">action 2</text><path d="M756,348 L790,348" stroke="#222831" stroke-width="3" marker-end="url(#vA)"/><clipPath id="vw1"><rect x="798" y="320" width="56" height="56" rx="8"/></clipPath><image href="assets/lock/wm_ok.jpg" x="798" y="320" width="56" height="56" preserveAspectRatio="xMidYMid slice" clip-path="url(#vw1)"/><rect x="798" y="320" width="56" height="56" rx="8" fill="none" stroke="#2E7D5B" stroke-width="4"/><text x="876" y="360" style="font:800 30px var(--font)" fill="#2E7D5B">&#10003;</text><rect x="600" y="386" width="150" height="48" rx="10" fill="#F6C1C8" stroke="#222831" stroke-width="2"/><text x="675" y="417" text-anchor="middle" style="font:700 19px var(--font)">action 3</text><path d="M756,410 L790,410" stroke="#222831" stroke-width="3" marker-end="url(#vA)"/><clipPath id="vw2"><rect x="798" y="382" width="56" height="56" rx="8"/></clipPath><image href="assets/out2.jpg" x="798" y="382" width="56" height="56" preserveAspectRatio="xMidYMid slice" clip-path="url(#vw2)"/><rect x="798" y="382" width="56" height="56" rx="8" fill="none" stroke="#222831" stroke-width="2"/><text x="876" y="422" style="font:800 30px var(--font)" fill="#E03131">&#10007;</text>
-<text x="960" y="360" style="font:700 22px var(--font)">knows the consequence of each action,</text><text x="960" y="388" style="font:700 22px var(--font)">so it can tell which one works</text>
+<clipPath id="vi1"><rect x="265" y="0" width="130" height="130" rx="12"/></clipPath><image href="assets/lock/lock3_in.jpg" x="265" y="0" width="130" height="130" preserveAspectRatio="xMidYMid slice" clip-path="url(#vi1)"/><rect x="265" y="0" width="130" height="130" rx="12" fill="none" stroke="#D9DFE7" stroke-width="2"/>
+<path d="M330,138 L330,170" stroke="#222831" stroke-width="4" marker-end="url(#vA)"/>
+<clipPath id="vi2"><rect x="1005" y="0" width="130" height="130" rx="12"/></clipPath><image href="assets/lock/lock3_in.jpg" x="1005" y="0" width="130" height="130" preserveAspectRatio="xMidYMid slice" clip-path="url(#vi2)"/><rect x="1005" y="0" width="130" height="130" rx="12" fill="none" stroke="#D9DFE7" stroke-width="2"/>
+<path d="M1070,138 L1070,170" stroke="#222831" stroke-width="4" marker-end="url(#vA)"/>
+<line x1="700" y1="0" x2="700" y2="640" stroke="#C3CBD4" stroke-width="3"/>
+<rect x="40" y="178" width="580" height="290" rx="24" fill="#F6F8FB" stroke="#222831" stroke-width="3"/>
+<text x="330" y="282" text-anchor="middle" style="font:800 44px var(--font)" fill="#15171A">VLA</text>
+<text x="330" y="336" text-anchor="middle" style="font:700 27px var(--font)" fill="#3A414B">a policy with a large pre-trained</text>
+<text x="330" y="372" text-anchor="middle" style="font:700 27px var(--font)" fill="#3A414B">backbone, generative like an LLM</text>
+<path d="M200,476 L200,508" stroke="#222831" stroke-width="4" marker-end="url(#vA)"/>
+<clipPath id="vo1"><rect x="140" y="516" width="120" height="120" rx="12"/></clipPath><image href="assets/lock/lock3_fail.jpg" x="140" y="516" width="120" height="120" preserveAspectRatio="xMidYMid slice" clip-path="url(#vo1)"/><rect x="140" y="516" width="120" height="120" rx="12" fill="none" stroke="#BA0C2F" stroke-width="5"/>
+<text x="285" y="562" text-anchor="start" style="font:800 28px var(--font)" fill="#BA0C2F">&#10007; generates one action</text>
+<text x="285" y="598" text-anchor="start" style="font:800 28px var(--font)" fill="#15171A">without its consequence</text>
+<rect x="740" y="178" width="660" height="290" rx="24" fill="#D8F0DF" stroke="#9CCFB0" stroke-width="3"/>
+<text x="1070" y="224" text-anchor="middle" style="font:800 38px var(--font)" fill="#15171A">World model</text>
+<text x="1070" y="258" text-anchor="middle" style="font:700 22px var(--font)" fill="#1B5E3D">scores each action by its learned latent</text>
+<text x="1070" y="284" text-anchor="middle" style="font:700 22px var(--font)" fill="#1B5E3D">correlation to its consequence</text>
+<rect x="760" y="300" width="180" height="50" rx="10" fill="#F6C1C8" stroke="#222831" stroke-width="2"/>
+<text x="850" y="334" text-anchor="middle" style="font:800 25px var(--font)" fill="#15171A">action 1</text>
+<path d="M850,354 L850,372" stroke="#222831" stroke-width="3" marker-end="url(#vA)"/>
+<clipPath id="vw0"><rect x="805" y="376" width="84" height="84" rx="8"/></clipPath><image href="assets/out3.jpg" x="805" y="376" width="84" height="84" preserveAspectRatio="xMidYMid slice" clip-path="url(#vw0)"/><rect x="805" y="376" width="84" height="84" rx="8" fill="none" stroke="#222831" stroke-width="2"/>
+<text x="918" y="430" text-anchor="middle" style="font:800 34px var(--font)" fill="#E03131">&#10007;</text>
+<rect x="980" y="300" width="180" height="50" rx="10" fill="#F6C1C8" stroke="#222831" stroke-width="2"/>
+<text x="1070" y="334" text-anchor="middle" style="font:800 25px var(--font)" fill="#15171A">action 2</text>
+<path d="M1070,354 L1070,372" stroke="#222831" stroke-width="3" marker-end="url(#vA)"/>
+<clipPath id="vw1"><rect x="1025" y="376" width="84" height="84" rx="8"/></clipPath><image href="assets/lock/wm_ok.jpg" x="1025" y="376" width="84" height="84" preserveAspectRatio="xMidYMid slice" clip-path="url(#vw1)"/><rect x="1025" y="376" width="84" height="84" rx="8" fill="none" stroke="#2E7D5B" stroke-width="5"/>
+<text x="1138" y="430" text-anchor="middle" style="font:800 34px var(--font)" fill="#2E7D5B">&#10003;</text>
+<rect x="1200" y="300" width="180" height="50" rx="10" fill="#F6C1C8" stroke="#222831" stroke-width="2"/>
+<text x="1290" y="334" text-anchor="middle" style="font:800 25px var(--font)" fill="#15171A">action 3</text>
+<path d="M1290,354 L1290,372" stroke="#222831" stroke-width="3" marker-end="url(#vA)"/>
+<clipPath id="vw2"><rect x="1245" y="376" width="84" height="84" rx="8"/></clipPath><image href="assets/out2.jpg" x="1245" y="376" width="84" height="84" preserveAspectRatio="xMidYMid slice" clip-path="url(#vw2)"/><rect x="1245" y="376" width="84" height="84" rx="8" fill="none" stroke="#222831" stroke-width="2"/>
+<text x="1358" y="430" text-anchor="middle" style="font:800 34px var(--font)" fill="#E03131">&#10007;</text>
+<path d="M940,476 L940,508" stroke="#222831" stroke-width="4" marker-end="url(#vA)"/>
+<clipPath id="vo2"><rect x="880" y="516" width="120" height="120" rx="12"/></clipPath><image href="assets/lock/wm_ok.jpg" x="880" y="516" width="120" height="120" preserveAspectRatio="xMidYMid slice" clip-path="url(#vo2)"/><rect x="880" y="516" width="120" height="120" rx="12" fill="none" stroke="#2E7D5B" stroke-width="5"/>
+<text x="1025" y="554" text-anchor="start" style="font:800 28px var(--font)" fill="#2E7D5B">&#10003; selects the action with</text>
+<text x="1025" y="590" text-anchor="start" style="font:800 28px var(--font)" fill="#15171A">the most plausible</text>
+<text x="1025" y="626" text-anchor="start" style="font:800 28px var(--font)" fill="#15171A">consequence</text>
 </svg></div>
