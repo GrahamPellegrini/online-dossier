@@ -12,6 +12,7 @@ rq-annotated
 diwa-vs-ours
 data
 arch
+arch2
 branches
 collapse
 act-configs
