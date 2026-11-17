@@ -1,0 +1,30 @@
+<!-- class="slide material top" topic="Backup G | Metrics" num="0" -->
+
+<h2 class="h1l">How error is measured</h2>
+<div style="margin:auto auto 0;width:960px"><svg viewBox="0 0 960 300" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
+<polyline points="60,250 170,232 280,205 390,170 500,130 610,95 720,70" fill="none" stroke="#8A93A0" stroke-width="4" stroke-dasharray="10 7"/>
+<polyline points="60,250 170,226 280,186 390,140 500,92 610,58 720,40" fill="none" stroke="#195D91" stroke-width="4"/>
+<line x1="170" y1="226" x2="170" y2="232" stroke="#BA0C2F" stroke-width="3"/>
+<circle cx="170" cy="226" r="5" fill="#195D91"/>
+<circle cx="170" cy="232" r="5" fill="#8A93A0"/>
+<line x1="280" y1="186" x2="280" y2="205" stroke="#BA0C2F" stroke-width="3"/>
+<circle cx="280" cy="186" r="5" fill="#195D91"/>
+<circle cx="280" cy="205" r="5" fill="#8A93A0"/>
+<line x1="390" y1="140" x2="390" y2="170" stroke="#BA0C2F" stroke-width="3"/>
+<circle cx="390" cy="140" r="5" fill="#195D91"/>
+<circle cx="390" cy="170" r="5" fill="#8A93A0"/>
+<line x1="500" y1="92" x2="500" y2="130" stroke="#BA0C2F" stroke-width="3"/>
+<circle cx="500" cy="92" r="5" fill="#195D91"/>
+<circle cx="500" cy="130" r="5" fill="#8A93A0"/>
+<line x1="610" y1="58" x2="610" y2="95" stroke="#BA0C2F" stroke-width="3"/>
+<circle cx="610" cy="58" r="5" fill="#195D91"/>
+<circle cx="610" cy="95" r="5" fill="#8A93A0"/>
+<line x1="720" y1="40" x2="720" y2="70" stroke="#BA0C2F" stroke-width="3"/>
+<circle cx="720" cy="40" r="5" fill="#195D91"/>
+<circle cx="720" cy="70" r="5" fill="#8A93A0"/><text x="740" y="44" font-size="18" font-weight="800" fill="#195D91">candidate wrist path</text><text x="740" y="76" font-size="18" font-weight="800" fill="#616873">recorded human path</text><text x="560" y="128" font-size="17" font-weight="800" fill="#BA0C2F">error at each step</text><text x="60" y="290" font-size="15" font-weight="700" fill="#616873">16 future steps, both wrists</text>
+</svg></div>
+<div class="mform">
+<p><b>Translation error</b> = average, over the 16 steps and both wrists, of the root-mean-square position error per axis (metres)</p>
+<p><b>Gain</b> = mean error of the chosen candidate &divide; mean error of candidate 0, minus 1</p>
+</div>
+<p class="small pin">Rotation error is the same idea for orientation: the mean geodesic angle in degrees. Error is always measured against the recorded human motion, which the world model never sees.</p>

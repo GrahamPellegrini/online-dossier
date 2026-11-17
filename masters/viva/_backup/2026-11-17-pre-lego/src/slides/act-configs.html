@@ -1,0 +1,30 @@
+<!-- class="slide top" topic="Method | ACT retraining" num="1" -->
+
+<h2 class="h1l">ACT: four latent training configurations</h2>
+<div class="cfg">
+ <div class="h">Run</div>
+<div class="h">Recipe</div>
+<div class="h">What it is meant to do</div>
+<div class="h" style="border:0"></div>
+<div class="h" style="border:0"></div>
+ <div><span class="chip">v1</span></div>
+<div>KL weight 10, the standard recipe</div>
+<div>Baseline: the decoder can ignore z</div>
+ <div><span class="chip">v2</span></div>
+<div>KL weight 100</div>
+<div>Penalise information in z ten times harder</div>
+ <div><span class="chip">v3</span></div>
+<div>Cyclical KL annealing and 30% observation dropout</div>
+<div>Ease the penalty in cycles and hide observations, so the decoder must lean on z</div>
+ <div><span class="chip">v4</span></div>
+<div>Cyclical KL annealing and free bits, 0.5 nats per dimension</div>
+<div>Let z carry a minimum amount of information for free</div>
+ <div class="brk"></div>
+ <div class="brl"><b>No diversity</b>
+<ul>
+<li>All five samples identical</li>
+<li>Differences below 10<sup>-6</sup></li>
+<li>Posterior collapse</li>
+</ul>
+</div>
+</div>

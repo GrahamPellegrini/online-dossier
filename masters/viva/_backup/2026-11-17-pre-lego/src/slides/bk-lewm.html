@@ -1,0 +1,24 @@
+<!-- class="slide material top" topic="Backup B | LeWM variants" num="0" -->
+
+<h2 class="h1l">LeWM variants</h2>
+<div style="margin-top:auto"><svg viewBox="0 0 1080 340" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif"><text x="0" y="30" font-size="21" font-weight="800" fill="#195D91">Rollout scorer: predictor + selection</text>
+<rect x="0" y="70" width="180" height="72" rx="12" fill="#fff" stroke="#8A93A0" stroke-width="2"/><text x="90.0" y="102.0" text-anchor="middle" font-size="16" font-weight="800">Candidate motion</text><text x="90.0" y="123.0" text-anchor="middle" font-size="13.5" font-weight="700" fill="#616873">+ past frames</text>
+<path d="M184,106 L204,106" stroke="#222831" stroke-width="3"/>
+<polygon points="202,98 202,114 214,106" fill="#222831"/>
+<rect x="216" y="70" width="200" height="72" rx="12" fill="#F3E8FB" stroke="#9C36B5" stroke-width="2"/><text x="316.0" y="102.0" text-anchor="middle" font-size="16" font-weight="800">LeWM predictor</text><text x="316.0" y="123.0" text-anchor="middle" font-size="13.5" font-weight="700" fill="#616873">rolls the future forward</text>
+<path d="M420,106 L440,106" stroke="#222831" stroke-width="3"/>
+<polygon points="438,98 438,114 450,106" fill="#222831"/>
+<rect x="452" y="70" width="180" height="72" rx="12" fill="#fff" stroke="#8A93A0" stroke-width="2"/><text x="542.0" y="112.0" text-anchor="middle" font-size="16" font-weight="800">Predicted future</text>
+<path d="M636,106 L656,106" stroke="#222831" stroke-width="3"/>
+<polygon points="654,98 654,114 666,106" fill="#222831"/>
+<rect x="668" y="70" width="220" height="72" rx="12" fill="#D8F0DF" stroke="#9CCFB0" stroke-width="2"/><text x="778.0" y="102.0" text-anchor="middle" font-size="16" font-weight="800">Distance to nearest</text><text x="778.0" y="123.0" text-anchor="middle" font-size="13.5" font-weight="700" fill="#616873">real training future</text><text x="900" y="112" font-size="28" font-weight="800" fill="#7A5A00">-10.09%</text>
+<line x1="0" y1="190" x2="1080" y2="190" stroke="#D9DFE7" stroke-width="2"/><text x="0" y="230" font-size="21" font-weight="800" fill="#7A5A00">Action-prior scorer: a typicality filter + selection</text><text x="1080" y="230" text-anchor="end" font-size="16" font-weight="800" fill="#BA0C2F">no world model, no frames</text>
+<rect x="0" y="250" width="180" height="72" rx="12" fill="#fff" stroke="#8A93A0" stroke-width="2"/><text x="90.0" y="292.0" text-anchor="middle" font-size="16" font-weight="800">Candidate motion</text>
+<path d="M184,286 L204,286" stroke="#222831" stroke-width="3"/>
+<polygon points="202,278 202,294 214,286" fill="#222831"/>
+<rect x="216" y="250" width="416" height="72" rx="12" fill="#FBF0D2" stroke="#E3B341" stroke-width="2"/><text x="424.0" y="282.0" text-anchor="middle" font-size="16" font-weight="800">How typical is this motion?</text><text x="424.0" y="303.0" text-anchor="middle" font-size="13.5" font-weight="700" fill="#616873">compared with training action statistics, no prediction</text>
+<path d="M636,286 L656,286" stroke="#222831" stroke-width="3"/>
+<polygon points="654,278 654,294 666,286" fill="#222831"/>
+<rect x="668" y="250" width="220" height="72" rx="12" fill="#fff" stroke="#8A93A0" stroke-width="2"/><text x="778.0" y="292.0" text-anchor="middle" font-size="16" font-weight="800">Regularity score</text><text x="900" y="292" font-size="28" font-weight="800" fill="#7A5A00">-10.24%</text><text x="960" y="190" text-anchor="middle" font-size="40" font-weight="800" fill="#BA0C2F">&#8776;</text>
+</svg></div>
+<p class="small pin">Almost the same gain, and only the rollout scorer uses LeWM&#39;s learned dynamics. So the gain comes from how typical the motion is, not from prediction.</p>

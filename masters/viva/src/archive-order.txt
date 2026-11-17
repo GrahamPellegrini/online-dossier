@@ -8,3 +8,8 @@ diwa-bars
 summary
 act
 combined
+lockstory-lock-ok
+lockstory-lock-fail
+lockstory-compound
+lockstory-wm-imagine
+lockstory-wm-vs-vla
