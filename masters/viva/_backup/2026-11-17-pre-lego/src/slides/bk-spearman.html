@@ -1,0 +1,86 @@
+<!-- class="slide material top" topic="Backup C | Spearman correlation" num="0" -->
+
+<h2 class="h1l">Does the score order match the true order?</h2>
+<p class="lead" style="margin-top:8px!important;max-width:none;font-size:1.15rem">Spearman rank correlation: how well the world model&#39;s ranking of the candidates matches their true ranking. Gain says how much error drops; correlation says whether the ranking is right.</p>
+<div class="row" style="gap:46px;margin-top:auto;align-items:center">
+ <div style="flex:0 0 400px"><svg viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif"><text x="16" y="86" text-anchor="middle" font-size="13" font-weight="700" fill="#616873">best</text><text x="16" y="266" text-anchor="middle" font-size="13" font-weight="700" fill="#616873">worst</text>
+<line x1="116" y1="172" x2="284" y2="218" stroke="#8A93A0" stroke-width="2"/>
+<line x1="116" y1="218" x2="284" y2="126" stroke="#8A93A0" stroke-width="2"/>
+<line x1="116" y1="126" x2="284" y2="80" stroke="#8A93A0" stroke-width="2"/>
+<line x1="116" y1="80" x2="284" y2="172" stroke="#8A93A0" stroke-width="2"/>
+<line x1="116" y1="264" x2="284" y2="264" stroke="#8A93A0" stroke-width="2"/><text x="100" y="22" text-anchor="middle" font-size="15" font-weight="800">World model ranks</text>
+<circle cx="100" cy="172" r="16" fill="#E0A100" stroke="#222831" stroke-width="2"/><text x="100" y="177" text-anchor="middle" font-size="15" font-weight="800" fill="#15171A">0</text>
+<circle cx="100" cy="218" r="16" fill="#C3CBD4" stroke="#222831" stroke-width="2"/><text x="100" y="223" text-anchor="middle" font-size="15" font-weight="800" fill="#15171A">1</text>
+<circle cx="100" cy="126" r="16" fill="#E07B00" stroke="#222831" stroke-width="2"/><text x="100" y="131" text-anchor="middle" font-size="15" font-weight="800" fill="#15171A">2</text>
+<circle cx="100" cy="80" r="16" fill="#195D91" stroke="#222831" stroke-width="2"/><text x="100" y="85" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">3</text>
+<circle cx="100" cy="264" r="16" fill="#C3CBD4" stroke="#222831" stroke-width="2"/><text x="100" y="269" text-anchor="middle" font-size="15" font-weight="800" fill="#15171A">4</text><text x="300" y="22" text-anchor="middle" font-size="15" font-weight="800">True ranks</text>
+<circle cx="300" cy="218" r="16" fill="#E0A100" stroke="#222831" stroke-width="2"/><text x="300" y="223" text-anchor="middle" font-size="15" font-weight="800" fill="#15171A">0</text>
+<circle cx="300" cy="126" r="16" fill="#C3CBD4" stroke="#222831" stroke-width="2"/><text x="300" y="131" text-anchor="middle" font-size="15" font-weight="800" fill="#15171A">1</text>
+<circle cx="300" cy="80" r="16" fill="#E07B00" stroke="#222831" stroke-width="2"/><text x="300" y="85" text-anchor="middle" font-size="15" font-weight="800" fill="#15171A">2</text>
+<circle cx="300" cy="172" r="16" fill="#195D91" stroke="#222831" stroke-width="2"/><text x="300" y="177" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">3</text>
+<circle cx="300" cy="264" r="16" fill="#C3CBD4" stroke="#222831" stroke-width="2"/><text x="300" y="269" text-anchor="middle" font-size="15" font-weight="800" fill="#15171A">4</text><text x="200" y="300" text-anchor="middle" font-size="16" font-weight="800">This real window: +0.5</text><text x="60" y="340" text-anchor="middle" font-size="16" font-weight="800" fill="#2E7D5B">+1 same</text>
+<circle cx="20" cy="352" r="4" fill="#222831"/>
+<circle cx="100" cy="352" r="4" fill="#222831"/>
+<line x1="20" y1="352" x2="100" y2="352" stroke="#8A93A0" stroke-width="1.5"/>
+<circle cx="20" cy="366" r="4" fill="#222831"/>
+<circle cx="100" cy="366" r="4" fill="#222831"/>
+<line x1="20" y1="366" x2="100" y2="366" stroke="#8A93A0" stroke-width="1.5"/>
+<circle cx="20" cy="380" r="4" fill="#222831"/>
+<circle cx="100" cy="380" r="4" fill="#222831"/>
+<line x1="20" y1="380" x2="100" y2="380" stroke="#8A93A0" stroke-width="1.5"/>
+<circle cx="20" cy="394" r="4" fill="#222831"/>
+<circle cx="100" cy="394" r="4" fill="#222831"/>
+<line x1="20" y1="394" x2="100" y2="394" stroke="#8A93A0" stroke-width="1.5"/>
+<circle cx="20" cy="408" r="4" fill="#222831"/>
+<circle cx="100" cy="408" r="4" fill="#222831"/>
+<line x1="20" y1="408" x2="100" y2="408" stroke="#8A93A0" stroke-width="1.5"/><text x="200" y="340" text-anchor="middle" font-size="16" font-weight="800" fill="#616873">0 unrelated</text>
+<circle cx="160" cy="352" r="4" fill="#222831"/>
+<circle cx="240" cy="380" r="4" fill="#222831"/>
+<line x1="160" y1="352" x2="240" y2="380" stroke="#8A93A0" stroke-width="1.5"/>
+<circle cx="160" cy="366" r="4" fill="#222831"/>
+<circle cx="240" cy="408" r="4" fill="#222831"/>
+<line x1="160" y1="366" x2="240" y2="408" stroke="#8A93A0" stroke-width="1.5"/>
+<circle cx="160" cy="380" r="4" fill="#222831"/>
+<circle cx="240" cy="352" r="4" fill="#222831"/>
+<line x1="160" y1="380" x2="240" y2="352" stroke="#8A93A0" stroke-width="1.5"/>
+<circle cx="160" cy="394" r="4" fill="#222831"/>
+<circle cx="240" cy="394" r="4" fill="#222831"/>
+<line x1="160" y1="394" x2="240" y2="394" stroke="#8A93A0" stroke-width="1.5"/>
+<circle cx="160" cy="408" r="4" fill="#222831"/>
+<circle cx="240" cy="366" r="4" fill="#222831"/>
+<line x1="160" y1="408" x2="240" y2="366" stroke="#8A93A0" stroke-width="1.5"/><text x="340" y="340" text-anchor="middle" font-size="16" font-weight="800" fill="#BA0C2F">-1 reversed</text>
+<circle cx="300" cy="352" r="4" fill="#222831"/>
+<circle cx="380" cy="408" r="4" fill="#222831"/>
+<line x1="300" y1="352" x2="380" y2="408" stroke="#8A93A0" stroke-width="1.5"/>
+<circle cx="300" cy="366" r="4" fill="#222831"/>
+<circle cx="380" cy="394" r="4" fill="#222831"/>
+<line x1="300" y1="366" x2="380" y2="394" stroke="#8A93A0" stroke-width="1.5"/>
+<circle cx="300" cy="380" r="4" fill="#222831"/>
+<circle cx="380" cy="380" r="4" fill="#222831"/>
+<line x1="300" y1="380" x2="380" y2="380" stroke="#8A93A0" stroke-width="1.5"/>
+<circle cx="300" cy="394" r="4" fill="#222831"/>
+<circle cx="380" cy="366" r="4" fill="#222831"/>
+<line x1="300" y1="394" x2="380" y2="366" stroke="#8A93A0" stroke-width="1.5"/>
+<circle cx="300" cy="408" r="4" fill="#222831"/>
+<circle cx="380" cy="352" r="4" fill="#222831"/>
+<line x1="300" y1="408" x2="380" y2="352" stroke="#8A93A0" stroke-width="1.5"/>
+</svg></div>
+ <div style="flex:1"><svg viewBox="0 0 560 330" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
+<defs>
+<marker id="{i}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="{c}"/>
+</marker>
+</defs>
+<line x1="60" y1="297.91942023984126" x2="550" y2="297.91942023984126" stroke="#E3E8EF"/><text x="52" y="302.91942023984126" text-anchor="end" font-size="13" fill="#616873">-0.75</text>
+<line x1="60" y1="243.135536191873" x2="550" y2="243.135536191873" stroke="#E3E8EF"/><text x="52" y="248.135536191873" text-anchor="end" font-size="13" fill="#616873">-0.5</text>
+<line x1="60" y1="188.35165214390474" x2="550" y2="188.35165214390474" stroke="#E3E8EF"/><text x="52" y="193.35165214390474" text-anchor="end" font-size="13" fill="#616873">-0.25</text>
+<line x1="60" y1="133.5677680959365" x2="550" y2="133.5677680959365" stroke="#E3E8EF"/><text x="52" y="138.5677680959365" text-anchor="end" font-size="13" fill="#616873">0.0</text>
+<line x1="60" y1="78.78388404796823" x2="550" y2="78.78388404796823" stroke="#E3E8EF"/><text x="52" y="83.78388404796823" text-anchor="end" font-size="13" fill="#616873">0.25</text>
+<line x1="60" y1="24.0" x2="550" y2="24.0" stroke="#E3E8EF"/><text x="52" y="29.0" text-anchor="end" font-size="13" fill="#616873">0.5</text>
+<line x1="60" y1="133.5677680959365" x2="550" y2="133.5677680959365" stroke="#15171A" stroke-width="1.5"/>
+<rect x="119.0" y="97.6295401604693" width="42" height="35.93822793546718" rx="3" fill="#195D91"/><text x="140.0" y="91.6295401604693" text-anchor="middle" font-size="14" font-weight="800" fill="#15171A">+0.16</text><text x="140.0" y="302" text-anchor="middle" font-size="14" font-weight="700" fill="#15171A">V-JEPA2-AC</text>
+<rect x="279.0" y="133.5677680959365" width="42" height="111.10171684927963" rx="3" fill="#195D91"/><text x="300.0" y="260.66948494521614" text-anchor="middle" font-size="14" font-weight="800" fill="#15171A">-0.51</text><text x="300.0" y="302" text-anchor="middle" font-size="14" font-weight="700" fill="#15171A">LeWM</text>
+<rect x="439.0" y="133.5677680959365" width="42" height="0.0" rx="3" fill="#195D91"/><text x="460.0" y="127.56776809593649" text-anchor="middle" font-size="14" font-weight="800" fill="#15171A">+0.00</text><text x="460.0" y="302" text-anchor="middle" font-size="14" font-weight="700" fill="#15171A">No-action control</text>
+</svg></div>
+</div>
+<p class="small pin">V-JEPA2-AC: per window, candidate scores against candidate errors (K = 5, pooled seeds). LeWM: across windows, score margin against true improvement (+0.54 on a 512-window check, -0.51 on all 7,607). The no-action control ties every score.</p>

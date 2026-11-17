@@ -1,0 +1,44 @@
+<!-- class="slide top" topic="Method | Posterior collapse" num="1" -->
+<h2 class="h1l">Posterior collapse</h2>
+<div style="margin:auto -150px 0"><svg viewBox="0 0 1300 470" style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
+<defs><marker id="pcA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222831"/></marker><marker id="pcR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#BA0C2F"/></marker></defs>
+<text x="290" y="44" text-anchor="middle" style="font:800 46px var(--font)" fill="#15171A">Diffusion Policy</text>
+<text x="290" y="94" text-anchor="middle" style="font:700 29px var(--font)" fill="#15171A">5 independently sampled Gaussian noise</text>
+<rect x="30" y="108" width="520" height="80" rx="18" fill="#DCE6F7"/>
+<circle cx="84" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="84" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">0</text>
+<circle cx="184" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="184" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">1</text>
+<circle cx="284" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="284" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">2</text>
+<circle cx="384" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="384" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">3</text>
+<circle cx="484" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="484" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">4</text>
+<path d="M84,182 L84,288" stroke="#222831" stroke-width="3.5" marker-end="url(#pcA)"/>
+<rect x="40" y="298" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,58 C28,52 52,28 80,14" transform="translate(40,298)" fill="none" stroke="#195D91" stroke-width="4" stroke-linecap="round"/>
+<path d="M184,182 L184,288" stroke="#222831" stroke-width="3.5" marker-end="url(#pcA)"/>
+<rect x="140" y="298" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,58 C32,58 56,42 80,40" transform="translate(140,298)" fill="none" stroke="#195D91" stroke-width="4" stroke-linecap="round"/>
+<path d="M284,182 L284,288" stroke="#222831" stroke-width="3.5" marker-end="url(#pcA)"/>
+<rect x="240" y="298" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,36 C30,48 56,56 80,58" transform="translate(240,298)" fill="none" stroke="#195D91" stroke-width="4" stroke-linecap="round"/>
+<path d="M384,182 L384,288" stroke="#222831" stroke-width="3.5" marker-end="url(#pcA)"/>
+<rect x="340" y="298" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,58 C20,32 48,20 80,22" transform="translate(340,298)" fill="none" stroke="#195D91" stroke-width="4" stroke-linecap="round"/>
+<path d="M484,182 L484,288" stroke="#222831" stroke-width="3.5" marker-end="url(#pcA)"/>
+<rect x="440" y="298" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,36 C34,58 58,28 80,30" transform="translate(440,298)" fill="none" stroke="#195D91" stroke-width="4" stroke-linecap="round"/>
+<rect x="160" y="214" width="260" height="44" rx="10" fill="#fff" stroke="#C3CBD4" stroke-width="2"/><text x="290" y="245" text-anchor="middle" style="font:800 26px var(--font)" fill="#3A414B">DDIM denoising</text>
+<text x="290" y="416" text-anchor="middle" style="font:800 32px var(--font)" fill="#2E7D5B">5 varied candidates</text>
+<line x1="680" y1="10" x2="680" y2="460" stroke="#222831" stroke-width="3.5"/>
+<text x="990" y="44" text-anchor="middle" style="font:800 46px var(--font)" fill="#15171A">ACT</text>
+<text x="990" y="94" text-anchor="middle" style="font:700 29px var(--font)" fill="#15171A">5 different latent samples of z</text>
+<rect x="730" y="108" width="520" height="80" rx="18" fill="#DCE6F7"/>
+<circle cx="784" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="784" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">0</text>
+<circle cx="884" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="884" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">1</text>
+<circle cx="984" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="984" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">2</text>
+<circle cx="1084" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="1084" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">3</text>
+<circle cx="1184" cy="148" r="30" fill="#F6C1C8" stroke="#222831" stroke-width="2.5"/><text x="1184" y="156" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">4</text>
+<path d="M784,180 L784,218" stroke="#BA0C2F" stroke-width="3.5" fill="none"/>
+<path d="M884,180 L884,218" stroke="#BA0C2F" stroke-width="3.5" fill="none"/>
+<path d="M984,180 L984,218" stroke="#BA0C2F" stroke-width="3.5" fill="none"/>
+<path d="M1084,180 L1084,218" stroke="#BA0C2F" stroke-width="3.5" fill="none"/>
+<path d="M1184,180 L1184,218" stroke="#BA0C2F" stroke-width="3.5" fill="none"/>
+<path d="M782,218 L1186,218" stroke="#BA0C2F" stroke-width="3.5" fill="none"/><path d="M984,218 L984,288" stroke="#BA0C2F" stroke-width="3.5" marker-end="url(#pcR)"/>
+<text x="1002" y="262" text-anchor="start" style="font:800 26px var(--font)" fill="#3A414B">CVAE decoder</text>
+<rect x="948" y="306" width="88" height="70" rx="9" fill="#fff" stroke="#C3CBD4" stroke-width="2"/><rect x="944" y="302" width="88" height="70" rx="9" fill="#fff" stroke="#C3CBD4" stroke-width="2"/><rect x="940" y="298" width="88" height="70" rx="9" fill="#fff" stroke="#222831" stroke-width="2.5"/><path d="M8,58 C28,52 52,28 80,14" transform="translate(940,298)" fill="none" stroke="#BA0C2F" stroke-width="4" stroke-linecap="round"/>
+<text x="990" y="416" text-anchor="middle" style="font:800 32px var(--font)" fill="#BA0C2F">Posterior collapse to the</text>
+<text x="990" y="454" text-anchor="middle" style="font:800 32px var(--font)" fill="#BA0C2F">same single candidate</text>
+</svg></div>
