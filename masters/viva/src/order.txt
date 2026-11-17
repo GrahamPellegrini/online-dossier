@@ -4,6 +4,7 @@ scene
 lock-fail
 compound
 wm-imagine
+wm-expanded
 wm-vs-vla
 rq
 rq-annotated
