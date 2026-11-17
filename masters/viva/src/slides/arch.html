@@ -1,7 +1,97 @@
 <!-- class="slide top" topic="Method | What I built" num="1" -->
-<h2 class="h1l">What I built</h2>
-<div class="arch">
- <div class="lane">Main study<br>EgoDex</div><div class="flow"><div class="bx tl-r">EgoDex data<small>Apple Vision Pro</small></div><i>&rarr;</i><div class="bx tl-g">Window loader<small>+ 18-D wrist adapter</small></div><i>&rarr;</i><div class="bx tl-a">Policy<small>ACT, Diffusion Policy</small></div><i>&rarr;</i><div class="bx tl-g">Candidate pool<small>K = 5, CEMP for ACT</small></div><i>&rarr;</i><div class="bx tl-a">World model scorer<small>5 world models, frozen cores</small></div><i>&rarr;</i><div class="bx tl-g">3 branches<small>argmax</small></div><i>&rarr;</i><div class="bx tl-g">Metrics<small>seeds, correlation</small></div></div>
- <div class="lane">Second study<br>DiWA on CALVIN</div><div class="flow" style="margin-right:20%"><div class="bx tl-r">CALVIN<small>simulator</small></div><i>&rarr;</i><div class="bx tl-r">DiWA checkpoints<small>world model, reward, policy</small></div><i>&rarr;</i><div class="bx tl-a">DiWA fine-tuning<small>reproduced</small></div><i>&rarr;</i><div class="bx tl-g">Selection on CALVIN<small>same idea</small></div><i>&rarr;</i><div class="bx tl-g">Success rate</div></div>
-</div>
-<div class="tlkey"><span><i class="tl-g"></i>Built by me</span><span><i class="tl-a"></i>Trained or adapted by me, published design</span><span><i class="tl-r"></i>Used as released</span></div>
+<h2 class="h1l">The pipeline: what I built, adapted and reused</h2>
+<div style="margin:auto -50px 0"><svg viewBox="-4 0 1508 784" style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif">
+<defs><marker id="aA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222831"/></marker></defs>
+<text x="85" y="52" text-anchor="middle" style="font:800 24px var(--font)" fill="#15171A">EgoDex</text>
+<rect x="0" y="70" width="170" height="200" rx="16" fill="#F6F8FB" stroke="#BA0C2F" stroke-width="3.5" stroke-dasharray="11 7"/>
+<clipPath id="eg"><rect x="12" y="92" width="146" height="110" rx="8"/></clipPath><rect x="12" y="92" width="146" height="110" rx="8" fill="#fff"/><image href="assets/frame_start.jpg" x="12" y="92" width="146" height="110" preserveAspectRatio="xMidYMid meet" clip-path="url(#eg)"/>
+<text x="85" y="236" text-anchor="middle" style="font:700 17px var(--font)" fill="#3A414B">episodes</text>
+<path d="M176,170 L210,170" fill="none" stroke="#222831" stroke-width="3.5" marker-end="url(#aA)"/>
+<text x="430" y="92" text-anchor="middle" style="font:800 24px var(--font)" fill="#15171A">Windowing</text>
+<rect x="218" y="108" width="424" height="124" rx="16" fill="#F6F8FB" stroke="#2E7D5B" stroke-width="3.5" stroke-dasharray="11 7"/>
+<rect x="234.0" y="150" width="10" height="34" rx="2" fill="#DCE6F7" stroke="#195D91" stroke-width="1.5"/>
+<rect x="246.4" y="150" width="10" height="34" rx="2" fill="#DCE6F7" stroke="#195D91" stroke-width="1.5"/>
+<rect x="258.8" y="150" width="10" height="34" rx="2" fill="#DCE6F7" stroke="#195D91" stroke-width="1.5"/>
+<rect x="271.2" y="150" width="10" height="34" rx="2" fill="#DCE6F7" stroke="#195D91" stroke-width="1.5"/>
+<rect x="283.6" y="150" width="10" height="34" rx="2" fill="#DCE6F7" stroke="#195D91" stroke-width="1.5"/>
+<rect x="296.0" y="150" width="10" height="34" rx="2" fill="#DCE6F7" stroke="#195D91" stroke-width="1.5"/>
+<rect x="308.4" y="150" width="10" height="34" rx="2" fill="#DCE6F7" stroke="#195D91" stroke-width="1.5"/>
+<rect x="320.8" y="150" width="10" height="34" rx="2" fill="#DCE6F7" stroke="#195D91" stroke-width="1.5"/>
+<rect x="333.2" y="150" width="10" height="34" rx="2" fill="#DCE6F7" stroke="#195D91" stroke-width="1.5"/>
+<rect x="345.6" y="150" width="10" height="34" rx="2" fill="#DCE6F7" stroke="#195D91" stroke-width="1.5"/>
+<rect x="358.0" y="150" width="10" height="34" rx="2" fill="#DCE6F7" stroke="#195D91" stroke-width="1.5"/>
+<rect x="370.4" y="150" width="10" height="34" rx="2" fill="#DCE6F7" stroke="#195D91" stroke-width="1.5"/>
+<rect x="382.8" y="150" width="10" height="34" rx="2" fill="#DCE6F7" stroke="#195D91" stroke-width="1.5"/>
+<rect x="395.20000000000005" y="150" width="10" height="34" rx="2" fill="#DCE6F7" stroke="#195D91" stroke-width="1.5"/>
+<rect x="407.6" y="150" width="10" height="34" rx="2" fill="#DCE6F7" stroke="#195D91" stroke-width="1.5"/>
+<rect x="420.0" y="150" width="10" height="34" rx="2" fill="#DCE6F7" stroke="#195D91" stroke-width="1.5"/>
+<rect x="432.4" y="150" width="10" height="34" rx="2" fill="#D8F0DF" stroke="#2E7D5B" stroke-width="1.5"/>
+<rect x="444.8" y="150" width="10" height="34" rx="2" fill="#D8F0DF" stroke="#2E7D5B" stroke-width="1.5"/>
+<rect x="457.20000000000005" y="150" width="10" height="34" rx="2" fill="#D8F0DF" stroke="#2E7D5B" stroke-width="1.5"/>
+<rect x="469.6" y="150" width="10" height="34" rx="2" fill="#D8F0DF" stroke="#2E7D5B" stroke-width="1.5"/>
+<rect x="482.0" y="150" width="10" height="34" rx="2" fill="#D8F0DF" stroke="#2E7D5B" stroke-width="1.5"/>
+<rect x="494.40000000000003" y="150" width="10" height="34" rx="2" fill="#D8F0DF" stroke="#2E7D5B" stroke-width="1.5"/>
+<rect x="506.8" y="150" width="10" height="34" rx="2" fill="#D8F0DF" stroke="#2E7D5B" stroke-width="1.5"/>
+<rect x="519.2" y="150" width="10" height="34" rx="2" fill="#D8F0DF" stroke="#2E7D5B" stroke-width="1.5"/>
+<rect x="531.6" y="150" width="10" height="34" rx="2" fill="#D8F0DF" stroke="#2E7D5B" stroke-width="1.5"/>
+<rect x="544.0" y="150" width="10" height="34" rx="2" fill="#D8F0DF" stroke="#2E7D5B" stroke-width="1.5"/>
+<rect x="556.4000000000001" y="150" width="10" height="34" rx="2" fill="#D8F0DF" stroke="#2E7D5B" stroke-width="1.5"/>
+<rect x="568.8" y="150" width="10" height="34" rx="2" fill="#D8F0DF" stroke="#2E7D5B" stroke-width="1.5"/>
+<rect x="581.2" y="150" width="10" height="34" rx="2" fill="#D8F0DF" stroke="#2E7D5B" stroke-width="1.5"/>
+<rect x="593.6" y="150" width="10" height="34" rx="2" fill="#D8F0DF" stroke="#2E7D5B" stroke-width="1.5"/>
+<rect x="606.0" y="150" width="10" height="34" rx="2" fill="#D8F0DF" stroke="#2E7D5B" stroke-width="1.5"/>
+<rect x="618.4000000000001" y="150" width="10" height="34" rx="2" fill="#D8F0DF" stroke="#2E7D5B" stroke-width="1.5"/>
+<text x="234" y="140" text-anchor="start" style="font:800 17px var(--font)" fill="#195D91">16 observed</text>
+<text x="432" y="140" text-anchor="start" style="font:800 17px var(--font)" fill="#2E7D5B">16 predicted</text>
+<text x="430" y="214" text-anchor="middle" style="font:700 17px var(--font)" fill="#3A414B">each step: 18D wrist pose</text>
+<path d="M650,170 L684,170" fill="none" stroke="#222831" stroke-width="3.5" marker-end="url(#aA)"/>
+<rect x="692" y="30" width="430" height="300" rx="20" fill="#DCE6F7" stroke="#D99A00" stroke-width="3.5" stroke-dasharray="11 7"/>
+<text x="907" y="64" text-anchor="middle" style="font:800 26px var(--font)" fill="#15171A">Policies</text>
+<clipPath id="act"><rect x="708" y="82" width="190" height="200" rx="8"/></clipPath><rect x="708" y="82" width="190" height="200" rx="8" fill="#fff"/><image href="assets/arch/act.jpg" x="708" y="82" width="190" height="200" preserveAspectRatio="xMidYMid meet" clip-path="url(#act)"/>
+<clipPath id="dp"><rect x="916" y="100" width="190" height="157" rx="8"/></clipPath><rect x="916" y="100" width="190" height="157" rx="8" fill="#fff"/><image href="assets/arch/dp.jpg" x="916" y="100" width="190" height="157" preserveAspectRatio="xMidYMid meet" clip-path="url(#dp)"/>
+<text x="803" y="312" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">ACT</text>
+<text x="1011" y="312" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">Diffusion Policy</text>
+<path d="M1130,170 L1188,170" fill="none" stroke="#222831" stroke-width="3.5" marker-end="url(#aA)"/><text x="1159" y="158" text-anchor="middle" style="font:800 19px var(--font)" fill="#3A414B">B1</text>
+<rect x="1196" y="100" width="304" height="140" rx="16" fill="#F6F8FB" stroke="#2E7D5B" stroke-width="3.5" stroke-dasharray="11 7"/>
+<text x="1348" y="140" text-anchor="middle" style="font:800 24px var(--font)" fill="#15171A">Evaluation</text>
+<text x="1348" y="176" text-anchor="middle" style="font:700 18px var(--font)" fill="#3A414B">predicted vs real human motion</text>
+<text x="1348" y="214" text-anchor="middle" style="font:800 19px var(--font)" fill="#2E7D5B">translation &amp; rotation error</text>
+<path d="M803,338 L803,372" fill="none" stroke="#222831" stroke-width="3.5" marker-end="url(#aA)"/>
+<polygon points="803,380 943,430 803,480 663,430" fill="#fff" stroke="#2E7D5B" stroke-width="3.5" stroke-dasharray="11 7"/>
+<text x="803" y="426" text-anchor="middle" style="font:800 19px var(--font)" fill="#15171A">Posterior</text>
+<text x="803" y="450" text-anchor="middle" style="font:800 19px var(--font)" fill="#15171A">collapse?</text>
+<path d="M663,430 L606,430" fill="none" stroke="#BA0C2F" stroke-width="3.5" marker-end="url(#aA)"/><text x="636" y="418" text-anchor="middle" style="font:800 19px var(--font)" fill="#3A414B">Yes</text>
+<text x="636" y="418" text-anchor="middle" style="font:800 19px var(--font)" fill="#BA0C2F">Yes</text>
+<rect x="436" y="396" width="162" height="70" rx="16" fill="#FFF" stroke="#D99A00" stroke-width="3.5" stroke-dasharray="11 7"/>
+<text x="517" y="428" text-anchor="middle" style="font:800 26px var(--font)" fill="#15171A">CEMP</text>
+<text x="517" y="452" text-anchor="middle" style="font:700 15px var(--font)" fill="#3A414B">search around ACT</text>
+<path d="M517,474 L517,690 L632,690" fill="none" stroke="#222831" stroke-width="3.5" marker-end="url(#aA)"/><text x="527" y="600" text-anchor="start" style="font:800 19px var(--font)" fill="#3A414B">4 + ACT output</text>
+<path d="M803,480 L803,642" fill="none" stroke="#222831" stroke-width="3.5" marker-end="url(#aA)"/><text x="815" y="560" text-anchor="start" style="font:800 19px var(--font)" fill="#3A414B">5 samples</text>
+<text x="780" y="600" text-anchor="end" style="font:800 20px var(--font)" fill="#2E7D5B">No</text>
+<path d="M1011,338 L1011,642" fill="none" stroke="#222831" stroke-width="3.5" marker-end="url(#aA)"/><text x="999" y="520" text-anchor="end" style="font:800 19px var(--font)" fill="#3A414B">5 samples</text>
+<rect x="640" y="650" width="430" height="80" rx="16" fill="#F6F8FB" stroke="#2E7D5B" stroke-width="3.5" stroke-dasharray="11 7"/>
+<text x="855" y="698" text-anchor="middle" style="font:800 26px var(--font)" fill="#15171A">Candidate pool</text>
+<text x="855" y="762" text-anchor="middle" style="font:700 19px var(--font)" fill="#3A414B">B2: all K = 5   ·   B3: K = 4, default removed</text>
+<path d="M1078,690 L1112,690" fill="none" stroke="#222831" stroke-width="3.5" marker-end="url(#aA)"/>
+<rect x="1120" y="478" width="380" height="300" rx="20" fill="#D8F0DF" stroke="#D99A00" stroke-width="3.5" stroke-dasharray="11 7"/>
+<text x="1310" y="508" text-anchor="middle" style="font:800 22px var(--font)" fill="#15171A">Frozen world models</text>
+<clipPath id="wm0"><rect x="1134" y="530" width="170" height="96" rx="8"/></clipPath><rect x="1134" y="530" width="170" height="96" rx="8" fill="#fff"/><image href="assets/arch/vjepa.jpg" x="1134" y="530" width="170" height="96" preserveAspectRatio="xMidYMid meet" clip-path="url(#wm0)"/>
+<text x="1219" y="646" text-anchor="middle" style="font:800 16px var(--font)" fill="#15171A">V-JEPA2-AC</text>
+<clipPath id="wm1"><rect x="1318" y="530" width="170" height="96" rx="8"/></clipPath><rect x="1318" y="530" width="170" height="96" rx="8" fill="#fff"/><image href="assets/arch/lewm.jpg" x="1318" y="530" width="170" height="96" preserveAspectRatio="xMidYMid meet" clip-path="url(#wm1)"/>
+<text x="1403" y="646" text-anchor="middle" style="font:800 16px var(--font)" fill="#15171A">LeWM</text>
+<clipPath id="wm2"><rect x="1134" y="650" width="170" height="96" rx="8"/></clipPath><rect x="1134" y="650" width="170" height="96" rx="8" fill="#fff"/><image href="assets/arch/dexwm.jpg" x="1134" y="650" width="170" height="96" preserveAspectRatio="xMidYMid meet" clip-path="url(#wm2)"/>
+<text x="1219" y="766" text-anchor="middle" style="font:800 16px var(--font)" fill="#15171A">DexWM</text>
+<clipPath id="wm3"><rect x="1318" y="650" width="170" height="96" rx="8"/></clipPath><rect x="1318" y="650" width="170" height="96" rx="8" fill="#fff"/><image href="assets/arch/pointworld.jpg" x="1318" y="650" width="170" height="96" preserveAspectRatio="xMidYMid meet" clip-path="url(#wm3)"/>
+<text x="1403" y="766" text-anchor="middle" style="font:800 16px var(--font)" fill="#15171A">PointWorld</text>
+<path d="M1348,470 L1348,428" fill="none" stroke="#222831" stroke-width="3.5" marker-end="url(#aA)"/><text x="1336" y="456" text-anchor="end" style="font:800 19px var(--font)" fill="#3A414B">plausibility scores</text>
+<rect x="1268" y="368" width="160" height="54" rx="14" fill="#FFF3C4" stroke="#2E7D5B" stroke-width="3.5" stroke-dasharray="11 7"/>
+<text x="1348" y="403" text-anchor="middle" style="font:800 24px var(--font)" fill="#15171A">Argmax</text>
+<path d="M1348,360 L1348,248" fill="none" stroke="#222831" stroke-width="3.5" marker-end="url(#aA)"/><text x="1360" y="312" text-anchor="start" style="font:800 19px var(--font)" fill="#3A414B">B2 / B3</text>
+<rect x="0" y="560" width="46" height="28" rx="6" fill="#fff" stroke="#2E7D5B" stroke-width="3.5" stroke-dasharray="8 5"/>
+<text x="60" y="582" text-anchor="start" style="font:700 20px var(--font)" fill="#15171A">Built by me</text>
+<rect x="0" y="604" width="46" height="28" rx="6" fill="#fff" stroke="#D99A00" stroke-width="3.5" stroke-dasharray="8 5"/>
+<text x="60" y="626" text-anchor="start" style="font:700 20px var(--font)" fill="#15171A">Trained or adapted by me</text>
+<rect x="0" y="648" width="46" height="28" rx="6" fill="#fff" stroke="#BA0C2F" stroke-width="3.5" stroke-dasharray="8 5"/>
+<text x="60" y="670" text-anchor="start" style="font:700 20px var(--font)" fill="#15171A">Used as released</text>
+<text x="0" y="712" text-anchor="start" style="font:600 14px var(--font)" fill="#8A93A0">Model figures adapted from the original papers</text>
+</svg></div>

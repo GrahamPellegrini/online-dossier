@@ -13,3 +13,4 @@ lockstory-lock-fail
 lockstory-compound
 lockstory-wm-imagine
 lockstory-wm-vs-vla
+arch-old
