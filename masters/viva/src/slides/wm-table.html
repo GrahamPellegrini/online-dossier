@@ -1,10 +1,23 @@
 <!-- class="slide material top" topic="Results | World models" num="1" -->
 <h2 class="h1l">World model results</h2>
-<table class="t wm3">
-<tr><th style="width:22%">Model</th><th style="width:34%">What it is</th><th style="width:22%;text-align:center">Error change</th><th style="text-align:center">Correlation</th></tr>
-<tr style="background:#F1F3F6"><td><b>V-JEPA2-AC</b></td><td class="desc">Frozen video encoder, my action head</td><td class="num c-y">&minus;5.98%</td><td class="num c-g">+0.16</td></tr>
+<style>
+.t.wm3.wm4 td,.t.wm3.wm4 th{padding:8px 14px}
+.t.wm3.wm4 td.bgrp{width:70px;padding:0 22px 0 0!important;border-bottom:0;position:relative;text-align:right;background:none}
+.t.wm3.wm4 td.bgrp span{writing-mode:vertical-rl;transform:rotate(180deg);font:800 1.35rem var(--font);color:#15171A;white-space:nowrap}
+.t.wm3.wm4 td.bgrp::after{content:"";position:absolute;right:4px;top:8px;bottom:8px;width:12px;border:4px solid #222831;border-right:0;border-radius:8px 0 0 8px}
+.t.wm3.wm4 tr.base td:not(.bgrp){background:#F6F8FB}
+.t.wm3.wm4 tr.vj td:not(.bgrp){background:#F1F3F6}
+.t.wm3.wm4 tr.real td{border-bottom:2px solid var(--ink)}
+.t.wm3.wm4 .abs{text-align:center;font-size:2.1rem;font-weight:800;color:#3A414B;white-space:nowrap}
+.t.wm3.wm4 .abs small{font-size:1.2rem;font-weight:700;color:#616873;margin:0 10px 0 4px}
+</style>
+<table class="t wm3 wm4">
+<tr><th></th><th style="width:22%">Model</th><th style="width:33%">What it is</th><th style="width:20%;text-align:center">Error change</th><th style="text-align:center">Correlation</th></tr>
+<tr class="base"><td class="bgrp" rowspan="2"><span>Branch 1</span></td><td><b>Baseline</b></td><td class="desc">Policy alone, no world model</td><td class="num c-n">0.00%</td><td class="num c-n">0.00</td></tr>
+<tr class="base real"><td><b>Real error</b></td><td class="desc">Baseline vs recorded human motion</td><td class="abs" colspan="2">0.117 m<small>translation</small> 40.0&deg;<small>rotation</small></td></tr>
+<tr class="vj"><td class="bgrp" rowspan="4"><span>Branch 2</span></td><td><b>V-JEPA2-AC</b></td><td class="desc">Frozen video encoder, my action head</td><td class="num c-y">&minus;5.98%</td><td class="num c-g">+0.16</td></tr>
 <tr><td><b>LeWM</b></td><td class="desc">Small model trained end to end by me</td><td class="num c-g">&minus;10.1%</td><td class="num c-r">&minus;0.51</td></tr>
 <tr><td><b>DexWM</b></td><td class="desc">Frozen DINOv2 encoder, my predictor</td><td class="num c-r">+0.57%</td><td class="num c-n" style="font-size:1.4rem!important">not measured</td></tr>
 <tr><td><b>PointWorld proxy</b></td><td class="desc">Control: weakened motion input</td><td class="num c-r">+0.27%</td><td class="num c-n" style="font-size:1.4rem!important">not measured</td></tr>
-<tr><td><b>V-JEPA2, no action</b></td><td class="desc">Control: motion input set to zero</td><td class="num c-n">0.00%</td><td class="num c-n">0.00</td></tr>
 </table>
+<p class="small" style="margin-top:14px;font-size:1.25rem;font-weight:700;color:#BA0C2F">Compares inference within this pipeline and training, not the architectures themselves.</p>
